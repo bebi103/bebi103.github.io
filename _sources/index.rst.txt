@@ -1,98 +1,32 @@
-BE/Bi 103 a: Introduction to Data Analysis in the Biological Sciences
-=====================================================================
+bebi103: Utilities for Caltech BE/Bi 103 ab courses
+===================================================
 
-Modern biology is a quantitative science, and biological scientists need to be equipped with tools to analyze quantitative data. This course takes a hands-on approach to developing these tools. Together, we will analyze real data. We will learn how to organize, preserve, and share data sets, create informative interactive graphical displays of data, process images to extract actionable data, and perform basic resampling-based statistical inferences.
-
-Importantly, biological data is often "messy" and there is no one right way to perform an analysis or make a plot. As we work with data, we will discuss various approaches to get a feel for the art of biological data analysis.
-
-The sequel to this course goes deeper into statistical modeling, mostly from a Bayesian perspective. This course is foundational for that and further studies in analysis of biological data.
-
-If you are enrolled in the course, please read the :ref:`Course policies<Policies>` below. We will not go over them in detail in class, and it is your responsibility to understand them.
-
-
-Useful links
--------------
-
-- `Ed <https://us.edstem.org/courses/2636/>`_ (used for course communications)
-- `Course Zoom link <http://bebi103.caltech.edu/2020/a/zoom_links/bebi103_main>`_ (password protected)
-
-During lab and homework help sessions, we will break out into different Zoom sessions headed by various course staff members. Their individual Zoom links are accessible below.
-
-
-People
-------
-
-- Instructor
-
-   + `Justin Bois <http://bois.caltech.edu/>`_ (`bois at caltech dot edu`, `Zoom <http://bebi103.caltech.edu/2020/a/zoom_links/jb>`_)
-
-- TAs
-
-   + Michelle Cua (`ecua at caltech dot edu`, `Zoom <http://bebi103.caltech.edu/2020/a/zoom_links/michelle>`_)
-   + Rosita Fu (`rfu at caltech dot edu`, `Zoom <http://bebi103.caltech.edu/2020/a/zoom_links/rosita>`_)
-   + Sanjana Kulkarni (`skulkarn at caltech dot edu`, `Zoom <http://bebi103.caltech.edu/2020/a/zoom_links/sanjana>`_)
-   + Liana Merk (`lmerk at caltech dot edu`, `Zoom <http://bebi103.caltech.edu/2020/a/zoom_links/liana>`_)
-   + Sophie Miller (`semiller at caltech dot edu`, `Zoom <http://bebi103.caltech.edu/2020/a/zoom_links/sophie>`_)
-   + Ankita Roychoudhury (`aroychou at caltech dot edu`, `Zoom <http://bebi103.caltech.edu/2020/a/zoom_links/ankita>`_)
+The bebi103 package provides convenience functions for use in the `BE/Bi 103 ab courses <http://bebi103.caltech.edu/>`_ at `Caltech <http://caltech.edu/>`_.
 
 
 .. toctree::
    :maxdepth: 1
-   :caption: Lessons
+   :caption: Getting started
 
-   lessons/00/index
-   lessons/01/cycle_of_science
-   lessons/02/version_control_with_git
-   lessons/03/index
-   .. lessons/04/index
-   .. lessons/05/index
-   .. lessons/06/index
-   .. lessons/07/index
-   .. lessons/08/index
-   .. lessons/09/index
+   getting_started/installation
+   getting_started/purpose
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: User guide
+
+   user_guide/using_user_guide.ipynb
+   user_guide/hv.ipynb
+   user_guide/bootstrap.ipynb
+   user_guide/stan.ipynb
+   user_guide/image.ipynb
+   user_guide/api
 
 
 .. toctree::
    :maxdepth: 1
-   :caption: Recitations
+   :caption: Credits and citation
 
-   .. recitations/01/index
-   .. recitations/02/index
-   .. recitations/03/index
-   .. recitations/04/reshaping
-   .. recitations/05/index
-   .. recitations/06/time_series
-   .. recitations/07/colocalization
-   .. recitations/08/bootstrapping
-   .. recitations/09/index
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Homework
-
-   .. homework/01/index
-   .. homework/02/index
-   .. homework/03/index
-   .. homework/04/index
-   .. homework/05/index
-   .. homework/06/index
-   .. homework/07/index
-   .. homework/08/index
-   .. homework/09/index
-   .. 10. Course feedback <homework/10/hw10.ipynb>
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Schedule
-
-   schedule
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Policies
-
-   policies
+   credits_and_citation.rst
 
