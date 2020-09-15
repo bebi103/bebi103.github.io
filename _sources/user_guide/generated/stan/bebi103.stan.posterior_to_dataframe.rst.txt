@@ -1,6 +1,0 @@
-﻿bebi103.stan.posterior\_to\_dataframe
-=====================================
-
-.. currentmodule:: bebi103.stan
-
-.. autofunction:: posterior_to_dataframe
