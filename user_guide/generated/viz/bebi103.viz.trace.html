@@ -31,7 +31,6 @@
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -218,7 +217,7 @@
 <h1>bebi103.viz.trace<a class="headerlink" href="#bebi103-viz-trace" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="bebi103.viz.trace">
-<code class="sig-prename descclassname">bebi103.viz.</code><code class="sig-name descname">trace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">samples</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">palette</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">omit</span><span class="o">=</span><span class="default_value">re.compile('(.*_ppc\\[?\\d*\\]?$)|(log_?lik.*\\[?\\d*\\]?$)')</span></em>, <em class="sig-param"><span class="n">line_kwargs</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.viz.trace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">bebi103.viz.</code><code class="sig-name descname">trace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">samples</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">palette</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">omit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_ppc</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">include_log_lik</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">line_kwargs</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.viz.trace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make a trace plot of MCMC samples.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -226,19 +225,23 @@
 <li><p><strong>samples</strong> (<em>ArviZ InferenceData instance</em><em> or </em><em>xarray Dataset instance</em>) – Result of MCMC sampling.</p></li>
 <li><p><strong>parameters</strong> (<em>list of str</em><em>, or </em><em>None</em><em> (</em><em>default</em><em>)</em>) – Names of parameters to include in the plot. If None, use all
 parameters. For multidimensional parameters, each entry must be
-given separately, e.g., <cite>[‘alpha[0]’, ‘alpha[1]’, ‘beta[0,1]’]</cite>.</p></li>
+given separately, e.g., <cite>[‘alpha[0]’, ‘alpha[1]’, ‘beta[0,1]’]</cite>.
+If a given entry is a 2-tuple, the first entry is the variable
+name, and the second entry is the label for the parameter in
+plots.</p></li>
 <li><p><strong>palette</strong> (<em>list of strings of hex colors</em><em>, or </em><em>single hex string</em>) – If a list, color palette to use. If a single string representing
 a hex color, all glyphs are colored with that color. Default is
 colorcet.b_glasbey_category10 from the colorcet package.</p></li>
 <li><p><strong>omit</strong> (<em>str</em><em>, </em><em>re.Pattern</em><em>, or </em><em>list</em><em> or </em><em>tuple of str and re.Pattern</em>) – If <cite>parameters</cite> is not provided, all parameters are used in the
-trace plot. We often want to ignore samples of posterior
-predictive checks, log likelihoods, and other generated
-quantities. For each string entry in <cite>omit</cite>, the variable given
-by the string is omitted. For each entry that is a compiled
-regular expression pattern (<cite>re.Pattern</cite>), any variable name
-matching the pattern is omitted. By default, any variable that
-ends in ‘_ppc’ and any variable beginning with ‘log_lik’ or
-‘loglik’ are ignored.</p></li>
+parallel coordinate plot. We often want to ignore samples of
+some variables. For each string entry in <cite>omit</cite>, the variable
+given by the string is omitted. For each entry that is a
+compiled regular expression patters (<cite>re.Pattern</cite>), any variable
+name matching the pattern is omitted.</p></li>
+<li><p><strong>include_ppc</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, include variables ending in _ppc, which denotes
+posterior predictive checks, in the plot.</p></li>
+<li><p><strong>include_log_lik</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, include variables starting with log_lik or loglik.
+These denote log-likelihood contributions.</p></li>
 <li><p><strong>line_kwargs</strong> (<em>dict</em>) – Dictionary of kwargs to be passed to <cite>p.multi_line()</cite> in making
 the plot of non-divergent samples.</p></li>
 <li><p><strong>kwargs</strong> – Any kwargs to be passed to <cite>bokeh.plotting.figure()</cite>.</p></li>
@@ -276,13 +279,13 @@ the plot of non-divergent samples.</p></li>
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Sep 02, 2020.
+        Last updated on Jan 30, 2021.
       </span>
 
     </p>
-  </div> <jinja2.runtime.BlockReference object at 0x7fa269d9d8e0> 
+  </div> <jinja2.runtime.BlockReference object at 0x7fb606223fa0> 
 
-<p>© 2020 Justin Bois.</p>
+<p>© 2021 Justin Bois.</p>
 
 <p>This document was prepared at <a rel="caltech" href="http://www.caltech.edu">Caltech</a> with financial support from the <a rel="rosen" href="http://rosen.caltech.edu">Donna and Benjamin M. Rosen Bioengineering Center</a>.</p>
 

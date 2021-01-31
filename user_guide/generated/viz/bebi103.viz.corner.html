@@ -31,7 +31,6 @@
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -218,7 +217,7 @@
 <h1>bebi103.viz.corner<a class="headerlink" href="#bebi103-viz-corner" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="bebi103.viz.corner">
-<code class="sig-prename descclassname">bebi103.viz.</code><code class="sig-name descname">corner</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">samples</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">palette</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">omit</span><span class="o">=</span><span class="default_value">re.compile('(.*_ppc\\[?\\d*\\]?$)|(log_?lik.*\\[?\\d*\\]?$)')</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_plotted</span><span class="o">=</span><span class="default_value">10000</span></em>, <em class="sig-param"><span class="n">datashade</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">frame_width</span><span class="o">=</span><span class="default_value">150</span></em>, <em class="sig-param"><span class="n">frame_height</span><span class="o">=</span><span class="default_value">150</span></em>, <em class="sig-param"><span class="n">plot_ecdf</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ecdf_staircase</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">cmap</span><span class="o">=</span><span class="default_value">'black'</span></em>, <em class="sig-param"><span class="n">color_by_chain</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">divergence_color</span><span class="o">=</span><span class="default_value">'orange'</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">single_var_color</span><span class="o">=</span><span class="default_value">'black'</span></em>, <em class="sig-param"><span class="n">bins</span><span class="o">=</span><span class="default_value">'freedman-diaconis'</span></em>, <em class="sig-param"><span class="n">show_contours</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">contour_color</span><span class="o">=</span><span class="default_value">'black'</span></em>, <em class="sig-param"><span class="n">bins_2d</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">levels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weights</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smooth</span><span class="o">=</span><span class="default_value">0.02</span></em>, <em class="sig-param"><span class="n">extend_contour_domain</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">xtick_label_orientation</span><span class="o">=</span><span class="default_value">'horizontal'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.viz.corner" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">bebi103.viz.</code><code class="sig-name descname">corner</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">samples</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">palette</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">omit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_ppc</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">include_log_lik</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">max_plotted</span><span class="o">=</span><span class="default_value">10000</span></em>, <em class="sig-param"><span class="n">datashade</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">frame_width</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frame_height</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plot_ecdf</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ecdf_staircase</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">cmap</span><span class="o">=</span><span class="default_value">'black'</span></em>, <em class="sig-param"><span class="n">color_by_chain</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">divergence_color</span><span class="o">=</span><span class="default_value">'orange'</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">single_var_color</span><span class="o">=</span><span class="default_value">'black'</span></em>, <em class="sig-param"><span class="n">bins</span><span class="o">=</span><span class="default_value">'freedman-diaconis'</span></em>, <em class="sig-param"><span class="n">show_contours</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">contour_color</span><span class="o">=</span><span class="default_value">'black'</span></em>, <em class="sig-param"><span class="n">bins_2d</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">levels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weights</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smooth</span><span class="o">=</span><span class="default_value">0.02</span></em>, <em class="sig-param"><span class="n">extend_contour_domain</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">xtick_label_orientation</span><span class="o">=</span><span class="default_value">'horizontal'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.viz.corner" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make a corner plot of sampling results. Heavily influenced by the
 corner package by Dan Foreman-Mackey.</p>
 <dl class="field-list simple">
@@ -234,28 +233,33 @@ columns to use in the plot. If <cite>samples</cite> is an ArviZ
 InferenceData instance, <cite>parameters</cite> contains the names of
 parameters to include in the  plot. For multidimensional
 parameters, each entry must be given separately, e.g.,
-<cite>[‘alpha[0]’, ‘alpha[1]’, ‘beta[0,1]’]</cite>.</p></li>
-<li><p><strong>labels</strong> (<em>list</em><em>, </em><em>default None</em>) – List of labels for the respective variables given in
-<cite>parameters</cite>. If None, the variable names from <cite>parameters</cite> are
-used.</p></li>
+<cite>[‘alpha[0]’, ‘alpha[1]’, ‘beta[0,1]’]</cite>. If a given entry is a
+2-tuple, the first entry is the variable name, and the second
+entry is the label for the parameter in plots.</p></li>
 <li><p><strong>palette</strong> (<em>list of strings of hex colors</em><em>, or </em><em>single hex string</em>) – If a list, color palette to use. If a single string representing
 a hex color, all glyphs are colored with that color. Default is
 the default color cycle employed by Altair. Ignored is
 <cite>color_by_chain</cite> is False.</p></li>
 <li><p><strong>omit</strong> (<em>str</em><em>, </em><em>re.Pattern</em><em>, or </em><em>list</em><em> or </em><em>tuple of str and re.Pattern</em>) – If <cite>parameters</cite> is not provided, all parameters are used in the
-corner plot. We often want to ignore samples of posterior
-predictive checks, log likelihoods, and other generated
-quantities. For each string entry in <cite>omit</cite>, the variable given
-by the string is omitted. For each entry that is a compiled
-regular expression pattern (<cite>re.Pattern</cite>), any variable name
-matching the pattern is omitted. By default, any variable that
-ends in ‘_ppc’ and any variable beginning with ‘log_lik’ or
-‘loglik’ are ignored.</p></li>
+parallel coordinate plot. We often want to ignore samples of
+some variables. For each string entry in <cite>omit</cite>, the variable
+given by the string is omitted. For each entry that is a
+compiled regular expression patters (<cite>re.Pattern</cite>), any variable
+name matching the pattern is omitted.</p></li>
+<li><p><strong>include_ppc</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, include variables ending in _ppc, which denotes
+posterior predictive checks, in the plot.</p></li>
+<li><p><strong>include_log_lik</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, include variables starting with log_lik or loglik.
+These denote log-likelihood contributions.</p></li>
 <li><p><strong>max_plotted</strong> (<em>int</em><em>, </em><em>default 10000</em>) – Maximum number of points to be plotted.</p></li>
 <li><p><strong>datashade</strong> (<em>bool</em><em>, </em><em>default False</em>) – Whether or not to convert sampled points to a raster image using
 Datashader.</p></li>
-<li><p><strong>frame_width</strong> (<em>int</em><em>, </em><em>default 150</em>) – Width of each plot in the corner plot in pixels.</p></li>
-<li><p><strong>frame_height</strong> (<em>int</em><em>, </em><em>default 150</em>) – Height of each plot in the corner plot in pixels.</p></li>
+<li><p><strong>frame_width</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>default None</em>) – Width of each plot in the corner plot in pixels. Default is set
+based on number of parameters plotted. If None and
+<cite>frame_height</cite> is specificed, <cite>frame_width</cite> is set to
+<cite>frame_height</cite>.</p></li>
+<li><p><strong>frame_height</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>default None</em>) – Height of each plot in the corner plot in pixels. Default is set
+based on number of parameters plotted. If None and <cite>frame_width</cite>
+is specificed, <cite>frame_height</cite> is set to <cite>frame_width</cite>.</p></li>
 <li><p><strong>plot_ecdf</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, plot ECDFs of samples on the diagonal of the corner
 plot. If False, histograms are plotted.</p></li>
 <li><p><strong>ecdf_staircase</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, plot the ECDF in “staircase” style. Otherwise, plot as
@@ -326,13 +330,13 @@ of some of the plots in the corner plot.</p></li>
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Sep 02, 2020.
+        Last updated on Jan 30, 2021.
       </span>
 
     </p>
-  </div> <jinja2.runtime.BlockReference object at 0x7fa282ff32e0> 
+  </div> <jinja2.runtime.BlockReference object at 0x7fb5e6585310> 
 
-<p>© 2020 Justin Bois.</p>
+<p>© 2021 Justin Bois.</p>
 
 <p>This document was prepared at <a rel="caltech" href="http://www.caltech.edu">Caltech</a> with financial support from the <a rel="rosen" href="http://rosen.caltech.edu">Donna and Benjamin M. Rosen Bioengineering Center</a>.</p>
 

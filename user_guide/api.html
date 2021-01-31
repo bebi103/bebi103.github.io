@@ -31,7 +31,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -133,8 +132,9 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#stan-utilities">Stan utilities</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.clean_cmdstan.html">bebi103.stan.clean_cmdstan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.cmdstan_version.html">bebi103.stan.cmdstan_version</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.df_to_datadict_hier.html">bebi103.stan.df_to_datadict_hier</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.posterior_to_dataframe.html">bebi103.stan.posterior_to_dataframe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.arviz_to_dataframe.html">bebi103.stan.arviz_to_dataframe</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.check_divergences.html">bebi103.stan.check_divergences</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.check_treedepth.html">bebi103.stan.check_treedepth</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.check_energy.html">bebi103.stan.check_energy</a></li>
@@ -370,37 +370,40 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.clean_cmdstan.html#bebi103.stan.clean_cmdstan" title="bebi103.stan.clean_cmdstan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clean_cmdstan</span></code></a></p></td>
 <td><p>Remove all .hpp, .o, .d, and executable files resulting from compilation of Stan models using CmdStanPy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.df_to_datadict_hier.html#bebi103.stan.df_to_datadict_hier" title="bebi103.stan.df_to_datadict_hier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">df_to_datadict_hier</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.cmdstan_version.html#bebi103.stan.cmdstan_version" title="bebi103.stan.cmdstan_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cmdstan_version</span></code></a></p></td>
+<td><p>Determine CmdStan version</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.df_to_datadict_hier.html#bebi103.stan.df_to_datadict_hier" title="bebi103.stan.df_to_datadict_hier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">df_to_datadict_hier</span></code></a></p></td>
 <td><p>Convert a tidy data frame to a data dictionary for a hierarchical Stan model.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.posterior_to_dataframe.html#bebi103.stan.posterior_to_dataframe" title="bebi103.stan.posterior_to_dataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">posterior_to_dataframe</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.arviz_to_dataframe.html#bebi103.stan.arviz_to_dataframe" title="bebi103.stan.arviz_to_dataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arviz_to_dataframe</span></code></a></p></td>
 <td><p>Convert ArviZ InferenceData to a Pandas data frame.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_divergences.html#bebi103.stan.check_divergences" title="bebi103.stan.check_divergences"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_divergences</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_divergences.html#bebi103.stan.check_divergences" title="bebi103.stan.check_divergences"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_divergences</span></code></a></p></td>
 <td><p>Check transitions that ended with a divergence.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_treedepth.html#bebi103.stan.check_treedepth" title="bebi103.stan.check_treedepth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_treedepth</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_treedepth.html#bebi103.stan.check_treedepth" title="bebi103.stan.check_treedepth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_treedepth</span></code></a></p></td>
 <td><p>Check transitions that ended prematurely due to maximum tree depth limit.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_energy.html#bebi103.stan.check_energy" title="bebi103.stan.check_energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_energy</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_energy.html#bebi103.stan.check_energy" title="bebi103.stan.check_energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_energy</span></code></a></p></td>
 <td><p>Checks the energy-Bayes fraction of missing information (E-BFMI)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_ess.html#bebi103.stan.check_ess" title="bebi103.stan.check_ess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_ess</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_ess.html#bebi103.stan.check_ess" title="bebi103.stan.check_ess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_ess</span></code></a></p></td>
 <td><p>Checks the effective sample size (ESS).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_rhat.html#bebi103.stan.check_rhat" title="bebi103.stan.check_rhat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_rhat</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_rhat.html#bebi103.stan.check_rhat" title="bebi103.stan.check_rhat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_rhat</span></code></a></p></td>
 <td><p>Checks the potential issues with scale reduction factors.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_all_diagnostics.html#bebi103.stan.check_all_diagnostics" title="bebi103.stan.check_all_diagnostics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_all_diagnostics</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_all_diagnostics.html#bebi103.stan.check_all_diagnostics" title="bebi103.stan.check_all_diagnostics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_all_diagnostics</span></code></a></p></td>
 <td><p>Checks all MCMC diagnostics</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.parse_warning_code.html#bebi103.stan.parse_warning_code" title="bebi103.stan.parse_warning_code"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_warning_code</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.parse_warning_code.html#bebi103.stan.parse_warning_code" title="bebi103.stan.parse_warning_code"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_warning_code</span></code></a></p></td>
 <td><p>Parses warning code from <cite>check_all_diagnostics()</cite> into individual failures and prints results.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.sbc.html#bebi103.stan.sbc" title="bebi103.stan.sbc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sbc</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.sbc.html#bebi103.stan.sbc" title="bebi103.stan.sbc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sbc</span></code></a></p></td>
 <td><p>Perform simulation-based calibration on a Stan Model.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.disable_logging.html#bebi103.stan.disable_logging" title="bebi103.stan.disable_logging"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_logging</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.disable_logging.html#bebi103.stan.disable_logging" title="bebi103.stan.disable_logging"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_logging</span></code></a></p></td>
 <td><p>Context manager for disabling logging when doing MCMC sampling.</p></td>
 </tr>
 </tbody>
@@ -470,13 +473,13 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Sep 02, 2020.
+        Last updated on Jan 30, 2021.
       </span>
 
     </p>
-  </div> <jinja2.runtime.BlockReference object at 0x7fa282fa4820> 
+  </div> <jinja2.runtime.BlockReference object at 0x7fb5e6cb0e50> 
 
-<p>© 2020 Justin Bois.</p>
+<p>© 2021 Justin Bois.</p>
 
 <p>This document was prepared at <a rel="caltech" href="http://www.caltech.edu">Caltech</a> with financial support from the <a rel="rosen" href="http://rosen.caltech.edu">Donna and Benjamin M. Rosen Bioengineering Center</a>.</p>
 
