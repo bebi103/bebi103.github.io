@@ -34,8 +34,6 @@
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -117,6 +115,7 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.disable_logging.html">bebi103.stan.disable_logging</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a></li>
 </ul>
 </li>
@@ -218,7 +217,7 @@
 <h1>bebi103.stan.check_divergences<a class="headerlink" href="#bebi103-stan-check-divergences" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="bebi103.stan.check_divergences">
-<code class="sig-prename descclassname">bebi103.stan.</code><code class="sig-name descname">check_divergences</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">samples</span></em>, <em class="sig-param"><span class="n">quiet</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">return_diagnostics</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.check_divergences" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></code><code class="sig-name descname"><span class="pre">check_divergences</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_diagnostics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.check_divergences" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check transitions that ended with a divergence.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -264,11 +263,11 @@ deep. Otherwise, only return Boolean if the test passed.</p></li>
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Jan 30, 2021.
+        Last updated on Mar 01, 2021.
       </span>
 
     </p>
-  </div> <jinja2.runtime.BlockReference object at 0x7fb5d7736c70> 
+  </div> <jinja2.runtime.BlockReference object at 0x7fa0341f4fa0> 
 
 <p>© 2021 Justin Bois.</p>
 

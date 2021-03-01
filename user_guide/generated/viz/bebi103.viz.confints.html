@@ -34,8 +34,6 @@
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -116,6 +114,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#bootstrap-methods">Bootstrap methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#stan-utilities">Stan utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a></li>
 </ul>
 </li>
@@ -217,7 +216,7 @@
 <h1>bebi103.viz.confints<a class="headerlink" href="#bebi103-viz-confints" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="bebi103.viz.confints">
-<code class="sig-prename descclassname">bebi103.viz.</code><code class="sig-name descname">confints</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">summaries</span></em>, <em class="sig-param"><span class="n">p</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">marker_kwargs</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="n">line_kwargs</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="n">palette</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.viz.confints" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">bebi103.viz.</span></code><code class="sig-name descname"><span class="pre">confints</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">summaries</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marker_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">palette</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.viz.confints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make a horizontal plot of centers/conf ints with error bars.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -273,11 +272,11 @@ accordingly, e.g., ‘black’. Otherwise a list of colors is used.</p></li>
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Jan 30, 2021.
+        Last updated on Mar 01, 2021.
       </span>
 
     </p>
-  </div> <jinja2.runtime.BlockReference object at 0x7fb5fb76b070> 
+  </div> <jinja2.runtime.BlockReference object at 0x7fa034525100> 
 
 <p>© 2021 Justin Bois.</p>
 

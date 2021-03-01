@@ -34,8 +34,6 @@
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -117,6 +115,7 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.disable_logging.html">bebi103.stan.disable_logging</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a></li>
 </ul>
 </li>
@@ -218,7 +217,7 @@
 <h1>bebi103.stan.sbc<a class="headerlink" href="#bebi103-stan-sbc" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="bebi103.stan.sbc">
-<code class="sig-prename descclassname">bebi103.stan.</code><code class="sig-name descname">sbc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prior_predictive_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">posterior_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prior_predictive_model_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">posterior_model_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">measured_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">var_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">measured_data_dtypes</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="n">posterior_predictive_var_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_likelihood_var_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sampling_kwargs</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="n">diagnostic_check_kwargs</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="n">cores</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">N</span><span class="o">=</span><span class="default_value">400</span></em>, <em class="sig-param"><span class="n">n_prior_draws_for_sd</span><span class="o">=</span><span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">remove_sample_files</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">progress_bar</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.sbc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></code><code class="sig-name descname"><span class="pre">sbc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prior_predictive_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prior_predictive_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data_dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_predictive_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_likelihood_var_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagnostic_check_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_prior_draws_for_sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_sample_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.sbc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform simulation-based calibration on a Stan Model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -326,11 +325,11 @@ by Talts, et al., for details.</p>
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Jan 30, 2021.
+        Last updated on Mar 01, 2021.
       </span>
 
     </p>
-  </div> <jinja2.runtime.BlockReference object at 0x7fb605724220> 
+  </div> <jinja2.runtime.BlockReference object at 0x7fa03535ae50> 
 
 <p>© 2021 Justin Bois.</p>
 

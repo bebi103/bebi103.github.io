@@ -34,8 +34,6 @@
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -117,6 +115,7 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.disable_logging.html">bebi103.stan.disable_logging</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a></li>
 </ul>
 </li>
@@ -218,7 +217,7 @@
 <h1>bebi103.stan.df_to_datadict_hier<a class="headerlink" href="#bebi103-stan-df-to-datadict-hier" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="bebi103.stan.df_to_datadict_hier">
-<code class="sig-prename descclassname">bebi103.stan.</code><code class="sig-name descname">df_to_datadict_hier</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">level_cols</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_cols</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sort_cols</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">cowardly</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.df_to_datadict_hier" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></code><code class="sig-name descname"><span class="pre">df_to_datadict_hier</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cowardly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.df_to_datadict_hier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a tidy data frame to a data dictionary for a hierarchical
 Stan model.</p>
 <dl class="field-list simple">
@@ -412,11 +411,11 @@ have time series data, you should use caution.</p>
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Jan 30, 2021.
+        Last updated on Mar 01, 2021.
       </span>
 
     </p>
-  </div> <jinja2.runtime.BlockReference object at 0x7fb5d70f2d30> 
+  </div> <jinja2.runtime.BlockReference object at 0x7fa03aad4ca0> 
 
 <p>© 2021 Justin Bois.</p>
 
