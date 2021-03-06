@@ -101,6 +101,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#bootstrap-methods">Bootstrap methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#stan-utilities">Stan utilities</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.linear_kernel.html">bebi103.gp.linear_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.polynomial_kernel.html">bebi103.gp.polynomial_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.se_kernel.html">bebi103.gp.se_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_se_kernel.html">bebi103.gp.d1_se_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d2_se_kernel.html">bebi103.gp.d2_se_kernel</a></li>
@@ -217,7 +219,7 @@
 <h1>bebi103.gp.periodic_kernel<a class="headerlink" href="#bebi103-gp-periodic-kernel" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="bebi103.gp.periodic_kernel">
-<code class="sig-prename descclassname"><span class="pre">bebi103.gp.</span></code><code class="sig-name descname"><span class="pre">periodic_kernel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.gp.periodic_kernel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">bebi103.gp.</span></code><code class="sig-name descname"><span class="pre">periodic_kernel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.gp.periodic_kernel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Periodic kernel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -226,6 +228,7 @@
 <li><p><strong>x2</strong> (<em>float</em><em> or </em><em>array</em>) – Point in the space of covariates.</p></li>
 <li><p><strong>alpha</strong> (<em>float</em>) – Marginalized standard deviation of the kernel.</p></li>
 <li><p><strong>rho</strong> (<em>float</em>) – Length scale of the kernel.</p></li>
+<li><p><strong>T</strong> (<em>float</em>) – Period of kernel.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -260,11 +263,11 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Mar 01, 2021.
+        Last updated on Mar 06, 2021.
       </span>
 
     </p>
-  </div> <jinja2.runtime.BlockReference object at 0x7fa0364a4580> 
+  </div> <jinja2.runtime.BlockReference object at 0x7fe88ae56e50> 
 
 <p>© 2021 Justin Bois.</p>
 
