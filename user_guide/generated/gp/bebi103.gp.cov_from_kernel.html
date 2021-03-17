@@ -101,6 +101,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#bootstrap-methods">Bootstrap methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#stan-utilities">Stan utilities</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.append_sort_index.html">bebi103.gp.append_sort_index</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.linear_kernel.html">bebi103.gp.linear_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.polynomial_kernel.html">bebi103.gp.polynomial_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.se_kernel.html">bebi103.gp.se_kernel</a></li>
@@ -219,8 +220,23 @@
 <h1>bebi103.gp.cov_from_kernel<a class="headerlink" href="#bebi103-gp-cov-from-kernel" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="bebi103.gp.cov_from_kernel">
-<code class="sig-prename descclassname"><span class="pre">bebi103.gp.</span></code><code class="sig-name descname"><span class="pre">cov_from_kernel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-08</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kernel_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.gp.cov_from_kernel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">bebi103.gp.</span></code><code class="sig-name descname"><span class="pre">cov_from_kernel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kernel_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.gp.cov_from_kernel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return covariance matrix for specified kernel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X1</strong> (<em>1D</em><em>, </em><em>shape</em><em> (</em><em>n</em><em>,</em><em>) or </em><em>2D array</em><em>, </em><em>shape</em><em> (</em><em>n</em><em>, </em><em>d</em><em>)</em>) – Array of n points to compute kernel. If a 1D array, assume the
+points are one-dimensional. If a 2D array, assume the points are
+d-dimensional.</p></li>
+<li><p><strong>X2</strong> (<em>1D</em><em>, </em><em>shape</em><em> (</em><em>m</em><em>, </em><em>) or </em><em>2D array</em><em>, </em><em>shape</em><em> (</em><em>m</em><em>, </em><em>d</em><em>) or </em><em>None</em>) – Array of m points to compute kernel. If a 1D array, assume the
+points are one-dimensional. If a 2D array, assume the points are
+d-dimensional. If None, assume m = 0 in output.</p></li>
+<li><p><strong>kernel</strong> (<em>function</em>) – Function of the form kernel(x1, x2, <a href="#id1"><span class="problematic" id="id2">**</span></a>kernel_params) that
+returns as scalar value that is the kernel evaluated at points
+x1, x2.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -246,11 +262,11 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Mar 06, 2021.
+        Last updated on Mar 16, 2021.
       </span>
 
     </p>
-  </div> <jinja2.runtime.BlockReference object at 0x7fe88d9eb700> 
+  </div> <jinja2.runtime.BlockReference object at 0x7fd5e71a24c0> 
 
 <p>© 2021 Justin Bois.</p>
 
