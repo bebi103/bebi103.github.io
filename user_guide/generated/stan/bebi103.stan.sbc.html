@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>bebi103.stan.sbc &mdash; bebi103  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="bebi103.stan.disable_logging" href="bebi103.stan.disable_logging.html" />
+    <link rel="prev" title="bebi103.stan.parse_warning_code" href="bebi103.stan.parse_warning_code.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #F0F0F0" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> bebi103
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/purpose.html">Purpose and contents</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../using_user_guide.html">Using the user guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hv.html">HoloViews defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bootstrap.html">Bootstrap utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../stan.html">Stan (MCMC) utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../image.html">Image processing utilities</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#holoviews-defaults">HoloViews defaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#visualization">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#bootstrap-methods">Bootstrap methods</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../api.html#stan-utilities">Stan utilities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.clean_cmdstan.html">bebi103.stan.clean_cmdstan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.cmdstan_version.html">bebi103.stan.cmdstan_version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.df_to_datadict_hier.html">bebi103.stan.df_to_datadict_hier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.arviz_to_dataframe.html">bebi103.stan.arviz_to_dataframe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_divergences.html">bebi103.stan.check_divergences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_treedepth.html">bebi103.stan.check_treedepth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_energy.html">bebi103.stan.check_energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_ess.html">bebi103.stan.check_ess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_rhat.html">bebi103.stan.check_rhat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_all_diagnostics.html">bebi103.stan.check_all_diagnostics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.parse_warning_code.html">bebi103.stan.parse_warning_code</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.stan.sbc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.disable_logging.html">bebi103.stan.disable_logging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Credits and citation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../credits_and_citation.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../credits_and_citation.html#citing-bebi103">Citing bebi103</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">bebi103</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="https://github.com/justinbois/bebi103">bebi103 repo on GitHub</a></li>
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+        
+        
+            <a href="../../../_sources/user_guide/generated/stan/bebi103.stan.sbc.rst.txt" rel="nofollow"> View page source</a>
+        
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="bebi103-stan-sbc">
+<h1>bebi103.stan.sbc<a class="headerlink" href="#bebi103-stan-sbc" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="bebi103.stan.sbc">
+<code class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></code><code class="sig-name descname"><span class="pre">sbc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prior_predictive_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prior_predictive_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data_dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_predictive_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_likelihood_var_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagnostic_check_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_prior_draws_for_sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_sample_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.sbc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform simulation-based calibration on a Stan Model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prior_predictive_model</strong> (<em>pystan.model.StanModel</em>) – A Stan model for generating prior predictive data sets.</p></li>
+<li><p><strong>posterior_model</strong> (<em>pystan.model.StanModel</em>) – A Stan model of the posterior that allows sampling.</p></li>
+<li><p><strong>prior_predictive_model_data</strong> (<em>dict</em>) – Dictionary with entries specified by the data block of the prior
+predictive Stan model.</p></li>
+<li><p><strong>posterior_model_data</strong> (<em>dict</em>) – Dictionary with entries specified by the data block of the prior
+predictive Stan model. Measured data in this dictionary will be
+replaced in each simulation by what was generated by the prior
+predictive model.</p></li>
+<li><p><strong>measured_data</strong> (<em>list</em>) – A list of strings containing the variable names of measured
+data. Each entry in <cite>measured_data</cite> must be a key in
+<cite>posterior_model_data</cite>.</p></li>
+<li><p><strong>var_names</strong> (<em>list of strings</em>) – A list of strings containing parameter names to be considered
+in the SBC analysis. Not all parameters of the model need be
+considered; only those in <cite>var_names</cite> have rank statistics
+calculated. Note that for multidimensional
+variables, <cite>var_names</cite> only has the root name. E.g.,
+<cite>var_names=[‘x’, ‘y’]</cite>, <em>not</em> something like
+<cite>var_names=[‘x[0]’, ‘x[1]’, ‘y[0,0]’]</cite>.</p></li>
+<li><p><strong>posterior_predictive_var_names</strong> (<em>list of strings</em><em>, </em><em>default None</em>) – List of variables that are posterior predictive. These are
+ignored in the SBC analysis. Note that for multidimensional
+variables, <cite>var_names</cite> only has the root name. E.g.,
+<cite>var_names=[‘x_ppc’, ‘y_ppc’]</cite>, <em>not</em> something like
+<cite>var_names=[‘x_ppc[0]’, ‘x_ppc[1]’, ‘y_ppc[0,0]’]</cite>.</p></li>
+<li><p><strong>log_likelihood_var_name</strong> (<em>string</em><em>, </em><em>default None</em>) – Name of variable in the Stan model that stores the log
+likelihood. This is ignored in the SBC analysis.</p></li>
+<li><p><strong>measured_data_dtypes</strong> (<em>dict</em><em>, </em><em>default {}</em>) – The key in the dtypes dict is a string representing the data
+name, and the corresponding item is its dtype, almost always
+either <cite>int</cite> or <cite>float</cite>.</p></li>
+<li><p><strong>sampling_kwargs</strong> (<em>dict</em><em>, </em><em>default {}</em>) – kwargs to be passed to <cite>sm.sample()</cite> for a CmdStanPy model <cite>sm</cite>
+or to <cite>sm.sampling()</cite> for a PyStan model <cite>sm</cite>. If using
+CmdStanPy, the ‘output_dir’ kwarg is not allowed because
+unambiguous naming is not possible if new sampling is done
+more than once per minute, given CmdStanPy’s naming convention.</p></li>
+<li><p><strong>diagnostic_check_kwargs</strong> (<em>dict</em><em>, </em><em>default {}</em>) – kwargs to pass to <cite>check_all_diagnostics()</cite>. If <cite>quiet</cite> and/or
+<cite>return_diagnostics</cite> are given, they are ignored.
+<cite>max_treedepth</cite> is inferred from <cite>sampling_kwargs</cite>.</p></li>
+<li><p><strong>cores</strong> (<em>int</em><em>, </em><em>default 1</em>) – Number of cores to use in the SBC calculation.</p></li>
+<li><p><strong>N</strong> (<em>int</em><em>, </em><em>400</em>) – Number of simulations to run.</p></li>
+<li><p><strong>n_prior_draws_for_sd</strong> (<em>int</em><em>, </em><em>default 1000</em>) – Number of prior draws to compute the prior standard deviation
+for a parameter in the prior distribution. This standard
+deviation is used in the shrinkage calculation.</p></li>
+<li><p><strong>remove_sample_files</strong> (<em>bool</em><em>, </em><em>default True</em>) – If True, remove .csv and .txt files generated by CmdStan. If
+the Stan models are made using PyStan, this is ignored; it is
+only active if using CmdStanPy.</p></li>
+<li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, display a progress bar for the calculation using tqdm.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p><strong>output</strong> – A Pandas DataFrame with the output of the SBC analysis. It has
+the following columns.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>trial : Unique trial number for the simulation.</p></li>
+<li><p>warning_code : Warning code based on diagnostic checks outputted by <cite>check_all_diagnostics()</cite>.</p></li>
+<li><p>parameter: The name of the scalar parameter.</p></li>
+<li><p>prior: Value of the parameter used in the simulation. This value was drawn out of the prior distribution.</p></li>
+<li><p>mean : mean parameter value based on sampling out of the posterior in the simulation.</p></li>
+<li><p>sd : standard deviation of the parameter value based on sampling out of the posterior in the simulation.</p></li>
+<li><p>L : The number of bins used in computing the rank statistic. The rank statistic should be uniform on the integers [0, L].</p></li>
+<li><p>rank_statistic : Value of the rank statistic for the parameter for the trial.</p></li>
+<li><p>shrinkage : The shrinkage for the parameter for the given trial. This is computed as 1 - sd / sd_prior, where sd_prior is the standard deviation of the parameters as determined from drawing out of the prior.</p></li>
+<li><p>z_score : The z-score for the parameter for the given trial. This is computed as abs(mean - prior) / sd.</p></li>
+</ul>
+</div></blockquote>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Pandas DataFrame</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Each simulation is done by sampling a parameter set out of the
+prior distribution, using those parameters to generate data from
+the likelihood, and then performing posterior sampling based on
+the generated data. A rank statistic for each simulation is
+computed. This rank statistic should be uniformly distributed
+over its L possible values. See <a class="reference external" href="https://arxiv.org/abs/1804.06788">https://arxiv.org/abs/1804.06788</a>,
+by Talts, et al., for details.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bebi103.stan.disable_logging.html" class="btn btn-neutral float-right" title="bebi103.stan.disable_logging" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bebi103.stan.parse_warning_code.html" class="btn btn-neutral float-left" title="bebi103.stan.parse_warning_code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">
+        Last updated on Mar 16, 2021.
+      </span>
+
+    </p>
+  </div> <jinja2.runtime.BlockReference object at 0x7fd5e74d6e20> 
+
+<p>© 2021 Justin Bois.</p>
+
+<p>This document was prepared at <a rel="caltech" href="http://www.caltech.edu">Caltech</a> with financial support from the <a rel="rosen" href="http://rosen.caltech.edu">Donna and Benjamin M. Rosen Bioengineering Center</a>.</p>
+
+<br />
+
+<p>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>.
+
+ 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

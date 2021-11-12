@@ -1,130 +1,32 @@
-BE/Bi 103 a: Introduction to Data Analysis in the Biological Sciences
-=====================================================================
+bebi103: Utilities for Caltech BE/Bi 103 ab courses
+===================================================
 
-Modern biology is a quantitative science, and biological scientists need to be equipped with tools to analyze quantitative data. This course takes a hands-on approach to developing these tools. Together, we will analyze real data. We will learn how to organize, preserve, and share data sets, create informative interactive graphical displays of data, process images to extract actionable data, and perform basic resampling-based statistical inferences.
-
-Importantly, biological data is often "messy" and there is no one right way to perform an analysis or make a plot. As we work with data, we will discuss various approaches to get a feel for the art of biological data analysis.
-
-The sequel to this course goes deeper into statistical modeling, mostly from a Bayesian perspective. This course is foundational for that and further studies in analysis of biological data.
-
-If you are enrolled in the course, please read the :ref:`Course policies<Policies>` below. We will not go over them in detail in class, and it is your responsibility to understand them.
-
-
-Useful links
--------------
-
-- `Ed <https://edstem.org/us/courses/7758/>`_ (used for course communications)
-- `Homework solutions <http://bebi103.caltech.edu/2021a_hw_solutions/hw_solutions.html>`_ (password protected)
-
-
-People
-------
-
-- Instructor
-
-   + `Justin Bois <http://bois.caltech.edu/>`_ (`bois at caltech dot edu`)
-
-- TAs
-
-   + Victoria Chen (``vichen AT caltech DOT edu``)
-   + Rosita Fu (``rfu AT caltech DOT edu``)
-   + Nastya Grebin (``agrebin AT caltech DOT edu``)
-   + Matteo Guareschi (``mmguar AT caltech DOT edu``)
-   + Rashi Jeeda (``rjeeda AT caltech DOT edu``)
-   + David Larios (``dalarios AT caltech DOT edu``)
+The bebi103 package provides convenience functions for use in the `BE/Bi 103 ab courses <http://bebi103.caltech.edu/>`_ at `Caltech <http://caltech.edu/>`_.
 
 
 .. toctree::
    :maxdepth: 1
-   :caption: Lessons
+   :caption: Getting started
 
-   lessons/00/index
-   lessons/01/cycle_of_science
-   lessons/02/index
-   lessons/03/index
-   lesson_exercises/exercise_01.ipynb
-   lessons/04/style.ipynb
-   lessons/05/index
-   lessons/06/index
-   lesson_exercises/exercise_02.ipynb
-   lessons/07/index
-   lesson_exercises/exercise_03.ipynb
-   lessons/08/file_formats.ipynb
-   lessons/09/data_storage_and_sharing
-   lessons/10/index
-   lesson_exercises/exercise_04.ipynb
-   lessons/11/index
-   lesson_exercises/exercise_05.ipynb
-   lessons/12/overplotting.ipynb
-   lessons/13/index
-   lessons/14/index
-   lessons/15/random_number_generation.ipynb
-   lessons/16/prob_dists.rst
-   lesson_exercises/exercise_06.ipynb
-   lessons/17/index
-   lessons/18/index
-   lesson_exercises/exercise_07.ipynb
-   lessons/19/index
-   lessons/20/index
-   lesson_exercises/exercise_08.ipynb
-   lessons/21/index
-   lessons/22/index
-   lesson_exercises/exercise_09.ipynb
-   lessons/23/reproducible_workflows.rst
-   lessons/24/paper_of_the_future.rst
-   lessons/25/mixture_models.ipynb
-   lessons/26/index
-   lessons/27/index
+   getting_started/installation
+   getting_started/purpose
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: User guide
+
+   user_guide/using_user_guide.ipynb
+   user_guide/hv.ipynb
+   user_guide/bootstrap.ipynb
+   user_guide/stan.ipynb
+   user_guide/image.ipynb
+   user_guide/api
 
 
 .. toctree::
    :maxdepth: 1
-   :caption: Recitations
+   :caption: Credits and citation
 
-   recitations/01/index
-   recitations/02/git_and_github_tips.ipynb
-   recitations/03/time_series.ipynb
-   recitations/04/manipuluating_dfs.ipynb
-   recitations/05/probability_review.rst
-   recitations/06/index.rst
-   recitations/07/topics_in_bootstrapping.ipynb
-   .. recitations/08/index
-   .. recitations/09/index
+   credits_and_citation.rst
 
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Homework
-
-   homework/00/index
-   homework/01/index
-   homework/02/index
-   homework/03/index
-   homework/04/index
-   homework/05/index
-   homework/06/index
-   homework/07/index
-   homework/08/index
-   .. homework/09/index
-   .. 11. Course feedback <homework/11/hw11.ipynb>
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Schedule
-
-   schedule
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Policies
-
-   policies
-
-
-Previous editions of the course
-------------------------------- 
-
-- `Fall 2020 <http://bebi103.caltech.edu.s3-website-us-east-1.amazonaws.com/2020a/>`_
-- `Fall 2019 <http://bebi103.caltech.edu.s3-website-us-east-1.amazonaws.com/2019a/>`_

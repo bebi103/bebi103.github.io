@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>bebi103.stan.df_to_datadict_hier &mdash; bebi103  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="bebi103.stan.arviz_to_dataframe" href="bebi103.stan.arviz_to_dataframe.html" />
+    <link rel="prev" title="bebi103.stan.cmdstan_version" href="bebi103.stan.cmdstan_version.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #F0F0F0" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> bebi103
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/purpose.html">Purpose and contents</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../using_user_guide.html">Using the user guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hv.html">HoloViews defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bootstrap.html">Bootstrap utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../stan.html">Stan (MCMC) utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../image.html">Image processing utilities</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#holoviews-defaults">HoloViews defaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#visualization">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#bootstrap-methods">Bootstrap methods</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../api.html#stan-utilities">Stan utilities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.clean_cmdstan.html">bebi103.stan.clean_cmdstan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.cmdstan_version.html">bebi103.stan.cmdstan_version</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.stan.df_to_datadict_hier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.arviz_to_dataframe.html">bebi103.stan.arviz_to_dataframe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_divergences.html">bebi103.stan.check_divergences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_treedepth.html">bebi103.stan.check_treedepth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_energy.html">bebi103.stan.check_energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_ess.html">bebi103.stan.check_ess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_rhat.html">bebi103.stan.check_rhat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_all_diagnostics.html">bebi103.stan.check_all_diagnostics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.parse_warning_code.html">bebi103.stan.parse_warning_code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.sbc.html">bebi103.stan.sbc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.disable_logging.html">bebi103.stan.disable_logging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Credits and citation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../credits_and_citation.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../credits_and_citation.html#citing-bebi103">Citing bebi103</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">bebi103</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="https://github.com/justinbois/bebi103">bebi103 repo on GitHub</a></li>
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+        
+        
+            <a href="../../../_sources/user_guide/generated/stan/bebi103.stan.df_to_datadict_hier.rst.txt" rel="nofollow"> View page source</a>
+        
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="bebi103-stan-df-to-datadict-hier">
+<h1>bebi103.stan.df_to_datadict_hier<a class="headerlink" href="#bebi103-stan-df-to-datadict-hier" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="bebi103.stan.df_to_datadict_hier">
+<code class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></code><code class="sig-name descname"><span class="pre">df_to_datadict_hier</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cowardly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.df_to_datadict_hier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a tidy data frame to a data dictionary for a hierarchical
+Stan model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>DataFrame</em>) – A tidy Pandas data frame.</p></li>
+<li><p><strong>level_cols</strong> (<em>list</em>) – A list of column names containing variables that specify the
+level of the hierarchical model. These must be given in order
+of the hierarchy of levels, with the first entry being the
+farthest from the data.</p></li>
+<li><p><strong>data_cols</strong> (<em>list</em>) – A list of column names containing the data.</p></li>
+<li><p><strong>sort_cols</strong> (<em>list</em><em>, </em><em>default</em><em> [</em><em>]</em><em>]</em>) – List of columns names to use in sorting the data. They will be
+first sorted by the level indices, and the subsequently sorted
+according to sort_cols.</p></li>
+<li><p><strong>cowardly</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, refuse to generate new columns if they already exist
+in the data frame. If you run this function using a data frame
+that was outputted previously by this function, you will get an
+error if <cite>cowardly</cite> is True. Otherwise, the columns may be
+overwritten.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul>
+<li><p><strong>data</strong> (<em>dict</em>) – A dictionary that can be passed to into a Stan program. The
+dictionary contains keys/entries:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>’N’</cite>: Total number of data points</p></li>
+<li><p><cite>’J_1’</cite>: Number of hyper parameters for hierarchical level 1.</p></li>
+<li><p><cite>’J_2’</cite>: Number of hyper parameters for hierarchical level 2. … and so on with <cite>‘J_3’</cite>, <cite>‘J_4’</cite>, …</p></li>
+<li><p><cite>’index_1’</cite>: Set of <cite>J_2</cite> indices defining which level 1 parameters condition the level 2 parameters.</p></li>
+<li><p><cite>’index_2’</cite>: Set of <cite>J_3</cite> indices defining which level 2 parameters condition the level 3 parameters. …and so on for ‘index_3’, etc.</p></li>
+<li><p><cite>’index_k’</cite>: Set of <cite>N</cite> indices defining which of the level k parameters condition the data, for a k-level hierarchical model.</p></li>
+<li><p><cite>data_col[0]</cite> : Data from first data_col</p></li>
+<li><p><cite>data_col[1]</cite> : Data from second data_col …and so on.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>df</strong> (<em>DataFrame</em>) – Updated input data frame with added columnes with names given by
+<cite>level_col[0] + ‘_stan’</cite>, <cite>level_col[1] + ‘_stan’</cite>, etc. These
+contain the integer indices that correspond to the possibly
+non-integer values in the <a href="#id1"><span class="problematic" id="id2">`</span></a>level_col`s of the original data
+frame. This enables interpretation of Stan results, which have
+everything integer indexed.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Assumes no missing data.</p>
+<p>The ordering of data sets is not guaranteed. So, e.g., if you
+have time series data, you should use caution.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">io</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">bebi103</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="go">    day,batch,colony,x</span>
+<span class="go">    monday,1,1,9.31</span>
+<span class="go">    monday,1,1,8.35</span>
+<span class="go">    monday,1,1,10.48</span>
+<span class="go">    monday,1,1,9.91</span>
+<span class="go">    monday,1,1,10.43</span>
+<span class="go">    monday,1,2,9.98</span>
+<span class="go">    monday,1,2,9.76</span>
+<span class="go">    monday,1,3,9.30</span>
+<span class="go">    monday,2,1,10.56</span>
+<span class="go">    monday,2,1,11.40</span>
+<span class="go">    monday,2,2,10.36</span>
+<span class="go">    monday,2,2,12.04</span>
+<span class="go">    monday,2,2,9.92</span>
+<span class="go">    monday,2,2,10.10</span>
+<span class="go">    monday,2,2,8.72</span>
+<span class="go">    monday,2,2,10.36</span>
+<span class="go">    monday,2,2,11.56</span>
+<span class="go">    monday,2,2,10.87</span>
+<span class="go">    monday,2,2,10.43</span>
+<span class="go">    monday,2,2,10.67</span>
+<span class="go">    monday,2,2,9.05</span>
+<span class="go">    monday,3,1,10.32</span>
+<span class="go">    monday,3,1,9.07</span>
+<span class="go">    monday,4,1,9.86</span>
+<span class="go">    monday,4,1,9.21</span>
+<span class="go">    monday,4,1,11.36</span>
+<span class="go">    monday,4,2,8.60</span>
+<span class="go">    monday,4,2,10.54</span>
+<span class="go">    monday,4,2,8.93</span>
+<span class="go">    monday,4,2,9.43</span>
+<span class="go">    monday,4,2,9.23</span>
+<span class="go">    monday,4,2,9.66</span>
+<span class="go">    monday,4,2,11.26</span>
+<span class="go">    monday,4,2,9.61</span>
+<span class="go">    monday,4,2,11.99</span>
+<span class="go">    monday,4,2,10.27</span>
+<span class="go">    monday,4,2,9.97</span>
+<span class="go">    monday,4,2,9.37</span>
+<span class="go">    monday,4,2,10.10</span>
+<span class="go">    monday,4,3,10.39</span>
+<span class="go">    monday,4,3,8.79</span>
+<span class="go">    wednesday,1,1,10.76</span>
+<span class="go">    wednesday,1,2,10.72</span>
+<span class="go">    wednesday,1,2,8.97</span>
+<span class="go">    wednesday,1,2,9.14</span>
+<span class="go">    wednesday,1,2,11.31</span>
+<span class="go">    wednesday,1,2,9.49</span>
+<span class="go">    wednesday,1,2,10.21</span>
+<span class="go">    wednesday,1,2,10.04</span>
+<span class="go">    wednesday,2,1,13.16</span>
+<span class="go">    wednesday,2,1,7.07</span>
+<span class="go">    wednesday,2,1,12.74</span>
+<span class="go">    wednesday,3,1,9.45</span>
+<span class="go">    wednesday,3,1,9.62</span>
+<span class="go">    wednesday,3,1,10.46</span>
+<span class="go">    wednesday,3,1,11.11</span>
+<span class="go">    wednesday,3,1,10.56</span>
+<span class="go">    wednesday,3,1,9.93</span>
+<span class="go">    thursday,1,1,8.60</span>
+<span class="go">    thursday,1,2,11.24</span>
+<span class="go">    thursday,1,2,9.10</span>
+<span class="go">    thursday,1,2,9.10</span>
+<span class="go">    thursday,1,2,11.30</span>
+<span class="go">    thursday,1,2,10.65</span>
+<span class="go">    thursday,1,2,9.98</span>
+<span class="go">    thursday,1,2,9.85</span>
+<span class="go">    thursday,1,2,12.41</span>
+<span class="go">    thursday,1,3,10.03</span>
+<span class="go">    thursday,1,3,10.53</span>
+<span class="go">    thursday,1,4,10.85</span>
+<span class="go">    &#39;&#39;&#39;), skipinitialspace=True)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="n">bebi103</span><span class="o">.</span><span class="n">stan</span><span class="o">.</span><span class="n">df_to_datadict_hier</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>
+<span class="go">                            level_cols=[&#39;day&#39;, &#39;batch&#39;, &#39;colony&#39;],</span>
+<span class="go">                            data_cols=[&#39;x&#39;])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span>
+<span class="go">{&#39;N&#39;: 70,</span>
+<span class="go"> &#39;J_1&#39;: 3,</span>
+<span class="go"> &#39;J_2&#39;: 8,</span>
+<span class="go"> &#39;J_3&#39;: 17,</span>
+<span class="go"> &#39;index_1&#39;: array([1, 1, 1, 1, 2, 3, 3, 3]),</span>
+<span class="go"> &#39;index_2&#39;: array([1, 1, 1, 2, 2, 3, 4, 4, 4, 5, 5, 5, 5, 6, 6, 7, 8]),</span>
+<span class="go"> &#39;index_3&#39;: array([ 1,  1,  1,  1,  1,  2,  2,  3,  4,  4,  5,  5,  5,  5,  5,  5,  5,</span>
+<span class="go">         5,  5,  5,  5,  6,  6,  7,  7,  7,  8,  8,  8,  8,  8,  8,  8,  8,</span>
+<span class="go">         8,  8,  8,  8,  8,  9,  9, 10, 11, 11, 11, 11, 11, 11, 11, 11, 12,</span>
+<span class="go">        12, 13, 14, 15, 15, 15, 15, 15, 15, 15, 16, 16, 16, 17, 17, 17, 17,</span>
+<span class="go">        17, 17]),</span>
+<span class="go"> &#39;x&#39;: array([ 9.31,  8.35, 10.48,  9.91, 10.43,  9.98,  9.76,  9.3 , 10.56,</span>
+<span class="go">        11.4 , 10.36, 12.04,  9.92, 10.1 ,  8.72, 10.36, 11.56, 10.87,</span>
+<span class="go">        10.43, 10.67,  9.05, 10.32,  9.07,  9.86,  9.21, 11.36,  8.6 ,</span>
+<span class="go">        10.54,  8.93,  9.43,  9.23,  9.66, 11.26,  9.61, 11.99, 10.27,</span>
+<span class="go">         9.97,  9.37, 10.1 , 10.39,  8.79,  8.6 , 11.24,  9.1 ,  9.1 ,</span>
+<span class="go">        11.3 , 10.65,  9.98,  9.85, 12.41, 10.03, 10.53, 10.85, 10.76,</span>
+<span class="go">        10.72,  8.97,  9.14, 11.31,  9.49, 10.21, 10.04, 13.16,  7.07,</span>
+<span class="go">        12.74,  9.45,  9.62, 10.46, 11.11, 10.56,  9.93])}</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="go">      day  batch  colony      x  day_stan  batch_stan  colony_stan</span>
+<span class="go">0  monday      1       1   9.31         1           1            1</span>
+<span class="go">1  monday      1       1   8.35         1           1            1</span>
+<span class="go">2  monday      1       1  10.48         1           1            1</span>
+<span class="go">3  monday      1       1   9.91         1           1            1</span>
+<span class="go">4  monday      1       1  10.43         1           1            1</span>
+<span class="go">5  monday      1       2   9.98         1           1            2</span>
+<span class="go">6  monday      1       2   9.76         1           1            2</span>
+<span class="go">7  monday      1       3   9.30         1           1            3</span>
+<span class="go">8  monday      2       1  10.56         1           2            4</span>
+<span class="go">9  monday      2       1  11.40         1           2            4</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bebi103.stan.arviz_to_dataframe.html" class="btn btn-neutral float-right" title="bebi103.stan.arviz_to_dataframe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bebi103.stan.cmdstan_version.html" class="btn btn-neutral float-left" title="bebi103.stan.cmdstan_version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">
+        Last updated on Mar 16, 2021.
+      </span>
+
+    </p>
+  </div> <jinja2.runtime.BlockReference object at 0x7fd5e6222670> 
+
+<p>© 2021 Justin Bois.</p>
+
+<p>This document was prepared at <a rel="caltech" href="http://www.caltech.edu">Caltech</a> with financial support from the <a rel="rosen" href="http://rosen.caltech.edu">Donna and Benjamin M. Rosen Bioengineering Center</a>.</p>
+
+<br />
+
+<p>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>.
+
+ 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>
