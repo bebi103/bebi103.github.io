@@ -49,11 +49,6 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../using_user_guide.html">Using the user guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../hv.html">HoloViews defaults</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../bootstrap.html">Bootstrap utilities</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../stan.html">Stan (MCMC) utilities</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../image.html">Image processing utilities</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#holoviews-defaults">HoloViews defaults</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#visualization">Visualization</a></li>
@@ -144,7 +139,7 @@
 <h1>bebi103.stan.sbc<a class="headerlink" href="#bebi103-stan-sbc" title="Permalink to this headline"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.stan.sbc">
-<span class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></span><span class="sig-name descname"><span class="pre">sbc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prior_predictive_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prior_predictive_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data_dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_predictive_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_likelihood_var_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagnostic_check_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_prior_draws_for_sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_sample_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.sbc" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></span><span class="sig-name descname"><span class="pre">sbc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prior_predictive_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prior_predictive_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data_dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_predictive_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_likelihood_var_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagnostic_check_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_prior_draws_for_sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sbc_samples'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_sample_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.sbc" title="Permalink to this definition"></a></dt>
 <dd><p>Perform simulation-based calibration on a Stan Model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -174,15 +169,15 @@ variables, <cite>var_names</cite> only has the root name. E.g.,
 <cite>var_names=[‘x_ppc[0]’, ‘x_ppc[1]’, ‘y_ppc[0,0]’]</cite>.</p></li>
 <li><p><strong>log_likelihood_var_name</strong> (<em>string</em><em>, </em><em>default None</em>) – Name of variable in the Stan model that stores the log
 likelihood. This is ignored in the SBC analysis.</p></li>
-<li><p><strong>measured_data_dtypes</strong> (<em>dict</em><em>, </em><em>default {}</em>) – The key in the dtypes dict is a string representing the data
+<li><p><strong>measured_data_dtypes</strong> (<em>dict</em><em>, </em><em>default None</em>) – The key in the dtypes dict is a string representing the data
 name, and the corresponding item is its dtype, almost always
 either <cite>int</cite> or <cite>float</cite>.</p></li>
-<li><p><strong>sampling_kwargs</strong> (<em>dict</em><em>, </em><em>default {}</em>) – kwargs to be passed to <cite>sm.sample()</cite> for a CmdStanPy model <cite>sm</cite>
+<li><p><strong>sampling_kwargs</strong> (<em>dict</em><em>, </em><em>default None</em>) – kwargs to be passed to <cite>sm.sample()</cite> for a CmdStanPy model <cite>sm</cite>
 or to <cite>sm.sampling()</cite> for a PyStan model <cite>sm</cite>. If using
 CmdStanPy, the ‘output_dir’ kwarg is not allowed because
 unambiguous naming is not possible if new sampling is done
 more than once per minute, given CmdStanPy’s naming convention.</p></li>
-<li><p><strong>diagnostic_check_kwargs</strong> (<em>dict</em><em>, </em><em>default {}</em>) – kwargs to pass to <cite>check_all_diagnostics()</cite>. If <cite>quiet</cite> and/or
+<li><p><strong>diagnostic_check_kwargs</strong> (<em>dict</em><em>, </em><em>default None</em>) – kwargs to pass to <cite>check_all_diagnostics()</cite>. If <cite>quiet</cite> and/or
 <cite>return_diagnostics</cite> are given, they are ignored.
 <cite>max_treedepth</cite> is inferred from <cite>sampling_kwargs</cite>.</p></li>
 <li><p><strong>cores</strong> (<em>int</em><em>, </em><em>default 1</em>) – Number of cores to use in the SBC calculation.</p></li>
@@ -190,6 +185,12 @@ more than once per minute, given CmdStanPy’s naming convention.</p></li>
 <li><p><strong>n_prior_draws_for_sd</strong> (<em>int</em><em>, </em><em>default 1000</em>) – Number of prior draws to compute the prior standard deviation
 for a parameter in the prior distribution. This standard
 deviation is used in the shrinkage calculation.</p></li>
+<li><p><strong>samples_dir</strong> (<em>str</em><em>, </em><em>default &quot;sbc_samples&quot;</em>) – Path to directory to store .csv and .txt files generated by
+CmdStan. If the Stan models are made using PyStan, this is
+ignored; it is only active if using CmdStanPy. The directory
+specified here will NOT be destroyed after a calculation,
+though the files within it may be, depending on the
+<cite>remove_sample_files</cite> kwarg.</p></li>
 <li><p><strong>remove_sample_files</strong> (<em>bool</em><em>, </em><em>default True</em>) – If True, remove .csv and .txt files generated by CmdStan. If
 the Stan models are made using PyStan, this is ignored; it is
 only active if using CmdStanPy.</p></li>
@@ -243,11 +244,11 @@ by Talts, et al., for details.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Dec 22, 2021.
+      <span class="lastupdated">Last updated on Feb 07, 2022.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x7fe302636430> 
+   <jinja2.runtime.BlockReference object at 0x7fa2202bc370> 
 
 <p>© 2021 Justin Bois.</p>
 
