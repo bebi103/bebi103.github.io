@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.viz.predictive_ecdf &mdash; bebi103  documentation</title>
@@ -16,6 +16,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
@@ -64,6 +65,7 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.corner.html">bebi103.viz.corner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.contour_lines_from_samples.html">bebi103.viz.contour_lines_from_samples</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.cdf_to_staircase.html">bebi103.viz.cdf_to_staircase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.viz.q_to_color.html">bebi103.viz.q_to_color</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#bootstrap-methods">Bootstrap methods</a></li>
@@ -135,13 +137,13 @@
 }
 </style>
 <section id="bebi103-viz-predictive-ecdf">
-<h1>bebi103.viz.predictive_ecdf<a class="headerlink" href="#bebi103-viz-predictive-ecdf" title="Permalink to this headline"></a></h1>
+<h1>bebi103.viz.predictive_ecdf<a class="headerlink" href="#bebi103-viz-predictive-ecdf" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.viz.predictive_ecdf">
 <span class="sig-prename descclassname"><span class="pre">bebi103.viz.</span></span><span class="sig-name descname"><span class="pre">predictive_ecdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">percentiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(95,</span> <span class="pre">68)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'blue'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'orange'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_staircase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.viz.predictive_ecdf" title="Permalink to this definition"></a></dt>
 <dd><p>Plot a predictive ECDF from samples.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>samples</strong> (<em>Numpy array</em><em> or </em><em>xarray</em><em>, </em><em>shape</em><em> (</em><em>n_samples</em><em>, </em><em>n</em><em>) or </em><em>xarray DataArray</em>) – A Numpy array containing predictive samples.</p></li>
 <li><p><strong>data</strong> (<em>Numpy array</em><em>, </em><em>shape</em><em> (</em><em>n</em><em>,</em><em>) or </em><em>xarray DataArray</em><em>, or </em><em>None</em>) – If not None, ECDF of measured data is overlaid with predictive
@@ -170,13 +172,13 @@ figure <cite>p</cite>.</p></li>
 <li><p><strong>kwargs</strong> – All other kwargs are passed to bokeh.plotting.figure().</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>output</strong> – Figure populated with glyphs describing range of values for the
 ECDF of the samples. The shading goes according to percentiles
 of samples of the ECDF, with the median ECDF plotted as line in
 the middle.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Bokeh figure</p>
 </dd>
 </dl>
@@ -196,11 +198,11 @@ the middle.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Feb 07, 2022.
+      <span class="lastupdated">Last updated on Sep 23, 2022.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x7fa21dfa0520> 
+   <jinja2.runtime.BlockReference object at 0x7fee1a8bc070> 
 
 <p>© 2021 Justin Bois.</p>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.bootstrap.draw_bs_reps_mle &mdash; bebi103  documentation</title>
@@ -16,6 +16,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
@@ -131,13 +132,13 @@
 }
 </style>
 <section id="bebi103-bootstrap-draw-bs-reps-mle">
-<h1>bebi103.bootstrap.draw_bs_reps_mle<a class="headerlink" href="#bebi103-bootstrap-draw-bs-reps-mle" title="Permalink to this headline"></a></h1>
+<h1>bebi103.bootstrap.draw_bs_reps_mle<a class="headerlink" href="#bebi103-bootstrap-draw-bs-reps-mle" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.bootstrap.draw_bs_reps_mle">
 <span class="sig-prename descclassname"><span class="pre">bebi103.bootstrap.</span></span><span class="sig-name descname"><span class="pre">draw_bs_reps_mle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mle_fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mle_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.bootstrap.draw_bs_reps_mle" title="Permalink to this definition"></a></dt>
 <dd><p>Draw bootstrap replicates of maximum likelihood estimator.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mle_fun</strong> (<em>function</em>) – Function with call signature <cite>mle_fun(data, *mle_args)</cite> that
 computes a MLE for the parameters.</p></li>
@@ -161,10 +162,10 @@ should have shape (n, 2).</p></li>
 Numpy RNG is used with a fresh seed based on the clock.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>output</strong> – Bootstrap replicates of MLEs.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>numpy array</p>
 </dd>
 </dl>
@@ -184,11 +185,11 @@ Numpy RNG is used with a fresh seed based on the clock.</p></li>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Feb 07, 2022.
+      <span class="lastupdated">Last updated on Sep 23, 2022.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x7fa21df7e400> 
+   <jinja2.runtime.BlockReference object at 0x7fee3ab9b9a0> 
 
 <p>© 2021 Justin Bois.</p>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.gp.append_sort_index &mdash; bebi103  documentation</title>
@@ -16,6 +16,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
@@ -139,7 +140,7 @@
 }
 </style>
 <section id="bebi103-gp-append-sort-index">
-<h1>bebi103.gp.append_sort_index<a class="headerlink" href="#bebi103-gp-append-sort-index" title="Permalink to this headline"></a></h1>
+<h1>bebi103.gp.append_sort_index<a class="headerlink" href="#bebi103-gp-append-sort-index" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.gp.append_sort_index">
 <span class="sig-prename descclassname"><span class="pre">bebi103.gp.</span></span><span class="sig-name descname"><span class="pre">append_sort_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Xstar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.gp.append_sort_index" title="Permalink to this definition"></a></dt>
@@ -148,7 +149,7 @@ in the results where the entries in X appear. Typically, Xstar is
 an array of x-values for which a GP is to be coputed and X is an
 array of x-values for which there are data.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Xstar</strong> (<em>array</em><em>, </em><em>shape</em><em> (</em><em>n</em><em>,</em><em>) or </em><em>(</em><em>n</em><em>, </em><em>d</em><em>)</em>) – Array whose unique, sorted entries are returned.</p></li>
 <li><p><strong>X</strong> (<em>array</em><em>, </em><em>shape</em><em> (</em><em>m</em><em>,</em><em>) or </em><em>(</em><em>m</em><em>, </em><em>d</em><em>)</em>) – Array to be added to Xstar and whose entries have their indices
@@ -156,7 +157,7 @@ returned.</p></li>
 <li><p><strong>index_origin</strong> (<em>int</em><em>, </em><em>default 0</em>) – Origin of indexing. Choose <cite>index_origin=1</cite> for use with Stan.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>X_out</strong> (<em>array, 1D if X is shape (n,), 2D if X is shape (n, d)</em>) – Sorted, unique entries of concatenation of Xstar and X.</p></li>
 <li><p><strong>inds</strong> (<em>array, shape (n,)</em>) – Array of indices such that X_out[inds] = X.</p></li>
@@ -180,11 +181,11 @@ returned.</p></li>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Feb 07, 2022.
+      <span class="lastupdated">Last updated on Sep 23, 2022.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x7fa21e95beb0> 
+   <jinja2.runtime.BlockReference object at 0x7fee5a668bb0> 
 
 <p>© 2021 Justin Bois.</p>
 

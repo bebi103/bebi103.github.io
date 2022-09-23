@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.viz.confints &mdash; bebi103  documentation</title>
@@ -16,6 +16,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
@@ -64,6 +65,7 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.corner.html">bebi103.viz.corner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.contour_lines_from_samples.html">bebi103.viz.contour_lines_from_samples</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.cdf_to_staircase.html">bebi103.viz.cdf_to_staircase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.viz.q_to_color.html">bebi103.viz.q_to_color</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#bootstrap-methods">Bootstrap methods</a></li>
@@ -135,13 +137,13 @@
 }
 </style>
 <section id="bebi103-viz-confints">
-<h1>bebi103.viz.confints<a class="headerlink" href="#bebi103-viz-confints" title="Permalink to this headline"></a></h1>
+<h1>bebi103.viz.confints<a class="headerlink" href="#bebi103-viz-confints" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.viz.confints">
 <span class="sig-prename descclassname"><span class="pre">bebi103.viz.</span></span><span class="sig-name descname"><span class="pre">confints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">summaries</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marker_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">palette</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.viz.confints" title="Permalink to this definition"></a></dt>
 <dd><p>Make a horizontal plot of centers/conf ints with error bars.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>summaries</strong> (<em>list of dicts</em>) – Each entry in <cite>summaries</cite> is a dictionary containing minimally
 keys ‘estimate’, ‘conf_int’, and ‘label’.  The ‘estimate’ value
@@ -162,10 +164,10 @@ accordingly, e.g., ‘black’. Otherwise a list of colors is used.</p></li>
 <li><p><strong>kwargs</strong> (<em>dict</em>) – Any additional kwargs are passed to bokeh.plotting.figure().</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>output</strong> – Plot of error bars.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Bokeh figure</p>
 </dd>
 </dl>
@@ -185,11 +187,11 @@ accordingly, e.g., ‘black’. Otherwise a list of colors is used.</p></li>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Feb 07, 2022.
+      <span class="lastupdated">Last updated on Sep 23, 2022.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x7fa21eaf5eb0> 
+   <jinja2.runtime.BlockReference object at 0x7fee1bb28ca0> 
 
 <p>© 2021 Justin Bois.</p>
 

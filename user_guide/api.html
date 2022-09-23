@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>API Reference &mdash; bebi103  documentation</title>
@@ -16,6 +16,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
@@ -69,6 +70,7 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.corner.html">bebi103.viz.corner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.contour_lines_from_samples.html">bebi103.viz.contour_lines_from_samples</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.cdf_to_staircase.html">bebi103.viz.cdf_to_staircase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.q_to_color.html">bebi103.viz.q_to_color</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#bootstrap-methods">Bootstrap methods</a><ul>
@@ -195,14 +197,10 @@
 }
 </style>
 <section id="api-reference">
-<span id="api"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline"></a></h1>
+<span id="api"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this heading"></a></h1>
 <section id="holoviews-defaults">
-<h2>HoloViews defaults<a class="headerlink" href="#holoviews-defaults" title="Permalink to this headline"></a></h2>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<h2>HoloViews defaults<a class="headerlink" href="#holoviews-defaults" title="Permalink to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/hv/bebi103.hv.set_defaults.html#bebi103.hv.set_defaults" title="bebi103.hv.set_defaults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_defaults</span></code></a></p></td>
 <td><p>Set convenient HoloViews defaults</p></td>
@@ -217,12 +215,8 @@
 </table>
 </section>
 <section id="visualization">
-<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline"></a></h2>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.confints.html#bebi103.viz.confints" title="bebi103.viz.confints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">confints</span></code></a></p></td>
 <td><p>Make a horizontal plot of centers/conf ints with error bars.</p></td>
@@ -260,16 +254,15 @@
 <tr class="row-even"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.cdf_to_staircase.html#bebi103.viz.cdf_to_staircase" title="bebi103.viz.cdf_to_staircase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cdf_to_staircase</span></code></a></p></td>
 <td><p>Convert discrete values of CDF to staircase for plotting.</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.q_to_color.html#bebi103.viz.q_to_color" title="bebi103.viz.q_to_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">q_to_color</span></code></a></p></td>
+<td><p>Convert a quantitative value to a color.</p></td>
+</tr>
 </tbody>
 </table>
 </section>
 <section id="bootstrap-methods">
-<h2>Bootstrap methods<a class="headerlink" href="#bootstrap-methods" title="Permalink to this headline"></a></h2>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<h2>Bootstrap methods<a class="headerlink" href="#bootstrap-methods" title="Permalink to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.seed_rng.html#bebi103.bootstrap.seed_rng" title="bebi103.bootstrap.seed_rng"><code class="xref py py-obj docutils literal notranslate"><span class="pre">seed_rng</span></code></a></p></td>
 <td><p>Seed random number generators for Numpy and Numba'd functions.</p></td>
@@ -299,12 +292,8 @@
 </table>
 </section>
 <section id="stan-utilities">
-<h2>Stan utilities<a class="headerlink" href="#stan-utilities" title="Permalink to this headline"></a></h2>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<h2>Stan utilities<a class="headerlink" href="#stan-utilities" title="Permalink to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.clean_cmdstan.html#bebi103.stan.clean_cmdstan" title="bebi103.stan.clean_cmdstan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clean_cmdstan</span></code></a></p></td>
 <td><p>Remove all .hpp, .o, .d, and executable files resulting from compilation of Stan models using CmdStanPy.</p></td>
@@ -349,12 +338,8 @@
 </table>
 </section>
 <section id="gaussian-process-utilities">
-<h2>Gaussian process utilities<a class="headerlink" href="#gaussian-process-utilities" title="Permalink to this headline"></a></h2>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<h2>Gaussian process utilities<a class="headerlink" href="#gaussian-process-utilities" title="Permalink to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.append_sort_index.html#bebi103.gp.append_sort_index" title="bebi103.gp.append_sort_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">append_sort_index</span></code></a></p></td>
 <td><p>Add the entries of X to Xstar, sort the result, and find indices in the results where the entries in X appear.</p></td>
@@ -408,12 +393,8 @@
 </table>
 </section>
 <section id="image-processing-utilities">
-<h2>Image processing utilities<a class="headerlink" href="#image-processing-utilities" title="Permalink to this headline"></a></h2>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<h2>Image processing utilities<a class="headerlink" href="#image-processing-utilities" title="Permalink to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/image/bebi103.image.imshow.html#bebi103.image.imshow" title="bebi103.image.imshow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imshow</span></code></a></p></td>
 <td><p>Display an image in a Bokeh figure.</p></td>
@@ -462,11 +443,11 @@
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Feb 07, 2022.
+      <span class="lastupdated">Last updated on Sep 23, 2022.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x7fa1feaf8250> 
+   <jinja2.runtime.BlockReference object at 0x7fee1b9c6fd0> 
 
 <p>© 2021 Justin Bois.</p>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.gp.posterior_mean_cov &mdash; bebi103  documentation</title>
@@ -16,6 +16,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
@@ -139,15 +140,15 @@
 }
 </style>
 <section id="bebi103-gp-posterior-mean-cov">
-<h1>bebi103.gp.posterior_mean_cov<a class="headerlink" href="#bebi103-gp-posterior-mean-cov" title="Permalink to this headline"></a></h1>
+<h1>bebi103.gp.posterior_mean_cov<a class="headerlink" href="#bebi103-gp-posterior-mean-cov" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.gp.posterior_mean_cov">
-<span class="sig-prename descclassname"><span class="pre">bebi103.gp.</span></span><span class="sig-name descname"><span class="pre">posterior_mean_cov</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">X</span></em>, <em class="sig-param"><span class="pre">y</span></em>, <em class="sig-param"><span class="pre">Xstar</span></em>, <em class="sig-param"><span class="pre">sigma</span></em>, <em class="sig-param"><span class="pre">kernel=&lt;function</span> <span class="pre">se_kernel&gt;</span></em>, <em class="sig-param"><span class="pre">include_deriv=False</span></em>, <em class="sig-param"><span class="pre">delta=1e-08</span></em>, <em class="sig-param"><span class="pre">**kernel_hyperparams</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.gp.posterior_mean_cov" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bebi103.gp.</span></span><span class="sig-name descname"><span class="pre">posterior_mean_cov</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Xstar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel=&lt;function</span> <span class="pre">se_kernel&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_deriv=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta=1e-08</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kernel_hyperparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.gp.posterior_mean_cov" title="Permalink to this definition"></a></dt>
 <dd><p>Compute the posterior mean vector and covariance matrix for a
 posterior Gaussian process derived from a Normal likelihood and
 Gaussian process prior.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>X</strong> (<em>1D</em><em>, </em><em>shape</em><em> (</em><em>n</em><em>,</em><em>) or </em><em>2D array</em><em>, </em><em>shape</em><em> (</em><em>n</em><em>, </em><em>d</em><em>)</em>) – Array of n data points for which observations were made. If a 1D
 array, assume the points are one-dimensional. If a 2D array,
@@ -169,7 +170,7 @@ to ensure numerical positive definiteness.</p></li>
 function.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>m</strong> (<em>array, shape (nstar,)</em>) – The mean function of the Gaussian process posterior evaluated at
 the points given by <cite>Xstar</cite>.</p></li>
@@ -203,11 +204,11 @@ returned if <cite>include_deriv</cite> is True.</p></li>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Feb 07, 2022.
+      <span class="lastupdated">Last updated on Sep 23, 2022.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x7fa21df470d0> 
+   <jinja2.runtime.BlockReference object at 0x7fee3a7d2610> 
 
 <p>© 2021 Justin Bois.</p>
 

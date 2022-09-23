@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.stan.parse_warning_code &mdash; bebi103  documentation</title>
@@ -16,6 +16,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
@@ -136,14 +137,14 @@
 }
 </style>
 <section id="bebi103-stan-parse-warning-code">
-<h1>bebi103.stan.parse_warning_code<a class="headerlink" href="#bebi103-stan-parse-warning-code" title="Permalink to this headline"></a></h1>
+<h1>bebi103.stan.parse_warning_code<a class="headerlink" href="#bebi103-stan-parse-warning-code" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.stan.parse_warning_code">
 <span class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></span><span class="sig-name descname"><span class="pre">parse_warning_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warning_code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.parse_warning_code" title="Permalink to this definition"></a></dt>
 <dd><p>Parses warning code from <cite>check_all_diagnostics()</cite> into
 individual failures and prints results.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>warning_code</strong> (<em>int</em>) – <p>When converted to binary, each digit in the code stands for
 whether or not a test passed. A digit of zero indicates the test
@@ -162,12 +163,12 @@ of 01100, which means that R-hat and divergences tests failed.</p>
 <li><p><strong>return_dict</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, return a dictionary of containing test passage info.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>output</strong> – If <cite>return_dict</cite> is True, returns a dictionary where each entry
 is True is the respective diagnostic check was passed and False
 if it was not.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
@@ -187,11 +188,11 @@ if it was not.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Feb 07, 2022.
+      <span class="lastupdated">Last updated on Sep 23, 2022.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x7fa225ec45e0> 
+   <jinja2.runtime.BlockReference object at 0x7fee1b7d65b0> 
 
 <p>© 2021 Justin Bois.</p>
 
