@@ -33,11 +33,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #F0F0F0" >
-            <a href="../../../index.html" class="icon icon-home"> bebi103
+
+          
+          
+          <a href="../../../index.html">
+            
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -50,6 +54,11 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../using_user_guide.html">Using the user guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hv.html">HoloViews defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bootstrap.html">Bootstrap utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../stan.html">Stan (MCMC) utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../image.html">Image processing utilities</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#holoviews-defaults">HoloViews defaults</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#visualization">Visualization</a></li>
@@ -112,31 +121,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<section id="bebi103-stan-df-to-datadict-hier">
+  <section id="bebi103-stan-df-to-datadict-hier">
 <h1>bebi103.stan.df_to_datadict_hier<a class="headerlink" href="#bebi103-stan-df-to-datadict-hier" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.stan.df_to_datadict_hier">
@@ -270,10 +255,10 @@ have time series data, you should use caution.</p>
 <span class="go">    thursday,1,3,10.53</span>
 <span class="go">    thursday,1,4,10.85</span>
 <span class="go">    &#39;&#39;&#39;), skipinitialspace=True)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="n">bebi103</span><span class="o">.</span><span class="n">stan</span><span class="o">.</span><span class="n">df_to_datadict_hier</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">data, df = bebi103.stan.df_to_datadict_hier(df,</span>
 <span class="go">                            level_cols=[&#39;day&#39;, &#39;batch&#39;, &#39;colony&#39;],</span>
 <span class="go">                            data_cols=[&#39;x&#39;])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">data</span>
 <span class="go">{&#39;N&#39;: 70,</span>
 <span class="go"> &#39;J_1&#39;: 3,</span>
 <span class="go"> &#39;J_2&#39;: 8,</span>
@@ -325,11 +310,11 @@ have time series data, you should use caution.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Sep 23, 2022.
+      <span class="lastupdated">Last updated on Aug 06, 2023.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x7fee1b7c3910> 
+   <jinja2.runtime.BlockReference object at 0x12e22bf50> 
 
 <p>© 2021 Justin Bois.</p>
 

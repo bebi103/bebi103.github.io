@@ -33,11 +33,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #F0F0F0" >
-            <a href="../index.html" class="icon icon-home"> bebi103
+
+          
+          
+          <a href="../index.html">
+            
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -53,6 +57,11 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/using_user_guide.html">Using the user guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hv.html">HoloViews defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/bootstrap.html">Bootstrap utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/stan.html">Stan (MCMC) utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/image.html">Image processing utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/api.html">API Reference</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Credits and citation</span></p>
@@ -92,31 +101,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<section id="installation">
+  <section id="installation">
 <span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
 <p>You can install bebi103 using pip.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install --upgrade bebi103
@@ -126,16 +111,16 @@
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h2>
 <p>bebi103 has the following dependencies.</p>
 <ul class="simple">
-<li><p>Python 3.6 or newer</p></li>
+<li><p>Python 3.9 or newer</p></li>
 <li><p><a class="reference external" href="http://www.numpy.org/">NumPy</a></p></li>
 <li><p><a class="reference external" href="http://www.scipy.org/">SciPy</a></p></li>
 <li><p><a class="reference external" href="http://pandas.pydata.org/">Pandas</a></p></li>
 <li><p><a class="reference external" href="http://numba.pydata.org/">Numba</a></p></li>
 <li><p><a class="reference external" href="https://tqdm.github.io/">tqdm</a></p></li>
-<li><p><a class="reference external" href="https://cmdstanpy.readthedocs.io/">CmdStanPy</a> 0.9.0 or higher</p></li>
+<li><p><a class="reference external" href="https://cmdstanpy.readthedocs.io/">CmdStanPy</a> 1.0.0 or higher</p></li>
 <li><p><a class="reference external" href="http://xarray.pydata.org/">xarray</a></p></li>
-<li><p><a class="reference external" href="https://arviz-devs.github.io/arviz/">ArviZ</a> 0.9.0 or higher</p></li>
-<li><p><a class="reference external" href="https://docs.bokeh.org/">Bokeh</a></p></li>
+<li><p><a class="reference external" href="https://arviz-devs.github.io/arviz/">ArviZ</a> 0.16.0 or higher</p></li>
+<li><p><a class="reference external" href="https://docs.bokeh.org/">Bokeh</a> 3.0.0 or higher</p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/">Matplotlib</a></p></li>
 <li><p><a class="reference external" href="https://colorcet.holoviz.org/">colorcet</a></p></li>
 <li><p><a class="reference external" href="http://holoviews.org/">HoloViews</a></p></li>
@@ -156,11 +141,11 @@
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Sep 23, 2022.
+      <span class="lastupdated">Last updated on Aug 06, 2023.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x7fee5a61c5e0> 
+   <jinja2.runtime.BlockReference object at 0x12ea0fdd0> 
 
 <p>© 2021 Justin Bois.</p>
 
