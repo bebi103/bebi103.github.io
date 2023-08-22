@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.stan.check_ess &mdash; bebi103  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -121,14 +120,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="bebi103-stan-check-ess">
+  <div class="section" id="bebi103-stan-check-ess">
 <h1>bebi103.stan.check_ess<a class="headerlink" href="#bebi103-stan-check-ess" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.stan.check_ess">
 <span class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></span><span class="sig-name descname"><span class="pre">check_ess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_ess_rule_of_thumb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fractional_ess_rule_of_thumb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_diagnostics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.check_ess" title="Permalink to this definition"></a></dt>
 <dd><p>Checks the effective sample size (ESS).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>samples</strong> (<em>ArviZ InferenceData instance</em>) – Contains samples to be checked. Must contain both <cite>posterior</cite>
 and <cite>sample_stats</cite>.</p></li>
@@ -147,7 +146,7 @@ of effective samples tests. Otherwise, only return Boolean if
 the test passed.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>passed</strong> (<em>bool</em>) – Return True if test passed. Return False otherwise.</p></li>
 <li><p><strong>ess_diagnostics</strong> (<em>DataFrame</em>) – Data frame with information about problematic ESS.</p></li>
@@ -161,7 +160,7 @@ the test passed.</p></li>
 <p>Vehtari, et al., 2019, <a class="reference external" href="https://arxiv.org/abs/1903.08008">https://arxiv.org/abs/1903.08008</a>.</p>
 </dd></dl>
 
-</section>
+</div>
 
 
            </div>
@@ -175,11 +174,11 @@ the test passed.</p></li>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Aug 06, 2023.
+      <span class="lastupdated">Last updated on Aug 22, 2023.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x12db5b8d0> 
+   <jinja2.runtime.BlockReference object at 0x171f55890> 
 
 <p>© 2021 Justin Bois.</p>
 

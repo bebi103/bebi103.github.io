@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.viz.contour &mdash; bebi103  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -121,51 +120,55 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="bebi103-viz-contour">
+  <div class="section" id="bebi103-viz-contour">
 <h1>bebi103.viz.contour<a class="headerlink" href="#bebi103-viz-contour" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.viz.contour">
-<span class="sig-prename descclassname"><span class="pre">bebi103.viz.</span></span><span class="sig-name descname"><span class="pre">contour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlaid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlay_grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_palette</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.viz.contour" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bebi103.viz.</span></span><span class="sig-name descname"><span class="pre">contour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density_levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlaid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlay_grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visual_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.viz.contour" title="Permalink to this definition"></a></dt>
 <dd><p>Make a contour plot, possibly overlaid on an image.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>X</strong> (<em>1D</em><em> or </em><em>2D Numpy array</em>) – If 1D, array of x-values. If 2D, array of x-values as would be
 produced using np.meshgrid().</p></li>
 <li><p><strong>Y</strong> (<em>1D</em><em> or </em><em>2D Numpy array</em>) – If 1D, array of y-values. If 2D, array of y-values as would be
 produced using np.meshgrid().</p></li>
 <li><p><strong>Z</strong> (<em>2D Numpy array</em>) – Array of z-values.</p></li>
-<li><p><strong>levels</strong> (<em>array_like</em>) – Levels to plot, ranging from 0 to 1. The contour around a given
+<li><p><strong>levels</strong> (<em>array_like</em><em> or </em><em>None</em>) – If given, absolute levels for contours. If given,
+<cite>density_levels</cite> must be None. If None, defers to
+<cite>density_levels</cite>.</p></li>
+<li><p><strong>density_levels</strong> (<em>array_like</em><em> or </em><em>None</em>) – Levels to plot, ranging from 0 to 1. The contour around a given
 level contains that fraction of the total probability if the
-contour plot is for a 2D probability density function. By
-default, the levels are given by the one, two, three, and four
+contour plot is for a 2D probability density function. If
+None, the levels are given by the one, two, three, and four
 sigma levels corresponding to a marginalized distribution from
-a 2D Gaussian distribution.</p></li>
+a 2D Gaussian distribution. <cite>levels</cite> must be None if
+<cite>density_levels</cite> is specified.</p></li>
 <li><p><strong>p</strong> (<em>bokeh plotting object</em><em>, </em><em>default None</em>) – If not None, the contour are added to <cite>p</cite>. This option is not
 allowed if <cite>overlaid</cite> is True.</p></li>
-<li><p><strong>overlaid</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, <cite>Z</cite> is displayed as an image and the contours are
-overlaid.</p></li>
-<li><p><strong>cmap</strong> (<em>str</em><em> or </em><em>list of hex colors</em><em>, </em><em>default None</em>) – If <cite>im</cite> is an intensity image, <cite>cmap</cite> is a mapping of
-intensity to color. If None, default is 256-level Viridis.
-If <cite>im</cite> is a color image, then <cite>cmap</cite> can either be
-‘rgb’ or ‘cmy’ (default), for RGB or CMY merge of channels.</p></li>
+<li><p><strong>overlaid</strong> (<em>str</em><em> (</em><em>'image'</em><em>, </em><em>'fill'</em><em>) or </em><em>None</em><em>, </em><em>default None</em>) – If ‘image’, the contours are overlaid on <cite>Z</cite> as an image. If
+‘fill’, then the spaces between the contour are filled. If None,
+only contour lines are plotted.</p></li>
+<li><p><strong>cmap</strong> (<em>str</em><em> or </em><em>list of hex colors</em><em>, </em><em>default None</em>) – Colormap to apply to image if <cite>overlaid</cite> is ‘image’.
+If None, default is 256-level Viridis.</p></li>
 <li><p><strong>overlay_grid</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, faintly overlay the grid on top of image. Ignored if
 overlaid is False.</p></li>
-<li><p><strong>line_kwargs</strong> (<em>dict</em><em>, </em><em>default None</em>) – Keyword arguments passed to <cite>p.multiline()</cite> for rendering the
-contour.</p></li>
+<li><p><strong>visual_kwargs</strong> (<em>dict</em><em>, </em><em>default None</em>) – Keyword arguments passed to <cite>p.contour()</cite> for rendering the
+contour. If None, prudent defaults are chosen.</p></li>
 <li><p><strong>kwargs</strong> – Any kwargs to be passed to <cite>bokeh.plotting.figure()</cite>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>output</strong> – Plot populated with contours, possible with an image.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>Bokeh plotting object</p>
 </dd>
 </dl>
+<p class="rubric">Notes</p>
 </dd></dl>
 
-</section>
+</div>
 
 
            </div>
@@ -179,11 +182,11 @@ contour.</p></li>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Aug 06, 2023.
+      <span class="lastupdated">Last updated on Aug 22, 2023.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x12e1a3890> 
+   <jinja2.runtime.BlockReference object at 0x1714b6bd0> 
 
 <p>© 2021 Justin Bois.</p>
 

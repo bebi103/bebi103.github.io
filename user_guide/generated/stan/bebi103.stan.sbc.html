@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.stan.sbc &mdash; bebi103  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -121,14 +120,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="bebi103-stan-sbc">
+  <div class="section" id="bebi103-stan-sbc">
 <h1>bebi103.stan.sbc<a class="headerlink" href="#bebi103-stan-sbc" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.stan.sbc">
 <span class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></span><span class="sig-name descname"><span class="pre">sbc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prior_predictive_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prior_predictive_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data_dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_predictive_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_likelihood_var_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagnostic_check_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_prior_draws_for_sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sbc_samples'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_sample_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.sbc" title="Permalink to this definition"></a></dt>
 <dd><p>Perform simulation-based calibration on a Stan Model.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>prior_predictive_model</strong> (<em>pystan.model.StanModel</em>) – A Stan model for generating prior predictive data sets.</p></li>
 <li><p><strong>posterior_model</strong> (<em>pystan.model.StanModel</em>) – A Stan model of the posterior that allows sampling.</p></li>
@@ -183,7 +182,7 @@ only active if using CmdStanPy.</p></li>
 <li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, display a progress bar for the calculation using tqdm.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p><p><strong>output</strong> – A Pandas DataFrame with the output of the SBC analysis. It has
 the following columns.</p>
 <blockquote>
@@ -202,7 +201,7 @@ the following columns.</p>
 </div></blockquote>
 </p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>Pandas DataFrame</p>
 </dd>
 </dl>
@@ -216,7 +215,7 @@ over its L possible values. See <a class="reference external" href="https://arxi
 by Talts, et al., for details.</p>
 </dd></dl>
 
-</section>
+</div>
 
 
            </div>
@@ -230,11 +229,11 @@ by Talts, et al., for details.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Aug 06, 2023.
+      <span class="lastupdated">Last updated on Aug 22, 2023.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x12de196d0> 
+   <jinja2.runtime.BlockReference object at 0x17112d0d0> 
 
 <p>© 2021 Justin Bois.</p>
 

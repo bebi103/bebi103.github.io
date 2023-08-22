@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.viz.sbc_rank_ecdf &mdash; bebi103  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -121,14 +120,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="bebi103-viz-sbc-rank-ecdf">
+  <div class="section" id="bebi103-viz-sbc-rank-ecdf">
 <h1>bebi103.viz.sbc_rank_ecdf<a class="headerlink" href="#bebi103-viz-sbc-rank-ecdf" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.viz.sbc_rank_ecdf">
 <span class="sig-prename descclassname"><span class="pre">bebi103.viz.</span></span><span class="sig-name descname"><span class="pre">sbc_rank_ecdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sbc_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ptile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">99.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bootstrap_envelope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bs_reps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_envelope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_envelope_line</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_by_warning_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staircase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marker_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">envelope_patch_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">envelope_line_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">palette</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_legend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.viz.sbc_rank_ecdf" title="Permalink to this definition"></a></dt>
 <dd><p>Make a rank ECDF plot from simulation-based calibration.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sbc_output</strong> (<em>DataFrame</em>) – Output of bebi103.stan.sbc() containing results from an SBC
 calculation.</p></li>
@@ -170,10 +169,10 @@ colorcet.b_glasbey_category10 from the colorcet package.</p></li>
 plot.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>output</strong> – A plot containing the SBC plot.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>bokeh.plotting.Figure instance</p>
 </dd>
 </dl>
@@ -182,7 +181,7 @@ plot.</p></li>
 paper: <a class="reference external" href="https://arxiv.org/abs/1804.06788">https://arxiv.org/abs/1804.06788</a></p>
 </dd></dl>
 
-</section>
+</div>
 
 
            </div>
@@ -196,11 +195,11 @@ paper: <a class="reference external" href="https://arxiv.org/abs/1804.06788">htt
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Aug 06, 2023.
+      <span class="lastupdated">Last updated on Aug 22, 2023.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x12f4b4b10> 
+   <jinja2.runtime.BlockReference object at 0x1709ab3d0> 
 
 <p>© 2021 Justin Bois.</p>
 

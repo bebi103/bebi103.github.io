@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.stan.arviz_to_dataframe &mdash; bebi103  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -121,7 +120,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="bebi103-stan-arviz-to-dataframe">
+  <div class="section" id="bebi103-stan-arviz-to-dataframe">
 <h1>bebi103.stan.arviz_to_dataframe<a class="headerlink" href="#bebi103-stan-arviz-to-dataframe" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.stan.arviz_to_dataframe">
@@ -134,7 +133,7 @@ and <cite>‘A[1,1]’</cite>.</p>
 <p>Only divergence information, chain ID, and draw number (not
 additional sampling stats) are stored in the data frame.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>ArviZ InferenceData instance</em>) – Results from MCMC sampling to convert to a data frame. It must
 have a <cite>posterior</cite> attribute, and it should have a
@@ -149,20 +148,20 @@ the list may include: ‘lp’, ‘accept_stat’, ‘stepsize’,
 ‘treedepth’, ‘n_leapfrog’, ‘diverging’, and ‘energy’.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>output</strong> – DataFrame with posterior samples and diagnostics. The column
 names of all diagnostics, as well as ‘chain’ and ‘draw’, are
 appended with a double-underscore (<cite>__</cite>) to signify that they
 are not samples out of the posterior, but rather metadata about
 a sample.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>Pandas DataFrame</p>
 </dd>
 </dl>
 </dd></dl>
 
-</section>
+</div>
 
 
            </div>
@@ -176,11 +175,11 @@ a sample.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Aug 06, 2023.
+      <span class="lastupdated">Last updated on Aug 22, 2023.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x12f67fa50> 
+   <jinja2.runtime.BlockReference object at 0x1703aaad0> 
 
 <p>© 2021 Justin Bois.</p>
 

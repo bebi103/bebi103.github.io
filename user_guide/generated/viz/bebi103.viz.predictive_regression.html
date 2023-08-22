@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.viz.predictive_regression &mdash; bebi103  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -121,14 +120,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="bebi103-viz-predictive-regression">
+  <div class="section" id="bebi103-viz-predictive-regression">
 <h1>bebi103.viz.predictive_regression<a class="headerlink" href="#bebi103-viz-predictive-regression" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.viz.predictive_regression">
 <span class="sig-prename descclassname"><span class="pre">bebi103.viz.</span></span><span class="sig-name descname"><span class="pre">predictive_regression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">percentiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[95,</span> <span class="pre">68]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'blue'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.viz.predictive_regression" title="Permalink to this definition"></a></dt>
 <dd><p>Plot a predictive regression plot from samples.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>samples</strong> (<em>Numpy array</em><em>, </em><em>shape</em><em> (</em><em>n_samples</em><em>, </em><em>n_x</em><em>) or </em><em>xarray DataArray</em>) – Numpy array containing predictive samples of y-values.</p></li>
 <li><p><strong>sample_x</strong> (<em>Numpy array</em><em>, </em><em>shape</em><em> (</em><em>n_x</em><em>,</em><em>)</em>) – </p></li>
@@ -150,18 +149,18 @@ figure <cite>p</cite>.</p></li>
 <li><p><strong>kwargs</strong> – All other kwargs are passed to bokeh.plotting.figure().</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>output</strong> – Figure populated with glyphs describing range of values for the
 the samples. The shading goes according to percentiles of
 samples, with the median plotted as line in the middle.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>Bokeh figure</p>
 </dd>
 </dl>
 </dd></dl>
 
-</section>
+</div>
 
 
            </div>
@@ -175,11 +174,11 @@ samples, with the median plotted as line in the middle.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Aug 06, 2023.
+      <span class="lastupdated">Last updated on Aug 22, 2023.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x12d5fee10> 
+   <jinja2.runtime.BlockReference object at 0x171c71290> 
 
 <p>© 2021 Justin Bois.</p>
 

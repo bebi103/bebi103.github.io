@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.stan.check_energy &mdash; bebi103  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -121,14 +120,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="bebi103-stan-check-energy">
+  <div class="section" id="bebi103-stan-check-energy">
 <h1>bebi103.stan.check_energy<a class="headerlink" href="#bebi103-stan-check-energy" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.stan.check_energy">
 <span class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></span><span class="sig-name descname"><span class="pre">check_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e_bfmi_rule_of_thumb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_diagnostics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.check_energy" title="Permalink to this definition"></a></dt>
 <dd><p>Checks the energy-Bayes fraction of missing information (E-BFMI)</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>samples</strong> (<em>ArviZ InferenceData instance</em>) – Contains samples to be checked. Must contain both <cite>posterior</cite>
 and <cite>sample_stats</cite>.</p></li>
@@ -140,7 +139,7 @@ passed and a data frame containing results about the E-BMFI
 tests. Otherwise, only return Boolean if the test passed.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>passed</strong> (<em>bool</em>) – Return True if test passed. Return False otherwise.</p></li>
 <li><p><strong>e_bfmi_diagnostics</strong> (<em>DataFrame</em>) – DataFrame with information about which chains had problematic
@@ -151,7 +150,7 @@ E-BFMIs.</p></li>
 </dl>
 </dd></dl>
 
-</section>
+</div>
 
 
            </div>
@@ -165,11 +164,11 @@ E-BFMIs.</p></li>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Aug 06, 2023.
+      <span class="lastupdated">Last updated on Aug 22, 2023.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x12f2eeb50> 
+   <jinja2.runtime.BlockReference object at 0x17133f110> 
 
 <p>© 2021 Justin Bois.</p>
 
