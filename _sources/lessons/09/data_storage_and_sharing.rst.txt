@@ -1,4 +1,0 @@
-9. Data storage and sharing
----------------------------
-
-Tom Morrell will give a guest lecture on data storage and sharing best practices.

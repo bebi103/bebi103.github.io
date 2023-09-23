@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Reference &mdash; bebi103  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="bebi103.hv.set_defaults" href="generated/hv/bebi103.hv.set_defaults.html" />
+    <link rel="prev" title="Image processing utilities" href="image.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #F0F0F0" >
+
+          
+          
+          <a href="../index.html">
+            
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/purpose.html">Purpose and contents</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="using_user_guide.html">Using the user guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hv.html">HoloViews defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bootstrap.html">Bootstrap utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stan.html">Stan (MCMC) utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Image processing utilities</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#holoviews-defaults">HoloViews defaults</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/hv/bebi103.hv.set_defaults.html">bebi103.hv.set_defaults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/hv/bebi103.hv.no_xgrid_hook.html">bebi103.hv.no_xgrid_hook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/hv/bebi103.hv.no_ygrid_hook.html">bebi103.hv.no_ygrid_hook</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#visualization">Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.confints.html">bebi103.viz.confints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.fill_between.html">bebi103.viz.fill_between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.qqplot.html">bebi103.viz.qqplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.contour.html">bebi103.viz.contour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.predictive_ecdf.html">bebi103.viz.predictive_ecdf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.predictive_regression.html">bebi103.viz.predictive_regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.sbc_rank_ecdf.html">bebi103.viz.sbc_rank_ecdf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.parcoord.html">bebi103.viz.parcoord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.trace.html">bebi103.viz.trace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.corner.html">bebi103.viz.corner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.contour_lines_from_samples.html">bebi103.viz.contour_lines_from_samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.cdf_to_staircase.html">bebi103.viz.cdf_to_staircase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/viz/bebi103.viz.q_to_color.html">bebi103.viz.q_to_color</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bootstrap-methods">Bootstrap methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.seed_rng.html">bebi103.bootstrap.seed_rng</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.draw_bs_reps.html">bebi103.bootstrap.draw_bs_reps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.draw_bs_reps_pairs.html">bebi103.bootstrap.draw_bs_reps_pairs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.draw_bs_reps_mle.html">bebi103.bootstrap.draw_bs_reps_mle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.draw_perm_reps.html">bebi103.bootstrap.draw_perm_reps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.diff_of_means.html">bebi103.bootstrap.diff_of_means</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.studentized_diff_of_means.html">bebi103.bootstrap.studentized_diff_of_means</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.pearson_r.html">bebi103.bootstrap.pearson_r</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#stan-utilities">Stan utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.clean_cmdstan.html">bebi103.stan.clean_cmdstan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.cmdstan_version.html">bebi103.stan.cmdstan_version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.df_to_datadict_hier.html">bebi103.stan.df_to_datadict_hier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.arviz_to_dataframe.html">bebi103.stan.arviz_to_dataframe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.check_divergences.html">bebi103.stan.check_divergences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.check_treedepth.html">bebi103.stan.check_treedepth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.check_energy.html">bebi103.stan.check_energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.check_ess.html">bebi103.stan.check_ess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.check_rhat.html">bebi103.stan.check_rhat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.check_all_diagnostics.html">bebi103.stan.check_all_diagnostics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.parse_warning_code.html">bebi103.stan.parse_warning_code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.sbc.html">bebi103.stan.sbc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/stan/bebi103.stan.disable_logging.html">bebi103.stan.disable_logging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gaussian-process-utilities">Gaussian process utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.append_sort_index.html">bebi103.gp.append_sort_index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.linear_kernel.html">bebi103.gp.linear_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.polynomial_kernel.html">bebi103.gp.polynomial_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.se_kernel.html">bebi103.gp.se_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.d1_se_kernel.html">bebi103.gp.d1_se_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.d2_se_kernel.html">bebi103.gp.d2_se_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.d1_d2_se_kernel.html">bebi103.gp.d1_d2_se_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.matern_kernel.html">bebi103.gp.matern_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.periodic_kernel.html">bebi103.gp.periodic_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_exp_quad.html">bebi103.gp.cov_exp_quad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_exp_quad.html">bebi103.gp.cov_d1_exp_quad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_d2_exp_quad.html">bebi103.gp.cov_d1_d2_exp_quad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_matern.html">bebi103.gp.cov_matern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_periodic.html">bebi103.gp.cov_periodic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_from_kernel.html">bebi103.gp.cov_from_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.posterior_mean_cov.html">bebi103.gp.posterior_mean_cov</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#image-processing-utilities">Image processing utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/image/bebi103.image.imshow.html">bebi103.image.imshow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/image/bebi103.image.record_clicks.html">bebi103.image.record_clicks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/image/bebi103.image.draw_rois.html">bebi103.image.draw_rois</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/image/bebi103.image.roicds_to_df.html">bebi103.image.roicds_to_df</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/image/bebi103.image.im_merge.html">bebi103.image.im_merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/image/bebi103.image.rgb_to_rgba32.html">bebi103.image.rgb_to_rgba32</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/image/bebi103.image.rgb_frac_to_hex.html">bebi103.image.rgb_frac_to_hex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/image/bebi103.image.simple_image_collection.html">bebi103.image.simple_image_collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/image/bebi103.image.verts_to_roi.html">bebi103.image.verts_to_roi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/image/bebi103.image.costes_coloc.html">bebi103.image.costes_coloc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Credits and citation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../credits_and_citation.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits_and_citation.html#citing-bebi103">Citing bebi103</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #F0F0F0" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">bebi103</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+<li><a href="https://github.com/justinbois/bebi103">bebi103 repo on GitHub</a></li>
+
+  <li class="wy-breadcrumbs-aside">
+    
+        
+        
+            <a href="../_sources/user_guide/api.rst.txt" rel="nofollow"> View page source</a>
+        
+      
+    
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="api-reference">
+<span id="api"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this heading"></a></h1>
+<div class="section" id="holoviews-defaults">
+<h2>HoloViews defaults<a class="headerlink" href="#holoviews-defaults" title="Permalink to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/hv/bebi103.hv.set_defaults.html#bebi103.hv.set_defaults" title="bebi103.hv.set_defaults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_defaults</span></code></a></p></td>
+<td><p>Set convenient HoloViews defaults</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/hv/bebi103.hv.no_xgrid_hook.html#bebi103.hv.no_xgrid_hook" title="bebi103.hv.no_xgrid_hook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">no_xgrid_hook</span></code></a></p></td>
+<td><p>Hook for disabling x-grid lines.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/hv/bebi103.hv.no_ygrid_hook.html#bebi103.hv.no_ygrid_hook" title="bebi103.hv.no_ygrid_hook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">no_ygrid_hook</span></code></a></p></td>
+<td><p>Hook for disabling x-grid lines.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="visualization">
+<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.confints.html#bebi103.viz.confints" title="bebi103.viz.confints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">confints</span></code></a></p></td>
+<td><p>Make a horizontal plot of centers/conf ints with error bars.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.fill_between.html#bebi103.viz.fill_between" title="bebi103.viz.fill_between"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_between</span></code></a></p></td>
+<td><p>Create a filled region between two curves.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.qqplot.html#bebi103.viz.qqplot" title="bebi103.viz.qqplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qqplot</span></code></a></p></td>
+<td><p>Generate a Q-Q plot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.contour.html#bebi103.viz.contour" title="bebi103.viz.contour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contour</span></code></a></p></td>
+<td><p>Make a contour plot, possibly overlaid on an image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.predictive_ecdf.html#bebi103.viz.predictive_ecdf" title="bebi103.viz.predictive_ecdf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predictive_ecdf</span></code></a></p></td>
+<td><p>Plot a predictive ECDF from samples.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.predictive_regression.html#bebi103.viz.predictive_regression" title="bebi103.viz.predictive_regression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predictive_regression</span></code></a></p></td>
+<td><p>Plot a predictive regression plot from samples.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.sbc_rank_ecdf.html#bebi103.viz.sbc_rank_ecdf" title="bebi103.viz.sbc_rank_ecdf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sbc_rank_ecdf</span></code></a></p></td>
+<td><p>Make a rank ECDF plot from simulation-based calibration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.parcoord.html#bebi103.viz.parcoord" title="bebi103.viz.parcoord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parcoord</span></code></a></p></td>
+<td><p>Make a parallel coordinate plot of MCMC samples.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.trace.html#bebi103.viz.trace" title="bebi103.viz.trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace</span></code></a></p></td>
+<td><p>Make a trace plot of MCMC samples.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.corner.html#bebi103.viz.corner" title="bebi103.viz.corner"><code class="xref py py-obj docutils literal notranslate"><span class="pre">corner</span></code></a></p></td>
+<td><p>Make a corner plot of sampling results.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.contour_lines_from_samples.html#bebi103.viz.contour_lines_from_samples" title="bebi103.viz.contour_lines_from_samples"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contour_lines_from_samples</span></code></a></p></td>
+<td><p>Get lines for a contour plot from (x, y) samples.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.cdf_to_staircase.html#bebi103.viz.cdf_to_staircase" title="bebi103.viz.cdf_to_staircase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cdf_to_staircase</span></code></a></p></td>
+<td><p>Convert discrete values of CDF to staircase for plotting.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/viz/bebi103.viz.q_to_color.html#bebi103.viz.q_to_color" title="bebi103.viz.q_to_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">q_to_color</span></code></a></p></td>
+<td><p>Convert a quantitative value to a color.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bootstrap-methods">
+<h2>Bootstrap methods<a class="headerlink" href="#bootstrap-methods" title="Permalink to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.seed_rng.html#bebi103.bootstrap.seed_rng" title="bebi103.bootstrap.seed_rng"><code class="xref py py-obj docutils literal notranslate"><span class="pre">seed_rng</span></code></a></p></td>
+<td><p>Seed random number generators for Numpy and Numba'd functions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.draw_bs_reps.html#bebi103.bootstrap.draw_bs_reps" title="bebi103.bootstrap.draw_bs_reps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_bs_reps</span></code></a></p></td>
+<td><p>Generate bootstrap replicates out of <cite>data</cite> using <cite>func</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.draw_bs_reps_pairs.html#bebi103.bootstrap.draw_bs_reps_pairs" title="bebi103.bootstrap.draw_bs_reps_pairs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_bs_reps_pairs</span></code></a></p></td>
+<td><p>Perform pairs bootstrap for single statistic.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.draw_bs_reps_mle.html#bebi103.bootstrap.draw_bs_reps_mle" title="bebi103.bootstrap.draw_bs_reps_mle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_bs_reps_mle</span></code></a></p></td>
+<td><p>Draw bootstrap replicates of maximum likelihood estimator.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.draw_perm_reps.html#bebi103.bootstrap.draw_perm_reps" title="bebi103.bootstrap.draw_perm_reps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_perm_reps</span></code></a></p></td>
+<td><p>Generate permutation replicates of <cite>func</cite> from <cite>data_1</cite> and <cite>data_2</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.diff_of_means.html#bebi103.bootstrap.diff_of_means" title="bebi103.bootstrap.diff_of_means"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diff_of_means</span></code></a></p></td>
+<td><p>Difference in means of two arrays.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.studentized_diff_of_means.html#bebi103.bootstrap.studentized_diff_of_means" title="bebi103.bootstrap.studentized_diff_of_means"><code class="xref py py-obj docutils literal notranslate"><span class="pre">studentized_diff_of_means</span></code></a></p></td>
+<td><p>Studentized difference in means of two arrays.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/bootstrap/bebi103.bootstrap.pearson_r.html#bebi103.bootstrap.pearson_r" title="bebi103.bootstrap.pearson_r"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pearson_r</span></code></a></p></td>
+<td><p>Compute the Pearson correlation coefficient between two samples.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="stan-utilities">
+<h2>Stan utilities<a class="headerlink" href="#stan-utilities" title="Permalink to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.clean_cmdstan.html#bebi103.stan.clean_cmdstan" title="bebi103.stan.clean_cmdstan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clean_cmdstan</span></code></a></p></td>
+<td><p>Remove all .hpp, .o, .d, and executable files resulting from compilation of Stan models using CmdStanPy.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.cmdstan_version.html#bebi103.stan.cmdstan_version" title="bebi103.stan.cmdstan_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cmdstan_version</span></code></a></p></td>
+<td><p>Determine CmdStan version</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.df_to_datadict_hier.html#bebi103.stan.df_to_datadict_hier" title="bebi103.stan.df_to_datadict_hier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">df_to_datadict_hier</span></code></a></p></td>
+<td><p>Convert a tidy data frame to a data dictionary for a hierarchical Stan model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.arviz_to_dataframe.html#bebi103.stan.arviz_to_dataframe" title="bebi103.stan.arviz_to_dataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arviz_to_dataframe</span></code></a></p></td>
+<td><p>Convert ArviZ InferenceData to a Pandas data frame.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_divergences.html#bebi103.stan.check_divergences" title="bebi103.stan.check_divergences"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_divergences</span></code></a></p></td>
+<td><p>Check transitions that ended with a divergence.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_treedepth.html#bebi103.stan.check_treedepth" title="bebi103.stan.check_treedepth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_treedepth</span></code></a></p></td>
+<td><p>Check transitions that ended prematurely due to maximum tree depth limit.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_energy.html#bebi103.stan.check_energy" title="bebi103.stan.check_energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_energy</span></code></a></p></td>
+<td><p>Checks the energy-Bayes fraction of missing information (E-BFMI)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_ess.html#bebi103.stan.check_ess" title="bebi103.stan.check_ess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_ess</span></code></a></p></td>
+<td><p>Checks the effective sample size (ESS).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_rhat.html#bebi103.stan.check_rhat" title="bebi103.stan.check_rhat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_rhat</span></code></a></p></td>
+<td><p>Checks the potential issues with scale reduction factors.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_all_diagnostics.html#bebi103.stan.check_all_diagnostics" title="bebi103.stan.check_all_diagnostics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_all_diagnostics</span></code></a></p></td>
+<td><p>Checks all MCMC diagnostics</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.parse_warning_code.html#bebi103.stan.parse_warning_code" title="bebi103.stan.parse_warning_code"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_warning_code</span></code></a></p></td>
+<td><p>Parses warning code from <cite>check_all_diagnostics()</cite> into individual failures and prints results.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.sbc.html#bebi103.stan.sbc" title="bebi103.stan.sbc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sbc</span></code></a></p></td>
+<td><p>Perform simulation-based calibration on a Stan Model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.disable_logging.html#bebi103.stan.disable_logging" title="bebi103.stan.disable_logging"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_logging</span></code></a></p></td>
+<td><p>Context manager for disabling logging when doing MCMC sampling.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="gaussian-process-utilities">
+<h2>Gaussian process utilities<a class="headerlink" href="#gaussian-process-utilities" title="Permalink to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.append_sort_index.html#bebi103.gp.append_sort_index" title="bebi103.gp.append_sort_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">append_sort_index</span></code></a></p></td>
+<td><p>Add the entries of X to Xstar, sort the result, and find indices in the results where the entries in X appear.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.linear_kernel.html#bebi103.gp.linear_kernel" title="bebi103.gp.linear_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linear_kernel</span></code></a></p></td>
+<td><p>Linear kernel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.polynomial_kernel.html#bebi103.gp.polynomial_kernel" title="bebi103.gp.polynomial_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polynomial_kernel</span></code></a></p></td>
+<td><p>Polynomial kernel: (sigma_0^2 + sigma_p^2 x1 .</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.se_kernel.html#bebi103.gp.se_kernel" title="bebi103.gp.se_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">se_kernel</span></code></a></p></td>
+<td><p>Squared exponential kernel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.d1_se_kernel.html#bebi103.gp.d1_se_kernel" title="bebi103.gp.d1_se_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d1_se_kernel</span></code></a></p></td>
+<td><p>Derivative of first variable of squared exponential kernel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.d2_se_kernel.html#bebi103.gp.d2_se_kernel" title="bebi103.gp.d2_se_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d2_se_kernel</span></code></a></p></td>
+<td><p>Derivative of second variable of squared exponential kernel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.d1_d2_se_kernel.html#bebi103.gp.d1_d2_se_kernel" title="bebi103.gp.d1_d2_se_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d1_d2_se_kernel</span></code></a></p></td>
+<td><p>Mixed second derivative of squared exponential kernel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.matern_kernel.html#bebi103.gp.matern_kernel" title="bebi103.gp.matern_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matern_kernel</span></code></a></p></td>
+<td><p>Matern kernel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.periodic_kernel.html#bebi103.gp.periodic_kernel" title="bebi103.gp.periodic_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">periodic_kernel</span></code></a></p></td>
+<td><p>Periodic kernel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_exp_quad.html#bebi103.gp.cov_exp_quad" title="bebi103.gp.cov_exp_quad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_exp_quad</span></code></a></p></td>
+<td><p>Return covariance matrix for squared exponential kernel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_exp_quad.html#bebi103.gp.cov_d1_exp_quad" title="bebi103.gp.cov_d1_exp_quad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_d1_exp_quad</span></code></a></p></td>
+<td><p>Return covariance matrix for squared exponential kernel differentiated by the first variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_d2_exp_quad.html#bebi103.gp.cov_d1_d2_exp_quad" title="bebi103.gp.cov_d1_d2_exp_quad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_d1_d2_exp_quad</span></code></a></p></td>
+<td><p>Return covariance matrix for squared exponential kernel differentiated once by the first variable and once by the second.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_matern.html#bebi103.gp.cov_matern" title="bebi103.gp.cov_matern"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_matern</span></code></a></p></td>
+<td><p>Return covariance matrix for a Matérn kernel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_periodic.html#bebi103.gp.cov_periodic" title="bebi103.gp.cov_periodic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_periodic</span></code></a></p></td>
+<td><p>Return covariance matrix for a perdioic kernel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_from_kernel.html#bebi103.gp.cov_from_kernel" title="bebi103.gp.cov_from_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_from_kernel</span></code></a></p></td>
+<td><p>Return covariance matrix for specified kernel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.posterior_mean_cov.html#bebi103.gp.posterior_mean_cov" title="bebi103.gp.posterior_mean_cov"><code class="xref py py-obj docutils literal notranslate"><span class="pre">posterior_mean_cov</span></code></a></p></td>
+<td><p>Compute the posterior mean vector and covariance matrix for a posterior Gaussian process derived from a Normal likelihood and Gaussian process prior.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="image-processing-utilities">
+<h2>Image processing utilities<a class="headerlink" href="#image-processing-utilities" title="Permalink to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/image/bebi103.image.imshow.html#bebi103.image.imshow" title="bebi103.image.imshow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imshow</span></code></a></p></td>
+<td><p>Display an image in a Bokeh figure.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/image/bebi103.image.record_clicks.html#bebi103.image.record_clicks" title="bebi103.image.record_clicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">record_clicks</span></code></a></p></td>
+<td><p>Display and record mouse clicks on a Bokeh plot of an image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/image/bebi103.image.draw_rois.html#bebi103.image.draw_rois" title="bebi103.image.draw_rois"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_rois</span></code></a></p></td>
+<td><p>Draw and record polygonal regions of interest on a plot of a Bokeh image.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/image/bebi103.image.roicds_to_df.html#bebi103.image.roicds_to_df" title="bebi103.image.roicds_to_df"><code class="xref py py-obj docutils literal notranslate"><span class="pre">roicds_to_df</span></code></a></p></td>
+<td><p>Convert a ColumnDataSource outputted by <cite>draw_rois()</cite> to a Pandas DataFrame.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/image/bebi103.image.im_merge.html#bebi103.image.im_merge" title="bebi103.image.im_merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">im_merge</span></code></a></p></td>
+<td><p>Merge channels to make RGB image.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/image/bebi103.image.rgb_to_rgba32.html#bebi103.image.rgb_to_rgba32" title="bebi103.image.rgb_to_rgba32"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rgb_to_rgba32</span></code></a></p></td>
+<td><p>Convert an RGB image to a 32 bit-encoded RGBA image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/image/bebi103.image.rgb_frac_to_hex.html#bebi103.image.rgb_frac_to_hex" title="bebi103.image.rgb_frac_to_hex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rgb_frac_to_hex</span></code></a></p></td>
+<td><p>Convert fractional RGB values to hexidecimal color string.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/image/bebi103.image.simple_image_collection.html#bebi103.image.simple_image_collection" title="bebi103.image.simple_image_collection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_image_collection</span></code></a></p></td>
+<td><p>Load a collection of images.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/image/bebi103.image.verts_to_roi.html#bebi103.image.verts_to_roi" title="bebi103.image.verts_to_roi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">verts_to_roi</span></code></a></p></td>
+<td><p>Converts list of vertices to an ROI and ROI bounding box</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/image/bebi103.image.costes_coloc.html#bebi103.image.costes_coloc" title="bebi103.image.costes_coloc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">costes_coloc</span></code></a></p></td>
+<td><p>Perform Costes colocalization analysis on a pair of images.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="image.html" class="btn btn-neutral float-left" title="Image processing utilities" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="generated/hv/bebi103.hv.set_defaults.html" class="btn btn-neutral float-right" title="bebi103.hv.set_defaults" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">Last updated on Sep 22, 2023.
+      </span></p>
+  </div>
+
+   <jinja2.runtime.BlockReference object at 0x144661710> 
+
+<p>© 2021 Justin Bois.</p>
+
+<p>This document was prepared at <a rel="caltech" href="http://www.caltech.edu">Caltech</a> with financial support from the <a rel="rosen" href="http://rosen.caltech.edu">Donna and Benjamin M. Rosen Bioengineering Center</a>.</p>
+
+<br />
+
+<p>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>.
+
+ 
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

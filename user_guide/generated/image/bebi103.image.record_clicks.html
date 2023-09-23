@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bebi103.image.record_clicks &mdash; bebi103  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="bebi103.image.draw_rois" href="bebi103.image.draw_rois.html" />
+    <link rel="prev" title="bebi103.image.imshow" href="bebi103.image.imshow.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #F0F0F0" >
+
+          
+          
+          <a href="../../../index.html">
+            
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/purpose.html">Purpose and contents</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../using_user_guide.html">Using the user guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hv.html">HoloViews defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bootstrap.html">Bootstrap utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../stan.html">Stan (MCMC) utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../image.html">Image processing utilities</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#holoviews-defaults">HoloViews defaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#visualization">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#bootstrap-methods">Bootstrap methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#stan-utilities">Stan utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bebi103.image.imshow.html">bebi103.image.imshow</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.image.record_clicks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.image.draw_rois.html">bebi103.image.draw_rois</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.image.roicds_to_df.html">bebi103.image.roicds_to_df</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.image.im_merge.html">bebi103.image.im_merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.image.rgb_to_rgba32.html">bebi103.image.rgb_to_rgba32</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.image.rgb_frac_to_hex.html">bebi103.image.rgb_frac_to_hex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.image.simple_image_collection.html">bebi103.image.simple_image_collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.image.verts_to_roi.html">bebi103.image.verts_to_roi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.image.costes_coloc.html">bebi103.image.costes_coloc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Credits and citation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../credits_and_citation.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../credits_and_citation.html#citing-bebi103">Citing bebi103</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #F0F0F0" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">bebi103</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+<li><a href="https://github.com/justinbois/bebi103">bebi103 repo on GitHub</a></li>
+
+  <li class="wy-breadcrumbs-aside">
+    
+        
+        
+            <a href="../../../_sources/user_guide/generated/image/bebi103.image.record_clicks.rst.txt" rel="nofollow"> View page source</a>
+        
+      
+    
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="bebi103-image-record-clicks">
+<h1>bebi103.image.record_clicks<a class="headerlink" href="#bebi103-image-record-clicks" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="bebi103.image.record_clicks">
+<span class="sig-prename descclassname"><span class="pre">bebi103.image.</span></span><span class="sig-name descname"><span class="pre">record_clicks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notebook_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost:8888'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crosshair_alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'white'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pixels'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpixel_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_ticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_axis_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_axis_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saturate_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_intensity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_intensity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.image.record_clicks" title="Permalink to this definition"></a></dt>
+<dd><p>Display and record mouse clicks on a Bokeh plot of an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>im</strong> (<em>2D Numpy array</em>) – Image to display while clicking.</p></li>
+<li><p><strong>notebook_url</strong> (<em>str</em><em>, </em><em>default 'localhost:8888'</em>) – URL of notebook for display.</p></li>
+<li><p><strong>point_size</strong> (<em>int</em><em>, </em><em>default 3</em>) – Size of points to display when clicking.</p></li>
+<li><p><strong>table_height</strong> (<em>int</em><em>, </em><em>default 200</em>) – Height, in pixels, of table displaying mouse click locations.</p></li>
+<li><p><strong>crosshair_alpha</strong> (<em>float</em><em>, </em><em>default 0.5</em>) – Opacity value for crosshairs when using the crosshair tool.</p></li>
+<li><p><strong>point_color</strong> (<em>str</em><em>, </em><em>default 'white'</em>) – Color of the points displaying clicks.</p></li>
+<li><p><strong>cmap</strong> (<em>str</em><em> or </em><em>list of hex colors</em><em>, </em><em>default None</em>) – If <cite>im</cite> is an intensity image, <cite>cmap</cite> is a mapping of
+intensity to color. If None, default is 256-level Viridis.
+If <cite>im</cite> is a color image, then <cite>cmap</cite> can either be
+‘rgb’ or ‘cmy’ (default), for RGB or CMY merge of channels.</p></li>
+<li><p><strong>frame_height</strong> (<em>int</em>) – Height of the plot in pixels. The width is scaled so that the
+x and y distance between pixels is the same.</p></li>
+<li><p><strong>frame_width</strong> (<em>int</em><em> or </em><em>None</em><em> (</em><em>default</em><em>)</em>) – If None, the width is scaled so that the x and y distance
+between pixels is approximately the same. Otherwise, the width
+of the plot in pixels.</p></li>
+<li><p><strong>length_units</strong> (<em>str</em><em>, </em><em>default 'pixels'</em>) – The units of length in the image.</p></li>
+<li><p><strong>interpixel_distance</strong> (<em>float</em><em>, </em><em>default 1.0</em>) – Interpixel distance in units of <cite>length_units</cite>.</p></li>
+<li><p><strong>x_range</strong> (<em>bokeh.models.Range1d instance</em><em>, </em><em>default None</em>) – Range of x-axis. If None, determined automatically.</p></li>
+<li><p><strong>y_range</strong> (<em>bokeh.models.Range1d instance</em><em>, </em><em>default None</em>) – Range of y-axis. If None, determined automatically.</p></li>
+<li><p><strong>colorbar</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, include a colorbar.</p></li>
+<li><p><strong>no_ticks</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, no ticks are displayed. See note below.</p></li>
+<li><p><strong>x_axis_label</strong> (<em>str</em><em>, </em><em>default None</em>) – Label for the x-axis. If None, labeled with <cite>length_units</cite>.</p></li>
+<li><p><strong>y_axis_label</strong> (<em>str</em><em>, </em><em>default None</em>) – Label for the y-axis. If None, labeled with <cite>length_units</cite>.</p></li>
+<li><p><strong>title</strong> (<em>str</em><em>, </em><em>default None</em>) – The title of the plot.</p></li>
+<li><p><strong>flip</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, flip image so it displays right-side up. This is
+necessary because traditionally images have their 0,0 pixel
+index in the top left corner, and not the bottom left corner.
+If you are going to use the clicks you record in further image
+processing applicaitons, you should have <cite>flip</cite> set to False.</p></li>
+<li><p><strong>saturate_channels</strong> (<em>bool</em><em>, </em><em>default True</em>) – If True, each of the channels have their displayed pixel values
+extended to range from 0 to 255 to show the full dynamic range.</p></li>
+<li><p><strong>min_intensity</strong> (<em>int</em><em> or </em><em>float</em><em>, </em><em>default None</em>) – Minimum possible intensity of a pixel in the image. If None,
+the image is scaled based on the dynamic range in the image.</p></li>
+<li><p><strong>max_intensity</strong> (<em>int</em><em> or </em><em>float</em><em>, </em><em>default None</em>) – Maximum possible intensity of a pixel in the image. If None,
+the image is scaled based on the dynamic range in the image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>output</strong> – A Bokeh ColumnDataSource instance. This can be immediately
+converted to a Pandas DataFrame using the <cite>to_df()</cite> method. For
+example, <cite>output.to_df()</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Bokeh ColumnDataSource</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bebi103.image.imshow.html" class="btn btn-neutral float-left" title="bebi103.image.imshow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bebi103.image.draw_rois.html" class="btn btn-neutral float-right" title="bebi103.image.draw_rois" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">Last updated on Sep 22, 2023.
+      </span></p>
+  </div>
+
+   <jinja2.runtime.BlockReference object at 0x1452cf4d0> 
+
+<p>© 2021 Justin Bois.</p>
+
+<p>This document was prepared at <a rel="caltech" href="http://www.caltech.edu">Caltech</a> with financial support from the <a rel="rosen" href="http://rosen.caltech.edu">Donna and Benjamin M. Rosen Bioengineering Center</a>.</p>
+
+<br />
+
+<p>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>.
+
+ 
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>
