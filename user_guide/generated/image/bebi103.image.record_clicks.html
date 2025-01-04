@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.image.record_clicks &mdash; bebi103  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -17,6 +19,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -66,7 +69,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="bebi103.image.imshow.html">bebi103.image.imshow</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.image.record_clicks</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.image.record_clicks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bebi103.image.record_clicks"><code class="docutils literal notranslate"><span class="pre">record_clicks()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.image.draw_rois.html">bebi103.image.draw_rois</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.image.roicds_to_df.html">bebi103.image.roicds_to_df</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.image.im_merge.html">bebi103.image.im_merge</a></li>
@@ -132,7 +138,7 @@
 <li><p><strong>table_height</strong> (<em>int</em><em>, </em><em>default 200</em>) – Height, in pixels, of table displaying mouse click locations.</p></li>
 <li><p><strong>crosshair_alpha</strong> (<em>float</em><em>, </em><em>default 0.5</em>) – Opacity value for crosshairs when using the crosshair tool.</p></li>
 <li><p><strong>point_color</strong> (<em>str</em><em>, </em><em>default 'white'</em>) – Color of the points displaying clicks.</p></li>
-<li><p><strong>cmap</strong> (<em>str</em><em> or </em><em>list of hex colors</em><em>, </em><em>default None</em>) – If <cite>im</cite> is an intensity image, <cite>cmap</cite> is a mapping of
+<li><p><strong>cmap</strong> (<em>str</em><em> or </em><em>list</em><em> of </em><em>hex colors</em><em>, </em><em>default None</em>) – If <cite>im</cite> is an intensity image, <cite>cmap</cite> is a mapping of
 intensity to color. If None, default is 256-level Viridis.
 If <cite>im</cite> is a color image, then <cite>cmap</cite> can either be
 ‘rgb’ or ‘cmy’ (default), for RGB or CMY merge of channels.</p></li>
@@ -188,11 +194,11 @@ example, <cite>output.to_df()</cite>.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Sep 22, 2023.
+      <span class="lastupdated">Last updated on Jan 03, 2025.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x1452cf4d0> 
+   <jinja2.runtime.BlockReference object at 0x17fc3d6d0> 
 
 <p>© 2021 Justin Bois.</p>
 

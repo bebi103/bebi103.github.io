@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.stan.df_to_datadict_hier &mdash; bebi103  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -17,6 +19,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -65,7 +68,10 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../api.html#stan-utilities">Stan utilities</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.clean_cmdstan.html">bebi103.stan.clean_cmdstan</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.cmdstan_version.html">bebi103.stan.cmdstan_version</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.stan.df_to_datadict_hier</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.stan.df_to_datadict_hier</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bebi103.stan.df_to_datadict_hier"><code class="docutils literal notranslate"><span class="pre">df_to_datadict_hier()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.arviz_to_dataframe.html">bebi103.stan.arviz_to_dataframe</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_divergences.html">bebi103.stan.check_divergences</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_treedepth.html">bebi103.stan.check_treedepth</a></li>
@@ -130,7 +136,7 @@ Stan model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>df</strong> (<em>DataFrame</em>) – A tidy Pandas data frame.</p></li>
+<li><p><strong>df</strong> (<em>DataFrame</em>) – A tidy Polars or Pandas data frame.</p></li>
 <li><p><strong>level_cols</strong> (<em>list</em>) – A list of column names containing variables that specify the
 level of the hierarchical model. These must be given in order
 of the hierarchy of levels, with the first entry being the
@@ -309,11 +315,11 @@ have time series data, you should use caution.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Sep 22, 2023.
+      <span class="lastupdated">Last updated on Jan 03, 2025.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x1455d5390> 
+   <jinja2.runtime.BlockReference object at 0x17c640fe0> 
 
 <p>© 2021 Justin Bois.</p>
 

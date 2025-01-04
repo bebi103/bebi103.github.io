@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.viz.trace &mdash; bebi103  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -17,6 +19,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -69,7 +72,10 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.predictive_regression.html">bebi103.viz.predictive_regression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.sbc_rank_ecdf.html">bebi103.viz.sbc_rank_ecdf</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.parcoord.html">bebi103.viz.parcoord</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.viz.trace</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.viz.trace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bebi103.viz.trace"><code class="docutils literal notranslate"><span class="pre">trace()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.corner.html">bebi103.viz.corner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.contour_lines_from_samples.html">bebi103.viz.contour_lines_from_samples</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.cdf_to_staircase.html">bebi103.viz.cdf_to_staircase</a></li>
@@ -130,16 +136,16 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>samples</strong> (<em>ArviZ InferenceData instance</em><em> or </em><em>xarray Dataset instance</em>) – Result of MCMC sampling.</p></li>
-<li><p><strong>parameters</strong> (<em>list of str</em><em>, or </em><em>None</em><em> (</em><em>default</em><em>)</em>) – Names of parameters to include in the plot. If None, use all
+<li><p><strong>parameters</strong> (<em>list</em><em> of </em><em>str</em><em>, or </em><em>None</em><em> (</em><em>default</em><em>)</em>) – Names of parameters to include in the plot. If None, use all
 parameters. For multidimensional parameters, each entry must be
 given separately, e.g., <cite>[‘alpha[0]’, ‘alpha[1]’, ‘beta[0,1]’]</cite>.
 If a given entry is a 2-tuple, the first entry is the variable
 name, and the second entry is the label for the parameter in
 plots.</p></li>
-<li><p><strong>palette</strong> (<em>list of strings of hex colors</em><em>, or </em><em>single hex string</em>) – If a list, color palette to use. If a single string representing
+<li><p><strong>palette</strong> (<em>list</em><em> of </em><em>strings</em><em> of </em><em>hex colors</em><em>, or </em><em>single hex string</em>) – If a list, color palette to use. If a single string representing
 a hex color, all glyphs are colored with that color. Default is
 colorcet.b_glasbey_category10 from the colorcet package.</p></li>
-<li><p><strong>omit</strong> (<em>str</em><em>, </em><em>re.Pattern</em><em>, or </em><em>list</em><em> or </em><em>tuple of str and re.Pattern</em>) – If <cite>parameters</cite> is not provided, all parameters are used in the
+<li><p><strong>omit</strong> (<em>str</em><em>, </em><em>re.Pattern</em><em>, or </em><em>list</em><em> or </em><em>tuple</em><em> of </em><em>str and re.Pattern</em>) – If <cite>parameters</cite> is not provided, all parameters are used in the
 parallel coordinate plot. We often want to ignore samples of
 some variables. For each string entry in <cite>omit</cite>, the variable
 given by the string is omitted. For each entry that is a
@@ -177,11 +183,11 @@ the plot of non-divergent samples.</p></li>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Sep 22, 2023.
+      <span class="lastupdated">Last updated on Jan 03, 2025.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x143f8f550> 
+   <jinja2.runtime.BlockReference object at 0x17fb254f0> 
 
 <p>© 2021 Justin Bois.</p>
 

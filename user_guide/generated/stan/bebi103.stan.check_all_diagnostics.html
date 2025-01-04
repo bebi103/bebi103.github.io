@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.stan.check_all_diagnostics &mdash; bebi103  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -17,6 +19,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -72,7 +75,10 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_energy.html">bebi103.stan.check_energy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_ess.html">bebi103.stan.check_ess</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_rhat.html">bebi103.stan.check_rhat</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.stan.check_all_diagnostics</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.stan.check_all_diagnostics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bebi103.stan.check_all_diagnostics"><code class="docutils literal notranslate"><span class="pre">check_all_diagnostics()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.parse_warning_code.html">bebi103.stan.parse_warning_code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.sbc.html">bebi103.stan.sbc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.stan.disable_logging.html">bebi103.stan.disable_logging</a></li>
@@ -131,7 +137,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>samples</strong> (<em>ArviZ InferenceData instance</em>) – Contains samples to be checked. Must contain both <cite>posterior</cite>
 and <cite>sample_stats</cite>.</p></li>
-<li><p><strong>parameters</strong> (<em>list of str</em><em>, or </em><em>None</em><em> (</em><em>default</em><em>)</em>) – Names of parameters to use in checking Rhat and ESS. If None,
+<li><p><strong>parameters</strong> (<em>list</em><em> of </em><em>str</em><em>, or </em><em>None</em><em> (</em><em>default</em><em>)</em>) – Names of parameters to use in checking Rhat and ESS. If None,
 use all parameters. For multidimensional parameters, each entry
 must be given separately, e.g.,
 <cite>[‘alpha[0]’, ‘alpha[1]’, ‘beta[0,1]’]</cite>.</p></li>
@@ -143,7 +149,7 @@ have 50 effective samples per split chain.</p></li>
 <li><p><strong>fractional_ess_rule_of_thumb</strong> (<em>float</em><em>, </em><em>default 0.001</em>) – Rule of thumb value for fractional number of effective samples.
 The default of 0.001 is based on CmdStan’s defaults.</p></li>
 <li><p><strong>rhat_rule_of_thumb</strong> (<em>float</em><em>, </em><em>default 1.1</em>) – Rule of thumb value for maximum allowed R-hat.</p></li>
-<li><p><strong>omit</strong> (<em>str</em><em>, </em><em>re.Pattern</em><em>, or </em><em>list</em><em> or </em><em>tuple of str and re.Pattern</em>) – If <cite>parameters</cite> is not provided, all sampled parameters are
+<li><p><strong>omit</strong> (<em>str</em><em>, </em><em>re.Pattern</em><em>, or </em><em>list</em><em> or </em><em>tuple</em><em> of </em><em>str and re.Pattern</em>) – If <cite>parameters</cite> is not provided, all sampled parameters are
 checked for Rhat. We often want to ignore samples of variables
 that a transformed parameters, as their Rhats are irrelevant and
 often NaNs. For each string entry in <cite>omit</cite>, the variable given
@@ -194,11 +200,11 @@ of each diagnostic test.</p></li>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Sep 22, 2023.
+      <span class="lastupdated">Last updated on Jan 03, 2025.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x14382d750> 
+   <jinja2.runtime.BlockReference object at 0x17e7c7260> 
 
 <p>© 2021 Justin Bois.</p>
 

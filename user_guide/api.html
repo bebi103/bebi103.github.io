@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>API Reference &mdash; bebi103  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -17,6 +19,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -113,15 +116,20 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.linear_kernel.html">bebi103.gp.linear_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.polynomial_kernel.html">bebi103.gp.polynomial_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.se_kernel.html">bebi103.gp.se_kernel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.d1_se_kernel.html">bebi103.gp.d1_se_kernel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.d2_se_kernel.html">bebi103.gp.d2_se_kernel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.d1_d2_se_kernel.html">bebi103.gp.d1_d2_se_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.d1_exp_quad_kernel.html">bebi103.gp.d1_exp_quad_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.d2_exp_quad_kernel.html">bebi103.gp.d2_exp_quad_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.d1_d2_exp_quad_kernel.html">bebi103.gp.d1_d2_exp_quad_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.matern_kernel.html">bebi103.gp.matern_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.d1_matern_kernel.html">bebi103.gp.d1_matern_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.d2_matern_kernel.html">bebi103.gp.d2_matern_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.d1_d2_matern_kernel.html">bebi103.gp.d1_d2_matern_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.periodic_kernel.html">bebi103.gp.periodic_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_exp_quad.html">bebi103.gp.cov_exp_quad</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_exp_quad.html">bebi103.gp.cov_d1_exp_quad</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_d2_exp_quad.html">bebi103.gp.cov_d1_d2_exp_quad</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_matern.html">bebi103.gp.cov_matern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_matern.html">bebi103.gp.cov_d1_matern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_d2_matern.html">bebi103.gp.cov_d1_d2_matern</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_periodic.html">bebi103.gp.cov_periodic</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.cov_from_kernel.html">bebi103.gp.cov_from_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/gp/bebi103.gp.posterior_mean_cov.html">bebi103.gp.posterior_mean_cov</a></li>
@@ -305,7 +313,7 @@
 <td><p>Convert a tidy data frame to a data dictionary for a hierarchical Stan model.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.arviz_to_dataframe.html#bebi103.stan.arviz_to_dataframe" title="bebi103.stan.arviz_to_dataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arviz_to_dataframe</span></code></a></p></td>
-<td><p>Convert ArviZ InferenceData to a Pandas data frame.</p></td>
+<td><p>Convert ArviZ InferenceData to a Pandas or Polars data frame.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/stan/bebi103.stan.check_divergences.html#bebi103.stan.check_divergences" title="bebi103.stan.check_divergences"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_divergences</span></code></a></p></td>
 <td><p>Check transitions that ended with a divergence.</p></td>
@@ -357,40 +365,55 @@
 <tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.se_kernel.html#bebi103.gp.se_kernel" title="bebi103.gp.se_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">se_kernel</span></code></a></p></td>
 <td><p>Squared exponential kernel.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.d1_se_kernel.html#bebi103.gp.d1_se_kernel" title="bebi103.gp.d1_se_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d1_se_kernel</span></code></a></p></td>
-<td><p>Derivative of first variable of squared exponential kernel.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.d1_exp_quad_kernel.html#bebi103.gp.d1_exp_quad_kernel" title="bebi103.gp.d1_exp_quad_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d1_exp_quad_kernel</span></code></a></p></td>
+<td><p>Derivative of first variable of the exponentiated quadratic (a.k.a.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.d2_se_kernel.html#bebi103.gp.d2_se_kernel" title="bebi103.gp.d2_se_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d2_se_kernel</span></code></a></p></td>
-<td><p>Derivative of second variable of squared exponential kernel.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.d2_exp_quad_kernel.html#bebi103.gp.d2_exp_quad_kernel" title="bebi103.gp.d2_exp_quad_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d2_exp_quad_kernel</span></code></a></p></td>
+<td><p>Derivative of the exponentiated quadratic (a.k.a.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.d1_d2_se_kernel.html#bebi103.gp.d1_d2_se_kernel" title="bebi103.gp.d1_d2_se_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d1_d2_se_kernel</span></code></a></p></td>
-<td><p>Mixed second derivative of squared exponential kernel.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.d1_d2_exp_quad_kernel.html#bebi103.gp.d1_d2_exp_quad_kernel" title="bebi103.gp.d1_d2_exp_quad_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d1_d2_exp_quad_kernel</span></code></a></p></td>
+<td><p>Mixed second derivative of exponentiated quadratic (a.k.a.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.matern_kernel.html#bebi103.gp.matern_kernel" title="bebi103.gp.matern_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matern_kernel</span></code></a></p></td>
 <td><p>Matern kernel.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.periodic_kernel.html#bebi103.gp.periodic_kernel" title="bebi103.gp.periodic_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">periodic_kernel</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.d1_matern_kernel.html#bebi103.gp.d1_matern_kernel" title="bebi103.gp.d1_matern_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d1_matern_kernel</span></code></a></p></td>
+<td><p>Derivative of the Matern kernel with respect to the first variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.d2_matern_kernel.html#bebi103.gp.d2_matern_kernel" title="bebi103.gp.d2_matern_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d2_matern_kernel</span></code></a></p></td>
+<td><p>Derivative of the Matern kernel with respect to the second parameter.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.d1_d2_matern_kernel.html#bebi103.gp.d1_d2_matern_kernel" title="bebi103.gp.d1_d2_matern_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d1_d2_matern_kernel</span></code></a></p></td>
+<td><p>Mixed second derivative of Matern kernel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.periodic_kernel.html#bebi103.gp.periodic_kernel" title="bebi103.gp.periodic_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">periodic_kernel</span></code></a></p></td>
 <td><p>Periodic kernel.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_exp_quad.html#bebi103.gp.cov_exp_quad" title="bebi103.gp.cov_exp_quad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_exp_quad</span></code></a></p></td>
-<td><p>Return covariance matrix for squared exponential kernel.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_exp_quad.html#bebi103.gp.cov_exp_quad" title="bebi103.gp.cov_exp_quad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_exp_quad</span></code></a></p></td>
+<td><p>Return covariance matrix for exponentiated quadratic (a.k.a.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_exp_quad.html#bebi103.gp.cov_d1_exp_quad" title="bebi103.gp.cov_d1_exp_quad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_d1_exp_quad</span></code></a></p></td>
-<td><p>Return covariance matrix for squared exponential kernel differentiated by the first variable.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_exp_quad.html#bebi103.gp.cov_d1_exp_quad" title="bebi103.gp.cov_d1_exp_quad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_d1_exp_quad</span></code></a></p></td>
+<td><p>Return covariance matrix for exponentiated quadratic (a.k.a.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_d2_exp_quad.html#bebi103.gp.cov_d1_d2_exp_quad" title="bebi103.gp.cov_d1_d2_exp_quad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_d1_d2_exp_quad</span></code></a></p></td>
-<td><p>Return covariance matrix for squared exponential kernel differentiated once by the first variable and once by the second.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_d2_exp_quad.html#bebi103.gp.cov_d1_d2_exp_quad" title="bebi103.gp.cov_d1_d2_exp_quad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_d1_d2_exp_quad</span></code></a></p></td>
+<td><p>Return covariance matrix for exponentiated quadratic (a.k.a.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_matern.html#bebi103.gp.cov_matern" title="bebi103.gp.cov_matern"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_matern</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_matern.html#bebi103.gp.cov_matern" title="bebi103.gp.cov_matern"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_matern</span></code></a></p></td>
 <td><p>Return covariance matrix for a Matérn kernel.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_periodic.html#bebi103.gp.cov_periodic" title="bebi103.gp.cov_periodic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_periodic</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_matern.html#bebi103.gp.cov_d1_matern" title="bebi103.gp.cov_d1_matern"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_d1_matern</span></code></a></p></td>
+<td><p>Return covariance matrix for Matérn kernel differentiated by the first variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_d1_d2_matern.html#bebi103.gp.cov_d1_d2_matern" title="bebi103.gp.cov_d1_d2_matern"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_d1_d2_matern</span></code></a></p></td>
+<td><p>Return covariance matrix for Matérn kernel differentiated once by the first variable and once by the second.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_periodic.html#bebi103.gp.cov_periodic" title="bebi103.gp.cov_periodic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_periodic</span></code></a></p></td>
 <td><p>Return covariance matrix for a perdioic kernel.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_from_kernel.html#bebi103.gp.cov_from_kernel" title="bebi103.gp.cov_from_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_from_kernel</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.cov_from_kernel.html#bebi103.gp.cov_from_kernel" title="bebi103.gp.cov_from_kernel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cov_from_kernel</span></code></a></p></td>
 <td><p>Return covariance matrix for specified kernel.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.posterior_mean_cov.html#bebi103.gp.posterior_mean_cov" title="bebi103.gp.posterior_mean_cov"><code class="xref py py-obj docutils literal notranslate"><span class="pre">posterior_mean_cov</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/gp/bebi103.gp.posterior_mean_cov.html#bebi103.gp.posterior_mean_cov" title="bebi103.gp.posterior_mean_cov"><code class="xref py py-obj docutils literal notranslate"><span class="pre">posterior_mean_cov</span></code></a></p></td>
 <td><p>Compute the posterior mean vector and covariance matrix for a posterior Gaussian process derived from a Normal likelihood and Gaussian process prior.</p></td>
 </tr>
 </tbody>
@@ -451,11 +474,11 @@
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Sep 22, 2023.
+      <span class="lastupdated">Last updated on Jan 03, 2025.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x144661710> 
+   <jinja2.runtime.BlockReference object at 0x17da16f90> 
 
 <p>© 2021 Justin Bois.</p>
 

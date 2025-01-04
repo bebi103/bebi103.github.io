@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.viz.contour_lines_from_samples &mdash; bebi103  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -17,6 +19,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -71,7 +74,10 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.parcoord.html">bebi103.viz.parcoord</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.trace.html">bebi103.viz.trace</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.corner.html">bebi103.viz.corner</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.viz.contour_lines_from_samples</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.viz.contour_lines_from_samples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bebi103.viz.contour_lines_from_samples"><code class="docutils literal notranslate"><span class="pre">contour_lines_from_samples()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.cdf_to_staircase.html">bebi103.viz.cdf_to_staircase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.viz.q_to_color.html">bebi103.viz.q_to_color</a></li>
 </ul>
@@ -134,7 +140,7 @@
 <li><p><strong>smooth</strong> (<em>float</em><em>, </em><em>default 0.02</em>) – Smoothing parameter for Gaussian smoothing of contour. A
 Gaussian filter is applied with standard deviation given by
 <cite>smooth * bins</cite>. If None, no smoothing is done.</p></li>
-<li><p><strong>levels</strong> (<em>float</em><em>, </em><em>list of floats</em><em>, or </em><em>None</em>) – The levels of the contours. To enclose 95% of the samples, use
+<li><p><strong>levels</strong> (<em>float</em><em>, </em><em>list</em><em> of </em><em>floats</em><em>, or </em><em>None</em>) – The levels of the contours. To enclose 95% of the samples, use
 <cite>levels=0.95</cite>. If provided as a list, multiple levels are used.
 If None, <cite>levels</cite> is approximately [0.12, 0.39, 0.68, 0.86].</p></li>
 <li><p><strong>bins</strong> (<em>int</em><em>, </em><em>default 50</em>) – Binning of samples into square bins is necessary to construct
@@ -178,11 +184,11 @@ contour plot.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Sep 22, 2023.
+      <span class="lastupdated">Last updated on Jan 03, 2025.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x1452b1710> 
+   <jinja2.runtime.BlockReference object at 0x175846ed0> 
 
 <p>© 2021 Justin Bois.</p>
 

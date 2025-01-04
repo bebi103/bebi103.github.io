@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.gp.posterior_mean_cov &mdash; bebi103  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -17,6 +19,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -68,18 +71,26 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.linear_kernel.html">bebi103.gp.linear_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.polynomial_kernel.html">bebi103.gp.polynomial_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.se_kernel.html">bebi103.gp.se_kernel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_se_kernel.html">bebi103.gp.d1_se_kernel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d2_se_kernel.html">bebi103.gp.d2_se_kernel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_d2_se_kernel.html">bebi103.gp.d1_d2_se_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_exp_quad_kernel.html">bebi103.gp.d1_exp_quad_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d2_exp_quad_kernel.html">bebi103.gp.d2_exp_quad_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_d2_exp_quad_kernel.html">bebi103.gp.d1_d2_exp_quad_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.matern_kernel.html">bebi103.gp.matern_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_matern_kernel.html">bebi103.gp.d1_matern_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d2_matern_kernel.html">bebi103.gp.d2_matern_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_d2_matern_kernel.html">bebi103.gp.d1_d2_matern_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.periodic_kernel.html">bebi103.gp.periodic_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_exp_quad.html">bebi103.gp.cov_exp_quad</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_d1_exp_quad.html">bebi103.gp.cov_d1_exp_quad</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_d1_d2_exp_quad.html">bebi103.gp.cov_d1_d2_exp_quad</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_matern.html">bebi103.gp.cov_matern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_d1_matern.html">bebi103.gp.cov_d1_matern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_d1_d2_matern.html">bebi103.gp.cov_d1_d2_matern</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_periodic.html">bebi103.gp.cov_periodic</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_from_kernel.html">bebi103.gp.cov_from_kernel</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.gp.posterior_mean_cov</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.gp.posterior_mean_cov</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bebi103.gp.posterior_mean_cov"><code class="docutils literal notranslate"><span class="pre">posterior_mean_cov()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a></li>
@@ -127,7 +138,7 @@
 <h1>bebi103.gp.posterior_mean_cov<a class="headerlink" href="#bebi103-gp-posterior-mean-cov" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.gp.posterior_mean_cov">
-<span class="sig-prename descclassname"><span class="pre">bebi103.gp.</span></span><span class="sig-name descname"><span class="pre">posterior_mean_cov</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Xstar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel=&lt;function</span> <span class="pre">se_kernel&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_deriv=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta=1e-08</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kernel_hyperparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.gp.posterior_mean_cov" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bebi103.gp.</span></span><span class="sig-name descname"><span class="pre">posterior_mean_cov</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Xstar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel=&lt;function</span> <span class="pre">se_kernel&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta=1e-08</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kernel_hyperparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.gp.posterior_mean_cov" title="Permalink to this definition"></a></dt>
 <dd><p>Compute the posterior mean vector and covariance matrix for a
 posterior Gaussian process derived from a Normal likelihood and
 Gaussian process prior.</p>
@@ -145,9 +156,6 @@ made. If a 1D array, assume the points are one-dimensional. If a
 be homoscedastic for all points.</p></li>
 <li><p><strong>kernel</strong> (<em>function</em><em>, </em><em>default se_kernel</em>) – Kernel defining the Gaussian process. Must have call signature
 kernel(x1, x2, <a href="#id1"><span class="problematic" id="id2">**</span></a>kernel_hyperparams).</p></li>
-<li><p><strong>include_deriv</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, include first derivatives in mean vectors and
-covariances. If True, <cite>X</cite> and <cite>Xstar</cite> must both be 1D because
-multivariate gradients are not implemented.</p></li>
 <li><p><strong>delta</strong> (<em>float</em><em>, </em><em>default 1e-8</em>) – Small number, used to add to the diagonal of covariance matrices
 to ensure numerical positive definiteness.</p></li>
 <li><p><strong>**kernel_hyperparams</strong> (<em>kwargs</em>) – All additional kwargs are sent as kwargs to the <cite>kernel</cite>
@@ -160,18 +168,10 @@ function.</p></li>
 the points given by <cite>Xstar</cite>.</p></li>
 <li><p><strong>Sigma</strong> (<em>array, shape (nstar, nstar) or (2*nstar, 2*nstar)</em>) – Covariance matrix of the Gaussian process posterior evaluated at
 the points given by <cite>Xstar</cite>.</p></li>
-<li><p><strong>g</strong> (<em>array, shape (nstar,)</em>) – The derivative function of the Gaussian process posterior
-evaluated at the points given by <cite>Xstar</cite>. Only returned if
-<cite>include_deriv</cite> is True.</p></li>
-<li><p><strong>Sigma_g</strong> (<em>array, shape (nstar, nstar)</em>) – The covariance matrix for the derivative of the Gaussian process
-posterior evaluated at the points given by <cite>Xstar</cite>. Only
-returned if <cite>include_deriv</cite> is True.</p></li>
 </ul>
 </p>
 </dd>
 </dl>
-<p class="rubric">Notes</p>
-<p>must be used.</p>
 </dd></dl>
 
 </div>
@@ -188,11 +188,11 @@ returned if <cite>include_deriv</cite> is True.</p></li>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Sep 22, 2023.
+      <span class="lastupdated">Last updated on Jan 03, 2025.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x1437c12d0> 
+   <jinja2.runtime.BlockReference object at 0x17e739070> 
 
 <p>© 2021 Justin Bois.</p>
 
