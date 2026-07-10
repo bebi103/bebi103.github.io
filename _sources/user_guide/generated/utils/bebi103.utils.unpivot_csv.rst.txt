@@ -1,0 +1,6 @@
+﻿bebi103.utils.unpivot\_csv
+==========================
+
+.. currentmodule:: bebi103.utils
+
+.. autofunction:: unpivot_csv

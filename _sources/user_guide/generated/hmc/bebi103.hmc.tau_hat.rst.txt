@@ -1,0 +1,6 @@
+﻿bebi103.hmc.tau\_hat
+====================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: tau_hat

@@ -1,0 +1,6 @@
+﻿bebi103.hmc.ess\_hat
+====================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: ess_hat

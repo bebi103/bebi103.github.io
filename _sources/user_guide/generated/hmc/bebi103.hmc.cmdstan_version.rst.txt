@@ -1,0 +1,6 @@
+﻿bebi103.hmc.cmdstan\_version
+============================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: cmdstan_version

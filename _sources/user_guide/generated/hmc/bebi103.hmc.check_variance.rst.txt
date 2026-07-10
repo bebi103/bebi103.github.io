@@ -1,0 +1,6 @@
+﻿bebi103.hmc.check\_variance
+===========================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: check_variance

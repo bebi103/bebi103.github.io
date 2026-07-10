@@ -1,28 +1,26 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Installation &mdash; bebi103  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=22ddcdb3" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -62,7 +60,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/using_user_guide.html">Using the user guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/hv.html">HoloViews defaults</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/bootstrap.html">Bootstrap utilities</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/stan.html">Stan (MCMC) utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hmc.html">Hamiltonian Monte Carlo utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/image.html">Image processing utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/api.html">API Reference</a></li>
 </ul>
@@ -103,33 +101,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="installation">
-<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
+  <section id="installation">
+<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
 <p>You can install bebi103 using pip.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install --upgrade bebi103
 </pre></div>
 </div>
-<div class="section" id="dependencies">
-<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h2>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h2>
 <p>bebi103 has the following dependencies.</p>
 <ul class="simple">
-<li><p>Python 3.9 or newer</p></li>
+<li><p>Python 3.11 or newer</p></li>
 <li><p><a class="reference external" href="http://www.numpy.org/">NumPy</a></p></li>
 <li><p><a class="reference external" href="http://www.scipy.org/">SciPy</a></p></li>
 <li><p><a class="reference external" href="https://pandas.pydata.org">Pandas</a></p></li>
 <li><p><a class="reference external" href="https://pola.rs">Polars</a></p></li>
+<li><p><a class="reference external" href="https://arrow.apache.org/docs/python/">PyArrow</a></p></li>
 <li><p><a class="reference external" href="http://numba.pydata.org/">Numba</a></p></li>
+<li><p><a class="reference external" href="https://contourpy.readthedocs.io/">contourpy</a></p></li>
 <li><p><a class="reference external" href="https://tqdm.github.io/">tqdm</a></p></li>
 <li><p><a class="reference external" href="https://cmdstanpy.readthedocs.io/">CmdStanPy</a> 1.0.0 or higher</p></li>
 <li><p><a class="reference external" href="http://xarray.pydata.org/">xarray</a></p></li>
-<li><p><a class="reference external" href="https://arviz-devs.github.io/arviz/">ArviZ</a> 0.16.0 or higher</p></li>
-<li><p><a class="reference external" href="https://docs.bokeh.org/">Bokeh</a> 3.4.0 or higher</p></li>
+<li><p><a class="reference external" href="https://arviz-devs.github.io/arviz/">ArviZ</a> 1.0.0 or higher</p></li>
+<li><p><a class="reference external" href="https://docs.bokeh.org/">Bokeh</a> 3.9.0 or higher</p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/">Matplotlib</a></p></li>
 <li><p><a class="reference external" href="https://colorcet.holoviz.org/">colorcet</a></p></li>
 <li><p><a class="reference external" href="http://holoviews.org/">HoloViews</a></p></li>
+<li><p><a class="reference external" href="https://scikit-image.org/">scikit-image</a></p></li>
+<li><p><a class="reference external" href="https://click.palletsprojects.com/">Click</a> 8.0.0 or higher</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -143,13 +145,13 @@
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jan 03, 2025.
+      <span class="lastupdated">Last updated on Jul 09, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x17d6f03b0> 
+   <jinja2.runtime.BlockReference object at 0x30a1ef4d0> 
 
-<p>© 2021 Justin Bois.</p>
+<p>© 2017–2025 Justin Bois.</p>
 
 <p>This document was prepared at <a rel="caltech" href="http://www.caltech.edu">Caltech</a> with financial support from the <a rel="rosen" href="http://rosen.caltech.edu">Donna and Benjamin M. Rosen Bioengineering Center</a>.</p>
 

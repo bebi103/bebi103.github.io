@@ -1,0 +1,6 @@
+﻿bebi103.hmc.install\_cmdstan\_colab
+===================================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: install_cmdstan_colab

@@ -1,0 +1,6 @@
+﻿bebi103.hmc.disable\_logging
+============================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: disable_logging

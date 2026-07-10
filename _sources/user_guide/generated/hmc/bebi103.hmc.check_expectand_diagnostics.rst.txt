@@ -1,0 +1,6 @@
+﻿bebi103.hmc.check\_expectand\_diagnostics
+=========================================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: check_expectand_diagnostics

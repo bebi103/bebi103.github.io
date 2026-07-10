@@ -1,0 +1,6 @@
+﻿bebi103.hmc.decode\_warning\_code
+=================================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: decode_warning_code

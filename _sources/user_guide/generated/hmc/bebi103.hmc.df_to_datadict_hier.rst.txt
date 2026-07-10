@@ -1,0 +1,6 @@
+﻿bebi103.hmc.df\_to\_datadict\_hier
+==================================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: df_to_datadict_hier

@@ -1,28 +1,26 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Purpose and contents &mdash; bebi103  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=22ddcdb3" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -59,7 +57,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/using_user_guide.html">Using the user guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/hv.html">HoloViews defaults</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/bootstrap.html">Bootstrap utilities</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/stan.html">Stan (MCMC) utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hmc.html">Hamiltonian Monte Carlo utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/image.html">Image processing utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/api.html">API Reference</a></li>
 </ul>
@@ -100,20 +98,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="purpose-and-contents">
-<span id="purpose"></span><h1>Purpose and contents<a class="headerlink" href="#purpose-and-contents" title="Permalink to this heading"></a></h1>
+  <section id="purpose-and-contents">
+<span id="purpose"></span><h1>Purpose and contents<a class="headerlink" href="#purpose-and-contents" title="Link to this heading"></a></h1>
 <p>The BE/Bi 103 ab courses at Caltech cover basic data science principles such as data validation, wrangling, and visualization, as well as statistical inference. In some editions of the course, we also do image processing.</p>
-<p>For visualization, we use <a class="reference external" href="https://bokeh.pydata.org/">Bokeh</a> almost exclusively. Additionally, we use <a class="reference external" href="http://holoviews.org/">HoloViews</a>, and <a class="reference external" href="http://panel.holoviz.org/">Panel</a>. The statistical inference is done either using resampling (bootstrap) or using a Bayesian approach. For the latter, <a class="reference external" href="http://mc-stan.org/">Stan</a> is used heavily, with <a class="reference external" href="https://arviz-devs.github.io/arviz/index.html">ArviZ</a> being used to parse the results.</p>
-<p>The bebi103 package consists of a set of utilities to facilitate the visualizations and analyses we use in the class, some of which extend or adapt the capabilities of the packages mentioned above. The package has five submodules.</p>
+<p>For visualization, we use <a class="reference external" href="https://bokeh.pydata.org/">Bokeh</a> almost exclusively. Occasionally, though not often, we use <a class="reference external" href="http://holoviews.org/">HoloViews</a>. The statistical inference is done either using resampling (bootstrap) or using a Bayesian approach. For the latter, <a class="reference external" href="http://mc-stan.org/">Stan</a> is used heavily, particularly the <a class="reference external" href="https://cmdstanpy.readthedocs.io/">CmdStanPy interface</a>.</p>
+<p>The bebi103 package consists of a set of utilities to facilitate the visualizations and analyses we use in the class, some of which extend or adapt the capabilities of the packages mentioned above. The package has six submodules.</p>
 <ul class="simple">
-<li><p><strong>hv</strong>: Supplies colormaps and pretty default styling for HoloViews plotting elements.</p></li>
 <li><p><strong>viz</strong>: Utilities for creating visualizations of data, but also of results from statistical inference calculations.</p></li>
 <li><p><strong>bootstrap</strong>: Utilities to perform bootstrap-based statistical inference calculations.</p></li>
-<li><p><strong>stan</strong>: Utilities for using CmdStanPy and ArviZ for constructing, running, and parsing MCMC calculations with Stan.</p></li>
+<li><p><strong>hmc</strong>: Utilities for using Hamitonian Monte Carlo (HMC), primarily using CmdStanPy.</p></li>
 <li><p><strong>gp</strong>: Utilities for performing inference using Gaussian processes.</p></li>
+<li><p><strong>hv</strong>: Supplies a pretty default styling for HoloViews plotting elements.</p></li>
 <li><p><strong>image</strong>: Utilities for image processing applications.</p></li>
 </ul>
-</div>
+</section>
 
 
            </div>
@@ -127,13 +125,13 @@
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jan 03, 2025.
+      <span class="lastupdated">Last updated on Jul 09, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x17d788f50> 
+   <jinja2.runtime.BlockReference object at 0x30a1ece50> 
 
-<p>© 2021 Justin Bois.</p>
+<p>© 2017–2025 Justin Bois.</p>
 
 <p>This document was prepared at <a rel="caltech" href="http://www.caltech.edu">Caltech</a> with financial support from the <a rel="rosen" href="http://rosen.caltech.edu">Donna and Benjamin M. Rosen Bioengineering Center</a>.</p>
 

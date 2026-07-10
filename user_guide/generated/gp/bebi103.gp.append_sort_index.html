@@ -1,33 +1,31 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.gp.append_sort_index &mdash; bebi103  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=22ddcdb3" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="bebi103.gp.linear_kernel" href="bebi103.gp.linear_kernel.html" />
-    <link rel="prev" title="bebi103.stan.disable_logging" href="../stan/bebi103.stan.disable_logging.html" /> 
+    <link rel="prev" title="bebi103.hmc.disable_logging" href="../hmc/bebi103.hmc.disable_logging.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -59,13 +57,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../using_user_guide.html">Using the user guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../hv.html">HoloViews defaults</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../bootstrap.html">Bootstrap utilities</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../stan.html">Stan (MCMC) utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hmc.html">Hamiltonian Monte Carlo utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../image.html">Image processing utilities</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../api.html#holoviews-defaults">HoloViews defaults</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#visualization">Visualization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#bootstrap-methods">Bootstrap methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api.html#stan-utilities">Stan utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#hamiltonian-monte-carlo-utilities">Hamiltonian Monte Carlo utilities</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.gp.append_sort_index</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bebi103.gp.append_sort_index"><code class="docutils literal notranslate"><span class="pre">append_sort_index()</span></code></a></li>
@@ -74,26 +71,36 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.linear_kernel.html">bebi103.gp.linear_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.polynomial_kernel.html">bebi103.gp.polynomial_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.se_kernel.html">bebi103.gp.se_kernel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_exp_quad_kernel.html">bebi103.gp.d1_exp_quad_kernel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d2_exp_quad_kernel.html">bebi103.gp.d2_exp_quad_kernel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_d2_exp_quad_kernel.html">bebi103.gp.d1_d2_exp_quad_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.exp_quad_kernel.html">bebi103.gp.exp_quad_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.matern_kernel.html">bebi103.gp.matern_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.periodic_kernel.html">bebi103.gp.periodic_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_se_kernel.html">bebi103.gp.d1_se_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_exp_quad_kernel.html">bebi103.gp.d1_exp_quad_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d2_se_kernel.html">bebi103.gp.d2_se_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d2_exp_quad_kernel.html">bebi103.gp.d2_exp_quad_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_d2_se_kernel.html">bebi103.gp.d1_d2_se_kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_d2_exp_quad_kernel.html">bebi103.gp.d1_d2_exp_quad_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_matern_kernel.html">bebi103.gp.d1_matern_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d2_matern_kernel.html">bebi103.gp.d2_matern_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.d1_d2_matern_kernel.html">bebi103.gp.d1_d2_matern_kernel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.periodic_kernel.html">bebi103.gp.periodic_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_exp_quad.html">bebi103.gp.cov_exp_quad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_se.html">bebi103.gp.cov_se</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_d1_exp_quad.html">bebi103.gp.cov_d1_exp_quad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_d1_se.html">bebi103.gp.cov_d1_se</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_d1_d2_exp_quad.html">bebi103.gp.cov_d1_d2_exp_quad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_d1_d2_se.html">bebi103.gp.cov_d1_d2_se</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_matern.html">bebi103.gp.cov_matern</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_d1_matern.html">bebi103.gp.cov_d1_matern</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_d1_d2_matern.html">bebi103.gp.cov_d1_d2_matern</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_periodic.html">bebi103.gp.cov_periodic</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.cov_from_kernel.html">bebi103.gp.cov_from_kernel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.gp.posterior_mean_cov.html">bebi103.gp.posterior_mean_cov</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.gp.posterior_mean_cov_deriv.html">bebi103.gp.posterior_mean_cov_deriv</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#holoviews-defaults">HoloViews defaults</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#general-utilities">General utilities</a></li>
 </ul>
 </li>
 </ul>
@@ -134,17 +141,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="bebi103-gp-append-sort-index">
-<h1>bebi103.gp.append_sort_index<a class="headerlink" href="#bebi103-gp-append-sort-index" title="Permalink to this heading"></a></h1>
+  <section id="bebi103-gp-append-sort-index">
+<h1>bebi103.gp.append_sort_index<a class="headerlink" href="#bebi103-gp-append-sort-index" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.gp.append_sort_index">
-<span class="sig-prename descclassname"><span class="pre">bebi103.gp.</span></span><span class="sig-name descname"><span class="pre">append_sort_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Xstar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.gp.append_sort_index" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bebi103.gp.</span></span><span class="sig-name descname"><span class="pre">append_sort_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Xstar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.gp.append_sort_index" title="Link to this definition"></a></dt>
 <dd><p>Add the entries of X to Xstar, sort the result, and find indices
 in the results where the entries in X appear. Typically, Xstar is
 an array of x-values for which a GP is to be computed and X is an
 array of x-values for which there are data.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Xstar</strong> (<em>array</em><em>, </em><em>shape</em><em> (</em><em>n</em><em>,</em><em>) or </em><em>(</em><em>n</em><em>, </em><em>d</em><em>)</em>) – Array whose unique, sorted entries are returned.</p></li>
 <li><p><strong>X</strong> (<em>array</em><em>, </em><em>shape</em><em> (</em><em>m</em><em>,</em><em>) or </em><em>(</em><em>m</em><em>, </em><em>d</em><em>)</em>) – Array to be added to Xstar and whose entries have their indices
@@ -152,7 +159,7 @@ returned.</p></li>
 <li><p><strong>index_origin</strong> (<em>int</em><em>, </em><em>default 0</em>) – Origin of indexing. Choose <cite>index_origin=1</cite> for use with Stan.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>X_out</strong> (<em>array, 1D if X is shape (n,), 2D if X is shape (n, d)</em>) – Sorted, unique entries of concatenation of Xstar and X.</p></li>
 <li><p><strong>inds</strong> (<em>array, shape (n,)</em>) – Array of indices such that X_out[inds] = X.</p></li>
@@ -162,13 +169,13 @@ returned.</p></li>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../stan/bebi103.stan.disable_logging.html" class="btn btn-neutral float-left" title="bebi103.stan.disable_logging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../hmc/bebi103.hmc.disable_logging.html" class="btn btn-neutral float-left" title="bebi103.hmc.disable_logging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="bebi103.gp.linear_kernel.html" class="btn btn-neutral float-right" title="bebi103.gp.linear_kernel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -176,13 +183,13 @@ returned.</p></li>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jan 03, 2025.
+      <span class="lastupdated">Last updated on Jul 09, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x175ae5160> 
+   <jinja2.runtime.BlockReference object at 0x309d0cde0> 
 
-<p>© 2021 Justin Bois.</p>
+<p>© 2017–2025 Justin Bois.</p>
 
 <p>This document was prepared at <a rel="caltech" href="http://www.caltech.edu">Caltech</a> with financial support from the <a rel="rosen" href="http://rosen.caltech.edu">Donna and Benjamin M. Rosen Bioengineering Center</a>.</p>
 

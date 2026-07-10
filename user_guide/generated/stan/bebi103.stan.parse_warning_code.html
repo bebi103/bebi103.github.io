@@ -1,33 +1,29 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bebi103.stan.parse_warning_code &mdash; bebi103  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=22ddcdb3" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="bebi103.stan.sbc" href="bebi103.stan.sbc.html" />
-    <link rel="prev" title="bebi103.stan.check_all_diagnostics" href="bebi103.stan.check_all_diagnostics.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,39 +51,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/purpose.html">Purpose and contents</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../using_user_guide.html">Using the user guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../hv.html">HoloViews defaults</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../bootstrap.html">Bootstrap utilities</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../stan.html">Stan (MCMC) utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hmc.html">Hamiltonian Monte Carlo utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../image.html">Image processing utilities</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../api.html#holoviews-defaults">HoloViews defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api.html#visualization">Visualization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api.html#bootstrap-methods">Bootstrap methods</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../api.html#stan-utilities">Stan utilities</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.clean_cmdstan.html">bebi103.stan.clean_cmdstan</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.cmdstan_version.html">bebi103.stan.cmdstan_version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.df_to_datadict_hier.html">bebi103.stan.df_to_datadict_hier</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.arviz_to_dataframe.html">bebi103.stan.arviz_to_dataframe</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_divergences.html">bebi103.stan.check_divergences</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_treedepth.html">bebi103.stan.check_treedepth</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_energy.html">bebi103.stan.check_energy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_ess.html">bebi103.stan.check_ess</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_rhat.html">bebi103.stan.check_rhat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.check_all_diagnostics.html">bebi103.stan.check_all_diagnostics</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.stan.parse_warning_code</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#bebi103.stan.parse_warning_code"><code class="docutils literal notranslate"><span class="pre">parse_warning_code()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.sbc.html">bebi103.stan.sbc</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.stan.disable_logging.html">bebi103.stan.disable_logging</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Credits and citation</span></p>
 <ul>
@@ -126,65 +96,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="bebi103-stan-parse-warning-code">
-<h1>bebi103.stan.parse_warning_code<a class="headerlink" href="#bebi103-stan-parse-warning-code" title="Permalink to this heading"></a></h1>
+  <section id="bebi103-stan-parse-warning-code">
+<h1>bebi103.stan.parse_warning_code<a class="headerlink" href="#bebi103-stan-parse-warning-code" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.stan.parse_warning_code">
-<span class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></span><span class="sig-name descname"><span class="pre">parse_warning_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warning_code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.parse_warning_code" title="Permalink to this definition"></a></dt>
-<dd><p>Parses warning code from <cite>check_all_diagnostics()</cite> into
-individual failures and prints results.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>warning_code</strong> (<em>int</em>) – <p>When converted to binary, each digit in the code stands for
-whether or not a test passed. A digit of zero indicates the test
-passed. The ordering of the tests goes:</p>
-<ul>
-<li><p>ESS</p></li>
-<li><p>r_hat</p></li>
-<li><p>divergences</p></li>
-<li><p>tree depth</p></li>
-<li><p>E-BFMI</p></li>
-</ul>
-<p>For example, a warning code of 12 has a binary representation
-of 01100, which means that R-hat and divergences tests failed.</p>
-</p></li>
-<li><p><strong>quiet</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, suppress print results to the screen.</p></li>
-<li><p><strong>return_dict</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, return a dictionary of containing test passage info.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>output</strong> – If <cite>return_dict</cite> is True, returns a dictionary where each entry
-is True is the respective diagnostic check was passed and False
-if it was not.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict</p>
-</dd>
-</dl>
+<span class="sig-prename descclassname"><span class="pre">bebi103.stan.</span></span><span class="sig-name descname"><span class="pre">parse_warning_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warning_code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.stan.parse_warning_code" title="Link to this definition"></a></dt>
+<dd><p>Deprecated. Use <cite>decode_warning_code()</cite>.</p>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="bebi103.stan.check_all_diagnostics.html" class="btn btn-neutral float-left" title="bebi103.stan.check_all_diagnostics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="bebi103.stan.sbc.html" class="btn btn-neutral float-right" title="bebi103.stan.sbc" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jan 03, 2025.
+      <span class="lastupdated">Last updated on Jul 09, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x17c60e210> 
+   <jinja2.runtime.BlockReference object at 0x30a20c1a0> 
 
-<p>© 2021 Justin Bois.</p>
+<p>© 2017–2025 Justin Bois.</p>
 
 <p>This document was prepared at <a rel="caltech" href="http://www.caltech.edu">Caltech</a> with financial support from the <a rel="rosen" href="http://rosen.caltech.edu">Donna and Benjamin M. Rosen Bioengineering Center</a>.</p>
 

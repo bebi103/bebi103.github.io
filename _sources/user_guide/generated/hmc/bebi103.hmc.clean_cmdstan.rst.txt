@@ -1,0 +1,6 @@
+﻿bebi103.hmc.clean\_cmdstan
+==========================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: clean_cmdstan

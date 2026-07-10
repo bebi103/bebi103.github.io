@@ -1,0 +1,6 @@
+﻿bebi103.hmc.split\_rhat
+=======================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: split_rhat

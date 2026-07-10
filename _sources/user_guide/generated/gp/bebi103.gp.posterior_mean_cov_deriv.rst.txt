@@ -1,0 +1,6 @@
+﻿bebi103.gp.posterior\_mean\_cov\_deriv
+======================================
+
+.. currentmodule:: bebi103.gp
+
+.. autofunction:: posterior_mean_cov_deriv

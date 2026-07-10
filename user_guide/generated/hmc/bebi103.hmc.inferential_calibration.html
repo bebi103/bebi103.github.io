@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bebi103.hmc.inferential_calibration &mdash; bebi103  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=22ddcdb3" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="bebi103.hmc.disable_logging" href="bebi103.hmc.disable_logging.html" />
+    <link rel="prev" title="bebi103.hmc.decode_warning_code" href="bebi103.hmc.decode_warning_code.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #F0F0F0" >
+
+          
+          
+          <a href="../../../index.html">
+            
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/purpose.html">Purpose and contents</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../using_user_guide.html">Using the user guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hv.html">HoloViews defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bootstrap.html">Bootstrap utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hmc.html">Hamiltonian Monte Carlo utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../image.html">Image processing utilities</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#visualization">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#bootstrap-methods">Bootstrap methods</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../api.html#hamiltonian-monte-carlo-utilities">Hamiltonian Monte Carlo utilities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.install_cmdstan_colab.html">bebi103.hmc.install_cmdstan_colab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.include_path.html">bebi103.hmc.include_path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.clean_cmdstan.html">bebi103.hmc.clean_cmdstan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.cmdstan_version.html">bebi103.hmc.cmdstan_version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.df_to_datadict_hier.html">bebi103.hmc.df_to_datadict_hier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.convert_samples.html">bebi103.hmc.convert_samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.extract_variable.html">bebi103.hmc.extract_variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.check_hmc_diagnostics.html">bebi103.hmc.check_hmc_diagnostics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.check_expectand_diagnostics.html">bebi103.hmc.check_expectand_diagnostics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.check_all_diagnostics.html">bebi103.hmc.check_all_diagnostics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.tau_hat.html">bebi103.hmc.tau_hat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.tail_xi_hat.html">bebi103.hmc.tail_xi_hat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.ess_hat.html">bebi103.hmc.ess_hat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.split_rhat.html">bebi103.hmc.split_rhat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.check_variance.html">bebi103.hmc.check_variance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.decode_warning_code.html">bebi103.hmc.decode_warning_code</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.hmc.inferential_calibration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bebi103.hmc.inferential_calibration"><code class="docutils literal notranslate"><span class="pre">inferential_calibration()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.disable_logging.html">bebi103.hmc.disable_logging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#holoviews-defaults">HoloViews defaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#general-utilities">General utilities</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Credits and citation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../credits_and_citation.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../credits_and_citation.html#citing-bebi103">Citing bebi103</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #F0F0F0" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">bebi103</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+<li><a href="https://github.com/justinbois/bebi103">bebi103 repo on GitHub</a></li>
+
+  <li class="wy-breadcrumbs-aside">
+    
+        
+        
+            <a href="../../../_sources/user_guide/generated/hmc/bebi103.hmc.inferential_calibration.rst.txt" rel="nofollow"> View page source</a>
+        
+      
+    
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="bebi103-hmc-inferential-calibration">
+<h1>bebi103.hmc.inferential_calibration<a class="headerlink" href="#bebi103-hmc-inferential-calibration" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="bebi103.hmc.inferential_calibration">
+<span class="sig-prename descclassname"><span class="pre">bebi103.hmc.</span></span><span class="sig-name descname"><span class="pre">inferential_calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prior_predictive_stan_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_stan_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prior_predictive_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignored_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data_dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagnostic_check_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_prior_draws_for_sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferential_calibration_samples'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_sample_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_package</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'polars'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_csv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferential_calibration_results.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.hmc.inferential_calibration" title="Link to this definition"></a></dt>
+<dd><p>Perform simulation-based calibration on a Stan Model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prior_predictive_stan_file</strong> (<em>str</em>) – Stan file for generating prior predictive data sets.</p></li>
+<li><p><strong>posterior_model</strong> (<em>str</em>) – Stan file for the posterior that allows sampling.</p></li>
+<li><p><strong>prior_predictive_model_data</strong> (<em>dict</em>) – Dictionary with entries specified by the data block of the prior
+predictive Stan model.</p></li>
+<li><p><strong>posterior_model_data</strong> (<em>dict</em>) – Dictionary with entries specified by the data block of the prior
+predictive Stan model. Measured data in this dictionary will be
+replaced in each simulation by what was generated by the prior
+predictive model.</p></li>
+<li><p><strong>measured_data</strong> (<em>list</em>) – A list of strings containing the variable names of measured
+data. Each entry in <cite>measured_data</cite> must be a key in
+<cite>posterior_model_data</cite>.</p></li>
+<li><p><strong>var_names</strong> (<em>list</em><em> of </em><em>strings</em>) – A list of strings containing parameter names to be considered
+in the inferential calibration analysis. Not all parameters of
+the model need be considered; only those in <cite>var_names</cite> have
+rank statistics calculated. Note that for multidimensional
+variables, <cite>var_names</cite> only has the root name. E.g.,
+<cite>var_names=[‘x’, ‘y’]</cite>, <em>not</em> something like
+<cite>var_names=[‘x[0]’, ‘x[1]’, ‘y[0,0]’]</cite>.</p></li>
+<li><p><strong>ignored_var_names</strong> (<em>tuple</em><em> or </em><em>list</em><em> of </em><em>strings</em><em>, </em><em>default</em><em> (</em><em>)</em>) – Variable names to ignore in the inferential calibration
+procedure. These variables have no rank statistics computed and
+are omitted from the diagnostic checks. This is typically used
+for posterior retrodictive variables and log likelihood
+variables. As with <cite>var_names</cite>, only the root name is given for
+multidimensional variables, e.g. <cite>ignored_var_names=[‘x_prc’]</cite>,
+<em>not</em> <cite>ignored_var_names=[‘x_prc[0]’, ‘x_prc[1]’]</cite>.</p></li>
+<li><p><strong>measured_data_dtypes</strong> (<em>dict</em><em>, </em><em>default None</em>) – The key in the dtypes dict is a string representing the data
+name, and the corresponding item is its dtype, almost always
+either <cite>int</cite> or <cite>float</cite>.</p></li>
+<li><p><strong>sampling_kwargs</strong> (<em>dict</em><em>, </em><em>default None</em>) – kwargs to be passed to <cite>sm.sample()</cite>.</p></li>
+<li><p><strong>diagnostic_check_kwargs</strong> (<em>dict</em><em>, </em><em>default None</em>) – kwargs to pass to <cite>check_all_diagnostics()</cite>. If <cite>verbosity</cite> and/or
+<cite>return_diagnostics</cite> are given, they are ignored.
+<cite>max_treedepth</cite> is inferred from <cite>sampling_kwargs</cite>.</p></li>
+<li><p><strong>cores</strong> (<em>int</em><em>, </em><em>default 1</em>) – Number of cores to use in the inferential calibration calculation.</p></li>
+<li><p><strong>N</strong> (<em>int</em><em>, </em><em>400</em>) – Number of simulations to run.</p></li>
+<li><p><strong>n_prior_draws_for_sd</strong> (<em>int</em><em>, </em><em>default 1000</em>) – Number of prior draws to compute the prior standard deviation
+for a parameter in the prior distribution. This standard
+deviation is used in the shrinkage calculation.</p></li>
+<li><p><strong>samples_dir</strong> (<em>str</em><em>, </em><em>default &quot;inferential_calibration_samples&quot;</em>) – Path to directory to store .csv and .txt files generated by
+CmdStan. The directory specified here will NOT be destroyed
+after a calculation, though the files within it may be,
+depending on the <cite>remove_sample_files</cite> kwarg.</p></li>
+<li><p><strong>remove_sample_files</strong> (<em>bool</em><em>, </em><em>default True</em>) – If True, remove .csv and .txt files generated by CmdStan.</p></li>
+<li><p><strong>df_package</strong> (<em>str</em><em>, </em><em>either 'polars'</em><em> (</em><em>default</em><em>) or </em><em>'pandas'</em>) – Which package to use for output data frame</p></li>
+<li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, display a progress bar for the calculation using tqdm.</p></li>
+<li><p><strong>output_csv</strong> (<em>str</em><em>, </em><em>default 'inferential_calibration_results.csv'</em>) – Path to CSV file where results will be written. Results are
+written directly to this file as workers complete (instead of
+collecting in memory). This reduces memory usage and allows
+monitoring progress by examining the growing CSV file. The file
+includes metadata comments at the top with run parameters and
+start time.</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em><em>, </em><em>default False</em>) – If False, raises RuntimeError if output_csv already exists.
+If True, overwrites existing file with new results.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p><strong>output</strong> – Data frame with the output of the inferential calibration analysis. It has
+the following columns.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>trial : Unique trial number for the simulation.</p></li>
+<li><p>warning_code : Warning code based on diagnostic checks outputted by <cite>check_all_diagnostics()</cite>.</p></li>
+<li><p>parameter: The name of the scalar parameter.</p></li>
+<li><p>prior: Value of the parameter used in the simulation. This value was drawn out of the prior distribution.</p></li>
+<li><p>mean : mean parameter value based on sampling out of the posterior in the simulation.</p></li>
+<li><p>sd : standard deviation of the parameter value based on sampling out of the posterior in the simulation.</p></li>
+<li><p>L : The number of bins used in computing the rank statistic. The rank statistic should be uniform on the integers [0, L].</p></li>
+<li><p>rank_statistic : Value of the rank statistic for the parameter for the trial.</p></li>
+<li><p>shrinkage : The shrinkage for the parameter for the given trial. This is computed as 1 - sd / sd_prior, where sd_prior is the standard deviation of the parameters as determined from drawing out of the prior.</p></li>
+<li><p>z_score : The z-score for the parameter for the given trial. This is computed as abs(mean - prior) / sd.</p></li>
+<li><p>tail_xi_hat_left : Left tail xi_hat for the parameter, computed over all chains pooled together.</p></li>
+<li><p>tail_xi_hat_right : Right tail xi_hat for the parameter, computed over all chains pooled together.</p></li>
+<li><p>inc_tau_hat : Incremental empirical integrated autocorrelation time for the parameter, computed over all chains pooled together.</p></li>
+<li><p>variance : Empirical variance of the parameter’s posterior samples, computed over all chains pooled together.</p></li>
+<li><p>average_accept_proxy : Average proxy acceptance statistic for the trial, taken over all chains.</p></li>
+<li><p>prior_predictive_seed : Random number seed used by Stan to generate the prior predictive data set for the trial.</p></li>
+<li><p>posterior_seed : Random number seed used by Stan for the posterior MCMC sampling for the trial.</p></li>
+<li><p>prior_predictive_prefix : Full-path prefix of the sampling files (.csv and .txt) generated by Stan when drawing the prior predictive data set for the trial. If <cite>remove_sample_files</cite> is True (so the files are deleted), every entry is null (Polars output) or np.nan (Pandas output).</p></li>
+<li><p>samples_prefix : Full-path prefix of the sampling files (.csv and .txt) generated by Stan for the posterior MCMC sampling for the trial. If <cite>remove_sample_files</cite> is True (so the files are deleted), every entry is null (Polars output) or np.nan (Pandas output).</p></li>
+</ul>
+</div></blockquote>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Polars or Pandas DataFrame</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>prior distribution, using those parameters to generate data from
+the likelihood, and then performing posterior sampling based on
+the generated data. A rank statistic for each simulation is
+computed. This rank statistic should be uniformly distributed
+over its L possible values. See <a class="reference external" href="https://arxiv.org/abs/1804.06788">https://arxiv.org/abs/1804.06788</a>,
+by Talts, et al., for details.</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bebi103.hmc.decode_warning_code.html" class="btn btn-neutral float-left" title="bebi103.hmc.decode_warning_code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bebi103.hmc.disable_logging.html" class="btn btn-neutral float-right" title="bebi103.hmc.disable_logging" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">Last updated on Jul 09, 2026.
+      </span></p>
+  </div>
+
+   <jinja2.runtime.BlockReference object at 0x309a51e10> 
+
+<p>© 2017–2025 Justin Bois.</p>
+
+<p>This document was prepared at <a rel="caltech" href="http://www.caltech.edu">Caltech</a> with financial support from the <a rel="rosen" href="http://rosen.caltech.edu">Donna and Benjamin M. Rosen Bioengineering Center</a>.</p>
+
+<br />
+
+<p>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>.
+
+ 
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

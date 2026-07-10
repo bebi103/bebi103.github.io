@@ -1,0 +1,6 @@
+﻿bebi103.gp.cov\_d1\_se
+======================
+
+.. currentmodule:: bebi103.gp
+
+.. autofunction:: cov_d1_se

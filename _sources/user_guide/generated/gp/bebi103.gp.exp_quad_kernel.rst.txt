@@ -1,0 +1,6 @@
+﻿bebi103.gp.exp\_quad\_kernel
+============================
+
+.. currentmodule:: bebi103.gp
+
+.. autofunction:: exp_quad_kernel

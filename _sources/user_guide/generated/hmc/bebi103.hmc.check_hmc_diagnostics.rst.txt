@@ -1,0 +1,6 @@
+﻿bebi103.hmc.check\_hmc\_diagnostics
+===================================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: check_hmc_diagnostics

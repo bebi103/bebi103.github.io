@@ -1,0 +1,6 @@
+﻿bebi103.hmc.inferential\_calibration
+====================================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: inferential_calibration

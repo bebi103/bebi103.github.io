@@ -1,0 +1,6 @@
+﻿bebi103.hmc.tail\_xi\_hat
+=========================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: tail_xi_hat

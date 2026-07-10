@@ -1,0 +1,6 @@
+﻿bebi103.hmc.convert\_samples
+============================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: convert_samples

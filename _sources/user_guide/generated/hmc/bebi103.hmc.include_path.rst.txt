@@ -1,0 +1,6 @@
+﻿bebi103.hmc.include\_path
+=========================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: include_path

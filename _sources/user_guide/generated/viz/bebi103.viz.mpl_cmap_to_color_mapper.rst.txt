@@ -1,0 +1,6 @@
+﻿bebi103.viz.mpl\_cmap\_to\_color\_mapper
+========================================
+
+.. currentmodule:: bebi103.viz
+
+.. autofunction:: mpl_cmap_to_color_mapper

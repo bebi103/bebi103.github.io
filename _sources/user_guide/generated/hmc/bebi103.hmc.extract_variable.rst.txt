@@ -1,0 +1,6 @@
+﻿bebi103.hmc.extract\_variable
+=============================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: extract_variable
