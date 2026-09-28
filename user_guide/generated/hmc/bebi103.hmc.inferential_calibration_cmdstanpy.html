@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bebi103.hmc.inferential_calibration &mdash; bebi103  documentation</title>
+  <title>bebi103.hmc.inferential_calibration_cmdstanpy &mdash; bebi103  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -24,8 +24,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="bebi103.hmc.disable_logging" href="bebi103.hmc.disable_logging.html" />
-    <link rel="prev" title="bebi103.hmc.decode_warning_code" href="bebi103.hmc.decode_warning_code.html" /> 
+    <link rel="next" title="bebi103.gp.append_sort_index" href="../gp/bebi103.gp.append_sort_index.html" />
+    <link rel="prev" title="bebi103.hmc.parse_prior_predictive_samples" href="bebi103.hmc.parse_prior_predictive_samples.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -79,11 +79,14 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.split_rhat.html">bebi103.hmc.split_rhat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.check_variance.html">bebi103.hmc.check_variance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.decode_warning_code.html">bebi103.hmc.decode_warning_code</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.hmc.inferential_calibration</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#bebi103.hmc.inferential_calibration"><code class="docutils literal notranslate"><span class="pre">inferential_calibration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.disable_logging.html">bebi103.hmc.disable_logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.sample_cmdstanpy.html">bebi103.hmc.sample_cmdstanpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.sample_cmdstanpy_prior_predictive.html">bebi103.hmc.sample_cmdstanpy_prior_predictive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.parse_prior_predictive_samples.html">bebi103.hmc.parse_prior_predictive_samples</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.hmc.inferential_calibration_cmdstanpy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bebi103.hmc.inferential_calibration_cmdstanpy"><code class="docutils literal notranslate"><span class="pre">inferential_calibration_cmdstanpy()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.disable_logging.html">bebi103.hmc.disable_logging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
@@ -118,7 +121,7 @@
     
         
         
-            <a href="../../../_sources/user_guide/generated/hmc/bebi103.hmc.inferential_calibration.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/user_guide/generated/hmc/bebi103.hmc.inferential_calibration_cmdstanpy.rst.txt" rel="nofollow"> View page source</a>
         
       
     
@@ -130,33 +133,63 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="bebi103-hmc-inferential-calibration">
-<h1>bebi103.hmc.inferential_calibration<a class="headerlink" href="#bebi103-hmc-inferential-calibration" title="Link to this heading"></a></h1>
+  <section id="bebi103-hmc-inferential-calibration-cmdstanpy">
+<h1>bebi103.hmc.inferential_calibration_cmdstanpy<a class="headerlink" href="#bebi103-hmc-inferential-calibration-cmdstanpy" title="Link to this heading"></a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="bebi103.hmc.inferential_calibration">
-<span class="sig-prename descclassname"><span class="pre">bebi103.hmc.</span></span><span class="sig-name descname"><span class="pre">inferential_calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prior_predictive_stan_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_stan_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prior_predictive_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignored_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data_dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagnostic_check_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_prior_draws_for_sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferential_calibration_samples'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_sample_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_package</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'polars'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_csv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferential_calibration_results.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.hmc.inferential_calibration" title="Link to this definition"></a></dt>
-<dd><p>Perform simulation-based calibration on a Stan Model.</p>
+<dt class="sig sig-object py" id="bebi103.hmc.inferential_calibration_cmdstanpy">
+<span class="sig-prename descclassname"><span class="pre">bebi103.hmc.</span></span><span class="sig-name descname"><span class="pre">inferential_calibration_cmdstanpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prior_predictive_fun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prior_predictive_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prior_sds_fun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prior_sds_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posterior_stan_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measured_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_posterior_model_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignored_var_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagnostic_check_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferential_calibration_samples'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_sample_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_package</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'polars'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_csv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferential_calibration_results.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.hmc.inferential_calibration_cmdstanpy" title="Link to this definition"></a></dt>
+<dd><p>Perform simulation-based calibration for models using the
+cmdstanpy interface.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>prior_predictive_stan_file</strong> (<em>str</em>) – Stan file for generating prior predictive data sets.</p></li>
-<li><p><strong>posterior_model</strong> (<em>str</em>) – Stan file for the posterior that allows sampling.</p></li>
-<li><p><strong>prior_predictive_model_data</strong> (<em>dict</em>) – Dictionary with entries specified by the data block of the prior
-predictive Stan model.</p></li>
-<li><p><strong>posterior_model_data</strong> (<em>dict</em>) – Dictionary with entries specified by the data block of the prior
-predictive Stan model. Measured data in this dictionary will be
-replaced in each simulation by what was generated by the prior
-predictive model.</p></li>
-<li><p><strong>measured_data</strong> (<em>list</em>) – A list of strings containing the variable names of measured
-data. Each entry in <cite>measured_data</cite> must be a key in
-<cite>posterior_model_data</cite>.</p></li>
-<li><p><strong>var_names</strong> (<em>list</em><em> of </em><em>strings</em>) – A list of strings containing parameter names to be considered
+<li><p><strong>prior_predictive_fun</strong> (<em>function</em>) – Function with call signature
+<code class="docutils literal notranslate"><span class="pre">prior_predictive_fun(seed=None,</span> <span class="pre">**prior_predictive_kwargs)</span></code>.
+This function is used to draw prior predictive samples of
+data sets from the posterior. The function need not necessarily
+use a provided seed, but must have a keyword argument allowing
+for seed specification. The function must still run, even if
+<cite>seed</cite> is None. The function must return a dictionary
+of a single prior predictive sample. Each key is the variable
+name and each value is either a parameter drawn from the prior
+or a data set drawn from the prior predictive distribution.
+Both variables and data sets may be entered in the dictionary
+as Numpy arrays/scalars or as individual elements of Numpy
+arrays (e.g., with keys ‘my_var[1]’, ‘my_var[2]’, etc.)</p></li>
+<li><p><strong>prior_predictive_kwargs</strong> (<em>dict</em><em>, </em><em>default {}</em>) – Kwargs to be passed to prior_predictive_fun().</p></li>
+<li><p><strong>prior_sds_fun</strong> (<em>function</em><em>, </em><em>default None</em>) – Function with call signature <code class="docutils literal notranslate"><span class="pre">prior_sds_fun(**prior_sds_kwargs)</span></code>.
+This function is used to compute the standard deviations of
+the marginal prior for each parameter. The function must
+return a dictionary where each key is the variable
+name and each value is the standard deviation of the
+corresponding marginal prior distribution. Note that
+any parameter must be a scalar. E.g., for a matrix-valued
+parameter A, the keys must be ‘A[1,1]’, ‘A[1,2]’, and so on.
+Note the 1-indexing. If None, then <cite>prior_predictive_fun()</cite> is
+used to draw samples out of the priors and then standard
+deviations are estimated from the samples.</p></li>
+<li><p><strong>prior_sds_kwargs</strong> (<em>dict</em><em>, </em><em>default {}</em>) – Kwargs to be passed to prior_sds_fun(). Ignored if
+<cite>prior_sds_fun</cite> is None.</p></li>
+<li><p><strong>posterior_stan_file</strong> (<em>str</em>) – Stan file for the posterior that allows sampling.</p></li>
+<li><p><strong>measured_data</strong> (<em>dict</em>) – A dictionary where each key is the variable name of measured
+data. The value of each entry in the <cite>measured_data</cite> dictionary
+is the type of the corresponding data, almost always either
+<cite>int</cite> or <cite>float</cite>. Upon generation of a prior predictive data
+set, a new dictionary is created with keys given by the keys of
+<cite>measured_data</cite> and value given by the generated prior
+predictive data set.</p></li>
+<li><p><strong>additional_posterior_model_data</strong> (<em>dict</em><em>, </em><em>default {}</em>) – Dictionary with entries specified for the data block of the
+posterior Stan model. These are all entries in the data block
+of the posterior model that are not measured data generated
+by <cite>prior_predictive_fun()</cite>.</p></li>
+<li><p><strong>var_names</strong> (<em>None</em><em>, or </em><em>tuple</em><em> or </em><em>list</em><em> of </em><em>strings</em>) – A list of strings containing parameter names to be considered
 in the inferential calibration analysis. Not all parameters of
 the model need be considered; only those in <cite>var_names</cite> have
 rank statistics calculated. Note that for multidimensional
 variables, <cite>var_names</cite> only has the root name. E.g.,
 <cite>var_names=[‘x’, ‘y’]</cite>, <em>not</em> something like
-<cite>var_names=[‘x[0]’, ‘x[1]’, ‘y[0,0]’]</cite>.</p></li>
+<cite>var_names=[‘x[0]’, ‘x[1]’, ‘y[0,0]’]</cite>. If None, names of
+variables are inferred from output of <cite>prior_predictive_fun()</cite>.</p></li>
 <li><p><strong>ignored_var_names</strong> (<em>tuple</em><em> or </em><em>list</em><em> of </em><em>strings</em><em>, </em><em>default</em><em> (</em><em>)</em>) – Variable names to ignore in the inferential calibration
 procedure. These variables have no rank statistics computed and
 are omitted from the diagnostic checks. This is typically used
@@ -164,18 +197,12 @@ for posterior retrodictive variables and log likelihood
 variables. As with <cite>var_names</cite>, only the root name is given for
 multidimensional variables, e.g. <cite>ignored_var_names=[‘x_prc’]</cite>,
 <em>not</em> <cite>ignored_var_names=[‘x_prc[0]’, ‘x_prc[1]’]</cite>.</p></li>
-<li><p><strong>measured_data_dtypes</strong> (<em>dict</em><em>, </em><em>default None</em>) – The key in the dtypes dict is a string representing the data
-name, and the corresponding item is its dtype, almost always
-either <cite>int</cite> or <cite>float</cite>.</p></li>
-<li><p><strong>sampling_kwargs</strong> (<em>dict</em><em>, </em><em>default None</em>) – kwargs to be passed to <cite>sm.sample()</cite>.</p></li>
+<li><p><strong>sample_kwargs</strong> (<em>dict</em><em>, </em><em>default None</em>) – kwargs to be passed to <cite>sm.sample()</cite>.</p></li>
 <li><p><strong>diagnostic_check_kwargs</strong> (<em>dict</em><em>, </em><em>default None</em>) – kwargs to pass to <cite>check_all_diagnostics()</cite>. If <cite>verbosity</cite> and/or
 <cite>return_diagnostics</cite> are given, they are ignored.
-<cite>max_treedepth</cite> is inferred from <cite>sampling_kwargs</cite>.</p></li>
+<cite>max_treedepth</cite> is inferred from <cite>sample_kwargs</cite>.</p></li>
 <li><p><strong>cores</strong> (<em>int</em><em>, </em><em>default 1</em>) – Number of cores to use in the inferential calibration calculation.</p></li>
 <li><p><strong>N</strong> (<em>int</em><em>, </em><em>400</em>) – Number of simulations to run.</p></li>
-<li><p><strong>n_prior_draws_for_sd</strong> (<em>int</em><em>, </em><em>default 1000</em>) – Number of prior draws to compute the prior standard deviation
-for a parameter in the prior distribution. This standard
-deviation is used in the shrinkage calculation.</p></li>
 <li><p><strong>samples_dir</strong> (<em>str</em><em>, </em><em>default &quot;inferential_calibration_samples&quot;</em>) – Path to directory to store .csv and .txt files generated by
 CmdStan. The directory specified here will NOT be destroyed
 after a calculation, though the files within it may be,
@@ -195,28 +222,38 @@ If True, overwrites existing file with new results.</p></li>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><p><strong>output</strong> – Data frame with the output of the inferential calibration analysis. It has
-the following columns.</p>
+one row per scalar parameter per trial and the following columns.
+If a trial fails, its per-parameter statistics and its HMC
+diagnostic summaries are null (Polars output) or np.nan (Pandas
+output), and the <cite>error</cite> column holds the error message.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>trial : Unique trial number for the simulation.</p></li>
-<li><p>warning_code : Warning code based on diagnostic checks outputted by <cite>check_all_diagnostics()</cite>.</p></li>
-<li><p>parameter: The name of the scalar parameter.</p></li>
-<li><p>prior: Value of the parameter used in the simulation. This value was drawn out of the prior distribution.</p></li>
+<li><p>parameter : The name of the scalar parameter.</p></li>
+<li><p>ground_truth : Value of the parameter used in the simulation. This value was drawn out of the prior distribution.</p></li>
+<li><p>rank_statistic : Value of the rank statistic for the parameter for the trial.</p></li>
 <li><p>mean : mean parameter value based on sampling out of the posterior in the simulation.</p></li>
 <li><p>sd : standard deviation of the parameter value based on sampling out of the posterior in the simulation.</p></li>
-<li><p>L : The number of bins used in computing the rank statistic. The rank statistic should be uniform on the integers [0, L].</p></li>
-<li><p>rank_statistic : Value of the rank statistic for the parameter for the trial.</p></li>
-<li><p>shrinkage : The shrinkage for the parameter for the given trial. This is computed as 1 - sd / sd_prior, where sd_prior is the standard deviation of the parameters as determined from drawing out of the prior.</p></li>
-<li><p>z_score : The z-score for the parameter for the given trial. This is computed as abs(mean - prior) / sd.</p></li>
+<li><p>shrinkage : The shrinkage for the parameter for the given trial. This is computed as 1 - (sd / sd_prior)**2, where sd_prior is the standard deviation of the parameter’s marginal prior distribution.</p></li>
+<li><p>z_score : The z-score for the parameter for the given trial. This is computed as (mean - ground_truth) / sd, so it is signed.</p></li>
+<li><p>Rhat : Split Rhat for the parameter, computed across all chains.</p></li>
+<li><p>ESS_hat : Total empirical effective sample size for the parameter, summed over all chains.</p></li>
+<li><p>ESS_hat_per_iter : <cite>ESS_hat</cite> divided by the total number of posterior samples (all chains and draws).</p></li>
+<li><p>ESS_hat_min_per_chain : Minimum per-chain empirical effective sample size for the parameter. This is the quantity the ESS_hat diagnostic warning is based on: a warning is raised (and the corresponding bit set in <cite>warning_code</cite>) when it falls below <cite>min_ess_hat_per_chain</cite>. Because <cite>ESS_hat</cite> is a sum over chains, it can be large even when this per-chain minimum, and hence the warning, indicates poor mixing in a single chain.</p></li>
 <li><p>tail_xi_hat_left : Left tail xi_hat for the parameter, computed over all chains pooled together.</p></li>
 <li><p>tail_xi_hat_right : Right tail xi_hat for the parameter, computed over all chains pooled together.</p></li>
 <li><p>inc_tau_hat : Incremental empirical integrated autocorrelation time for the parameter, computed over all chains pooled together.</p></li>
 <li><p>variance : Empirical variance of the parameter’s posterior samples, computed over all chains pooled together.</p></li>
+<li><p>n_divergences : Total number of divergent transitions in the trial, summed over all chains.</p></li>
+<li><p>n_bad_ebfmi : Number of chains in the trial whose E-BFMI is below <cite>efmi_rule_of_thumb</cite>.</p></li>
+<li><p>n_max_treedepth : Total number of transitions in the trial that hit the maximum tree depth, summed over all chains.</p></li>
 <li><p>average_accept_proxy : Average proxy acceptance statistic for the trial, taken over all chains.</p></li>
-<li><p>prior_predictive_seed : Random number seed used by Stan to generate the prior predictive data set for the trial.</p></li>
+<li><p>warning_code : Warning code based on diagnostic checks outputted by <cite>check_all_diagnostics()</cite>.</p></li>
+<li><p>prior_predictive_seed : Random number seed passed to <cite>prior_predictive_fun()</cite> to generate the prior predictive sample for the trial.</p></li>
 <li><p>posterior_seed : Random number seed used by Stan for the posterior MCMC sampling for the trial.</p></li>
-<li><p>prior_predictive_prefix : Full-path prefix of the sampling files (.csv and .txt) generated by Stan when drawing the prior predictive data set for the trial. If <cite>remove_sample_files</cite> is True (so the files are deleted), every entry is null (Polars output) or np.nan (Pandas output).</p></li>
+<li><p>L : The number of posterior draws used in computing the rank statistic. The rank statistic should be uniform on the integers [0, L].</p></li>
 <li><p>samples_prefix : Full-path prefix of the sampling files (.csv and .txt) generated by Stan for the posterior MCMC sampling for the trial. If <cite>remove_sample_files</cite> is True (so the files are deleted), every entry is null (Polars output) or np.nan (Pandas output).</p></li>
+<li><p>error : ‘no error’ if the trial succeeded; otherwise the error message raised during the trial.</p></li>
 </ul>
 </div></blockquote>
 </p>
@@ -226,12 +263,18 @@ the following columns.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>prior distribution, using those parameters to generate data from
+<p>Each simulation is done by sampling a parameter set out of the
+prior distribution, using those parameters to generate data from
 the likelihood, and then performing posterior sampling based on
 the generated data. A rank statistic for each simulation is
 computed. This rank statistic should be uniformly distributed
 over its L possible values. See <a class="reference external" href="https://arxiv.org/abs/1804.06788">https://arxiv.org/abs/1804.06788</a>,
 by Talts, et al., for details.</p>
+<p>Prior predictive samples are not stored. The assumption is that
+prior predictive samples can be drawn very quickly. The seed used
+to generated the prior predictive sample and other kwargs passed to
+<cite>prior_predictive_fun</cite> are stored for each trial, so it is easy to
+regenerated prior predictive samples as desired.</p>
 </dd></dl>
 
 </section>
@@ -240,19 +283,19 @@ by Talts, et al., for details.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="bebi103.hmc.decode_warning_code.html" class="btn btn-neutral float-left" title="bebi103.hmc.decode_warning_code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="bebi103.hmc.disable_logging.html" class="btn btn-neutral float-right" title="bebi103.hmc.disable_logging" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="bebi103.hmc.parse_prior_predictive_samples.html" class="btn btn-neutral float-left" title="bebi103.hmc.parse_prior_predictive_samples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../gp/bebi103.gp.append_sort_index.html" class="btn btn-neutral float-right" title="bebi103.gp.append_sort_index" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 09, 2026.
+      <span class="lastupdated">Last updated on Sep 27, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x309a51e10> 
+   <jinja2.runtime.BlockReference object at 0x3071ec6e0> 
 
 <p>© 2017–2025 Justin Bois.</p>
 

@@ -82,8 +82,11 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.split_rhat.html">bebi103.hmc.split_rhat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.check_variance.html">bebi103.hmc.check_variance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.decode_warning_code.html">bebi103.hmc.decode_warning_code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.inferential_calibration.html">bebi103.hmc.inferential_calibration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.disable_logging.html">bebi103.hmc.disable_logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.sample_cmdstanpy.html">bebi103.hmc.sample_cmdstanpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.sample_cmdstanpy_prior_predictive.html">bebi103.hmc.sample_cmdstanpy_prior_predictive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.parse_prior_predictive_samples.html">bebi103.hmc.parse_prior_predictive_samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.inferential_calibration_cmdstanpy.html">bebi103.hmc.inferential_calibration_cmdstanpy</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
@@ -134,7 +137,7 @@
 <h1>bebi103.hmc.check_expectand_diagnostics<a class="headerlink" href="#bebi103-hmc-check-expectand-diagnostics" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.hmc.check_expectand_diagnostics">
-<span class="sig-prename descclassname"><span class="pre">bebi103.hmc.</span></span><span class="sig-name descname"><span class="pre">check_expectand_diagnostics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_ess_hat_per_chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xi_hat_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omit_array_entry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.hmc.check_expectand_diagnostics" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bebi103.hmc.</span></span><span class="sig-name descname"><span class="pre">check_expectand_diagnostics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_ess_hat_per_chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omit_array_entry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.hmc.check_expectand_diagnostics" title="Link to this definition"></a></dt>
 <dd><p>Check all expectand-specific diagnostics for a collection of
 Markov chains (tail xi_hats, empirical variance, split Rhat,
 incremental integrated autocorrelation time, and effective sample
@@ -150,9 +153,6 @@ the second dimension indexes the sequential states within each
 Markov chain.</p></li>
 <li><p><strong>min_ess_hat_per_chain</strong> (<em>float</em><em>, </em><em>default 100</em>) – The minimum empirical effective sample size per chain below which
 a warning is flagged.</p></li>
-<li><p><strong>xi_hat_threshold</strong> (<em>float</em><em>, </em><em>default 0.25</em>) – Tail xi_hats at or above this value are flagged as warnings. Also
-passed through to <cite>tail_xi_hat()</cite> when computing the tail
-xi_hats.</p></li>
 <li><p><strong>omit</strong> (<em>str</em><em>, </em><em>re.Pattern</em><em>, or </em><em>iterable thereof</em>) – Glob pattern(s) matched against the base (non-indexed) name of
 each variable. Any variable whose base name matches an entry is
 omitted, whether scalar or array valued. For example,
@@ -185,6 +185,8 @@ warning.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
+<p>Adapted from <cite>check_all_expectand_diagnostics()</cite> written by Michael
+Betancourt in his mcmc_diagnostics package.</p>
 </dd></dl>
 
 </section>
@@ -201,11 +203,11 @@ warning.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 09, 2026.
+      <span class="lastupdated">Last updated on Sep 27, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x304877700> 
+   <jinja2.runtime.BlockReference object at 0x303fffb60> 
 
 <p>© 2017–2025 Justin Bois.</p>
 

@@ -82,8 +82,11 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.split_rhat.html">bebi103.hmc.split_rhat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.check_variance.html">bebi103.hmc.check_variance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.decode_warning_code.html">bebi103.hmc.decode_warning_code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.inferential_calibration.html">bebi103.hmc.inferential_calibration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.disable_logging.html">bebi103.hmc.disable_logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.sample_cmdstanpy.html">bebi103.hmc.sample_cmdstanpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.sample_cmdstanpy_prior_predictive.html">bebi103.hmc.sample_cmdstanpy_prior_predictive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.parse_prior_predictive_samples.html">bebi103.hmc.parse_prior_predictive_samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.inferential_calibration_cmdstanpy.html">bebi103.hmc.inferential_calibration_cmdstanpy</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
@@ -140,7 +143,7 @@ output ensembles across a collection of Markov chains.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>samples</strong> (<em>cmdstanpy.CmdStanMCMC instance</em><em> or </em><em>dict</em>) – MCMC samples from which to compute ESShat, either as a
+<li><p><strong>samples</strong> (<em>cmdstanpy.CmdStanMCMC instance</em><em> or </em><em>dict</em>) – MCMC samples from which to compute ESS_hat, either as a
 cmdstanpy.CmdStanMCMC instance or as a dictionary of
 two-dimensional arrays for each expectand. For the dictionary,
 the first dimension of each element indexes the Markov chains and
@@ -183,11 +186,11 @@ empirical ESS for each chain.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 09, 2026.
+      <span class="lastupdated">Last updated on Sep 27, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x304ca5940> 
+   <jinja2.runtime.BlockReference object at 0x30654a9e0> 
 
 <p>© 2017–2025 Justin Bois.</p>
 

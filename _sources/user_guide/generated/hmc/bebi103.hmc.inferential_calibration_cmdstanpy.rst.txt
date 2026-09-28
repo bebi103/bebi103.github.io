@@ -1,0 +1,6 @@
+﻿bebi103.hmc.inferential\_calibration\_cmdstanpy
+===============================================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: inferential_calibration_cmdstanpy

@@ -106,8 +106,11 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/hmc/bebi103.hmc.split_rhat.html">bebi103.hmc.split_rhat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/hmc/bebi103.hmc.check_variance.html">bebi103.hmc.check_variance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/hmc/bebi103.hmc.decode_warning_code.html">bebi103.hmc.decode_warning_code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/hmc/bebi103.hmc.inferential_calibration.html">bebi103.hmc.inferential_calibration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/hmc/bebi103.hmc.disable_logging.html">bebi103.hmc.disable_logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/hmc/bebi103.hmc.sample_cmdstanpy.html">bebi103.hmc.sample_cmdstanpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/hmc/bebi103.hmc.sample_cmdstanpy_prior_predictive.html">bebi103.hmc.sample_cmdstanpy_prior_predictive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/hmc/bebi103.hmc.parse_prior_predictive_samples.html">bebi103.hmc.parse_prior_predictive_samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/hmc/bebi103.hmc.inferential_calibration_cmdstanpy.html">bebi103.hmc.inferential_calibration_cmdstanpy</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#gaussian-process-utilities">Gaussian process utilities</a><ul>
@@ -162,6 +165,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#general-utilities">General utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/utils/bebi103.utils.array_to_dict.html">bebi103.utils.array_to_dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/utils/bebi103.utils.dict_to_array.html">bebi103.utils.dict_to_array</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/utils/bebi103.utils.unpivot_csv.html">bebi103.utils.unpivot_csv</a></li>
 </ul>
 </li>
@@ -342,11 +347,20 @@
 <tr class="row-even"><td><p><a class="reference internal" href="generated/hmc/bebi103.hmc.decode_warning_code.html#bebi103.hmc.decode_warning_code" title="bebi103.hmc.decode_warning_code"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decode_warning_code</span></code></a></p></td>
 <td><p>Parse a binary diagnostic warning code from <cite>check_all_diagnostics()</cite> into individual failures and print the results.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/hmc/bebi103.hmc.inferential_calibration.html#bebi103.hmc.inferential_calibration" title="bebi103.hmc.inferential_calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inferential_calibration</span></code></a></p></td>
-<td><p>Perform simulation-based calibration on a Stan Model.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/hmc/bebi103.hmc.disable_logging.html#bebi103.hmc.disable_logging" title="bebi103.hmc.disable_logging"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_logging</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/hmc/bebi103.hmc.disable_logging.html#bebi103.hmc.disable_logging" title="bebi103.hmc.disable_logging"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_logging</span></code></a></p></td>
 <td><p>Context manager for disabling logging when doing MCMC sampling.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/hmc/bebi103.hmc.sample_cmdstanpy.html#bebi103.hmc.sample_cmdstanpy" title="bebi103.hmc.sample_cmdstanpy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample_cmdstanpy</span></code></a></p></td>
+<td><p>Compile and sample out of a Stan file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/hmc/bebi103.hmc.sample_cmdstanpy_prior_predictive.html#bebi103.hmc.sample_cmdstanpy_prior_predictive" title="bebi103.hmc.sample_cmdstanpy_prior_predictive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample_cmdstanpy_prior_predictive</span></code></a></p></td>
+<td><p>Draw a prior predictive data set using cmdstanpy.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/hmc/bebi103.hmc.parse_prior_predictive_samples.html#bebi103.hmc.parse_prior_predictive_samples" title="bebi103.hmc.parse_prior_predictive_samples"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_prior_predictive_samples</span></code></a></p></td>
+<td><p>Given a dictionary of prior predictive samples, convert them to a dictionary that can use used in inferential calibration analysis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/hmc/bebi103.hmc.inferential_calibration_cmdstanpy.html#bebi103.hmc.inferential_calibration_cmdstanpy" title="bebi103.hmc.inferential_calibration_cmdstanpy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inferential_calibration_cmdstanpy</span></code></a></p></td>
+<td><p>Perform simulation-based calibration for models using the cmdstanpy interface.</p></td>
 </tr>
 </tbody>
 </table>
@@ -502,6 +516,12 @@
 <h2>General utilities<a class="headerlink" href="#general-utilities" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/utils/bebi103.utils.array_to_dict.html#bebi103.utils.array_to_dict" title="bebi103.utils.array_to_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array_to_dict</span></code></a></p></td>
+<td><p>Given a Numpy array, convert to a dictionary with each key being of the form 'base_name[1]', 'base_name[1,2]', etc.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/utils/bebi103.utils.dict_to_array.html#bebi103.utils.dict_to_array" title="bebi103.utils.dict_to_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict_to_array</span></code></a></p></td>
+<td><p>Given a dictionary <cite>input_dict</cite> with keys 'base_name[1]', 'base_name[2]', etc., for a one-dimensional array, or 'base_name[1,1]', 'base_name[1,2]', etc., for a multidimensional array, where each value is a scalar, a 1D array, or a 2D array, as would be returned in a dictionary from MCMC sampling, convert to a NumPy array.</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/utils/bebi103.utils.unpivot_csv.html#bebi103.utils.unpivot_csv" title="bebi103.utils.unpivot_csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unpivot_csv</span></code></a></p></td>
 <td><p>Converts a CSV file in wide format, possibly with a hierarchical column, index to tall format via a unpivot operation.</p></td>
 </tr>
@@ -522,11 +542,11 @@
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 09, 2026.
+      <span class="lastupdated">Last updated on Sep 27, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x30997ec10> 
+   <jinja2.runtime.BlockReference object at 0x30669e6d0> 
 
 <p>© 2017–2025 Justin Bois.</p>
 

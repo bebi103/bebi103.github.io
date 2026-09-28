@@ -163,7 +163,7 @@ a 2D array, assume the points are d-dimensional.</p></li>
 <li><p><strong>sigma</strong> (<em>float</em><em> or </em><em>array</em><em>, </em><em>shape</em><em> (</em><em>n</em><em>,</em><em>)</em>) – Standard deviation for Normal likelihood. If a float, assumed to
 be homoscedastic for all points.</p></li>
 <li><p><strong>kernel</strong> (<em>function</em><em>, </em><em>default se_kernel</em>) – Kernel defining the Gaussian process. Must have call signature
-kernel(x1, x2, <a href="#id1"><span class="problematic" id="id2">**</span></a>kernel_hyperparams).</p></li>
+<code class="docutils literal notranslate"><span class="pre">kernel(x1,</span> <span class="pre">x2,</span> <span class="pre">**kernel_hyperparams)</span></code>.</p></li>
 <li><p><strong>include_deriv</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, include first derivatives in mean vectors and
 covariances. If True, <cite>X</cite> and <cite>Xstar</cite> must both be 1D because
 multivariate gradients are not implemented.</p></li>
@@ -184,7 +184,8 @@ posterior evaluated at the points given by <cite>Xstar</cite>.</p></li>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>Multidimensional x-values and other kernels will hopefully be
+<p>X1 and Xstar must be 1D and a SE kernel must be used.
+Multidimensional x-values and other kernels will hopefully be
 implemented later.</p>
 </dd></dl>
 
@@ -202,11 +203,11 @@ implemented later.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 09, 2026.
+      <span class="lastupdated">Last updated on Sep 27, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x30a1cb230> 
+   <jinja2.runtime.BlockReference object at 0x303e92dd0> 
 
 <p>© 2017–2025 Justin Bois.</p>
 

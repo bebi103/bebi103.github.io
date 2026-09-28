@@ -82,8 +82,11 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.split_rhat.html">bebi103.hmc.split_rhat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.check_variance.html">bebi103.hmc.check_variance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.decode_warning_code.html">bebi103.hmc.decode_warning_code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.inferential_calibration.html">bebi103.hmc.inferential_calibration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.disable_logging.html">bebi103.hmc.disable_logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.sample_cmdstanpy.html">bebi103.hmc.sample_cmdstanpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.sample_cmdstanpy_prior_predictive.html">bebi103.hmc.sample_cmdstanpy_prior_predictive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.parse_prior_predictive_samples.html">bebi103.hmc.parse_prior_predictive_samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.inferential_calibration_cmdstanpy.html">bebi103.hmc.inferential_calibration_cmdstanpy</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
@@ -134,20 +137,18 @@
 <h1>bebi103.hmc.convert_samples<a class="headerlink" href="#bebi103-hmc-convert-samples" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.hmc.convert_samples">
-<span class="sig-prename descclassname"><span class="pre">bebi103.hmc.</span></span><span class="sig-name descname"><span class="pre">convert_samples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_format</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inc_warmup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arviz_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.hmc.convert_samples" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bebi103.hmc.</span></span><span class="sig-name descname"><span class="pre">convert_samples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_format</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inc_warmup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arviz_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.hmc.convert_samples" title="Link to this definition"></a></dt>
 <dd><p>Converts samples to a new format.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>samples</strong> (<em>dict</em><em>, </em><em>cmdstanpy.CmdStanMCMC</em><em>, </em><em>xarray.DataTree</em><em>, </em><em>pandas.DataFrame</em><em>, or </em><em>polars.DataFrame</em>) – Results from an MCMC sampling to convert to desired format.</p></li>
-<li><p><strong>out_format</strong> (<em>str</em><em>, </em><em>one</em><em> of </em><em>'dict'</em><em>, </em><em>'arviz'</em><em>, </em><em>'pandas'</em><em>, </em><em>'polars'</em>) – <p>The desired output format of the samples.
-- dict: Dictionary of expectands and HMC diagnostics. Each item</p>
-<blockquote>
-<div><p>is a 2D Numpy array. The first dimension indexes the Markov
-chains and the second indexes the sequential states within
-each chain.</p>
-</div></blockquote>
+<li><p><strong>out_format</strong> (<em>str</em><em>, </em><em>one</em><em> of </em><em>'dict'</em><em>, </em><em>'arviz'</em><em>, </em><em>'pandas'</em><em>, </em><em>'polars'</em>) – <p>The desired output format of the samples.</p>
 <ul>
+<li><p>dict: Dictionary of expectands and HMC diagnostics. Each item
+is a 2D Numpy array. The first dimension indexes the Markov
+chains and the second indexes the sequential states within
+each chain.</p></li>
 <li><p>arviz: An xarray.DataTree instance as used by ArviZ. Only
 valid if <cite>samples</cite> is a cmdstanpy.CmdStanMCMC instance.</p></li>
 <li><p>pandas.DataFrame: Each row of the data frame is a chain/draw
@@ -159,6 +160,17 @@ with expectand values and HMC diagnostic results.</p></li>
 <li><p><strong>inc_warmup</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, include warmup samples. Only active if <cite>samples</cite> is a
 cmdstanpy.CmdStanMCMC instance.</p></li>
 <li><p><strong>arviz_kwargs</strong> (<em>dict</em><em>, </em><em>default None</em>) – Keyword arguments to be passed to arviz_base.from_cmdstanpy().</p></li>
+<li><p><strong>groups</strong> (<em>str</em><em> or </em><em>iterable</em><em> of </em><em>str</em><em>, </em><em>default None</em>) – Groups of an xarray.DataTree to use when converting to ‘dict’,
+‘pandas’, or ‘polars’ format. Allowed groups are ‘posterior’,
+‘prior’, ‘posterior_predictive’, ‘prior_predictive’,
+‘log_likelihood’, and ‘sample_stats’. If None, all allowed
+groups present in <cite>samples</cite> are used. Prior-side groups
+(‘prior’, ‘prior_predictive’) cannot be combined with
+posterior-side groups (‘posterior’, ‘posterior_predictive’,
+‘log_likelihood’, ‘sample_stats’) into a single output, so
+<cite>groups</cite> must be specified if <cite>samples</cite> has groups from both
+sides.
+May only be given if <cite>samples</cite> is an xarray.DataTree.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -185,11 +197,11 @@ returned.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 09, 2026.
+      <span class="lastupdated">Last updated on Sep 27, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x304751a90> 
+   <jinja2.runtime.BlockReference object at 0x30654b7e0> 
 
 <p>© 2017–2025 Justin Bois.</p>
 

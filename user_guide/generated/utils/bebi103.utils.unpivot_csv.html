@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Credits" href="../../../credits_and_citation.html" />
-    <link rel="prev" title="bebi103.image.costes_coloc" href="../image/bebi103.image.costes_coloc.html" /> 
+    <link rel="prev" title="bebi103.utils.dict_to_array" href="bebi103.utils.dict_to_array.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -67,6 +67,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#holoviews-defaults">HoloViews defaults</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#image-processing-utilities">Image processing utilities</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../api.html#general-utilities">General utilities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bebi103.utils.array_to_dict.html">bebi103.utils.array_to_dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.utils.dict_to_array.html">bebi103.utils.dict_to_array</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">bebi103.utils.unpivot_csv</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bebi103.utils.unpivot_csv"><code class="docutils literal notranslate"><span class="pre">unpivot_csv()</span></code></a></li>
 </ul>
@@ -142,7 +144,10 @@ essentially identifies variables.</p></li>
 be treated as comments.</p></li>
 <li><p><strong>force_overwrite</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, if the output_file already exists, it is overwritten.</p></li>
 <li><p><strong>include_comments</strong> (<em>bool</em><em>, </em><em>default True</em>) – If True, write comments from the input file in the output files.</p></li>
-<li><p><strong>additional_comment</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>default None</em>) – Additional comment at top of output file.</p></li>
+<li><p><strong>additional_comment</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>default None</em>) – Additional comment at top of output file. It is written above
+any comments carried over from the input file. Each line of the
+comment is prefixed with <cite>comment_prefix</cite> (or ‘#’ if
+<cite>comment_prefix</cite> is None) unless it already begins with it.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -160,7 +165,7 @@ be treated as comments.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../image/bebi103.image.costes_coloc.html" class="btn btn-neutral float-left" title="bebi103.image.costes_coloc" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bebi103.utils.dict_to_array.html" class="btn btn-neutral float-left" title="bebi103.utils.dict_to_array" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../../../credits_and_citation.html" class="btn btn-neutral float-right" title="Credits" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -168,11 +173,11 @@ be treated as comments.</p></li>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 09, 2026.
+      <span class="lastupdated">Last updated on Sep 27, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x30a1c91d0> 
+   <jinja2.runtime.BlockReference object at 0x306dec6e0> 
 
 <p>© 2017–2025 Justin Bois.</p>
 

@@ -1,0 +1,6 @@
+﻿bebi103.hmc.parse\_prior\_predictive\_samples
+=============================================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: parse_prior_predictive_samples

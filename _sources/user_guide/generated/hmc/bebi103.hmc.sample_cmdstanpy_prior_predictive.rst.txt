@@ -1,0 +1,6 @@
+﻿bebi103.hmc.sample\_cmdstanpy\_prior\_predictive
+================================================
+
+.. currentmodule:: bebi103.hmc
+
+.. autofunction:: sample_cmdstanpy_prior_predictive

@@ -82,8 +82,11 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.split_rhat.html">bebi103.hmc.split_rhat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.check_variance.html">bebi103.hmc.check_variance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.decode_warning_code.html">bebi103.hmc.decode_warning_code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.inferential_calibration.html">bebi103.hmc.inferential_calibration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.disable_logging.html">bebi103.hmc.disable_logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.sample_cmdstanpy.html">bebi103.hmc.sample_cmdstanpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.sample_cmdstanpy_prior_predictive.html">bebi103.hmc.sample_cmdstanpy_prior_predictive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.parse_prior_predictive_samples.html">bebi103.hmc.parse_prior_predictive_samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.inferential_calibration_cmdstanpy.html">bebi103.hmc.inferential_calibration_cmdstanpy</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
@@ -134,7 +137,7 @@
 <h1>bebi103.hmc.extract_variable<a class="headerlink" href="#bebi103-hmc-extract-variable" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.hmc.extract_variable">
-<span class="sig-prename descclassname"><span class="pre">bebi103.hmc.</span></span><span class="sig-name descname"><span class="pre">extract_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inc_warmup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.hmc.extract_variable" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bebi103.hmc.</span></span><span class="sig-name descname"><span class="pre">extract_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inc_warmup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">one_indexed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.hmc.extract_variable" title="Link to this definition"></a></dt>
 <dd><p>Extracts sample of a variable as a Numpy array.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -144,6 +147,8 @@ Numpy array or a cmdstanpy.CmdStanMCMC instance</p></li>
 <li><p><strong>variable</strong> (<em>string</em>) – The name of the variable to extract</p></li>
 <li><p><strong>inc_warmup</strong> (<em>bool</em><em>, </em><em>default False</em>) – If True, include warmup when extracting from a
 cmdstanpy.CmdStanMCMC instance. Ignored if <cite>samples</cite> is a dict.</p></li>
+<li><p><strong>one_indexed</strong> (<em>bool</em><em>, </em><em>default True</em>) – True if the bracketed indices in the keys of <cite>samples</cite> start
+at 1, as is the case with Stan, and False if they start at 0.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -174,11 +179,11 @@ are the matrix indices. And so on.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 09, 2026.
+      <span class="lastupdated">Last updated on Sep 27, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x304d1bf50> 
+   <jinja2.runtime.BlockReference object at 0x3074881a0> 
 
 <p>© 2017–2025 Justin Bois.</p>
 

@@ -82,8 +82,11 @@
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.split_rhat.html">bebi103.hmc.split_rhat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.check_variance.html">bebi103.hmc.check_variance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.decode_warning_code.html">bebi103.hmc.decode_warning_code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.inferential_calibration.html">bebi103.hmc.inferential_calibration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.disable_logging.html">bebi103.hmc.disable_logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.sample_cmdstanpy.html">bebi103.hmc.sample_cmdstanpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.sample_cmdstanpy_prior_predictive.html">bebi103.hmc.sample_cmdstanpy_prior_predictive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.parse_prior_predictive_samples.html">bebi103.hmc.parse_prior_predictive_samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bebi103.hmc.inferential_calibration_cmdstanpy.html">bebi103.hmc.inferential_calibration_cmdstanpy</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api.html#gaussian-process-utilities">Gaussian process utilities</a></li>
@@ -134,21 +137,20 @@
 <h1>bebi103.hmc.tail_xi_hat<a class="headerlink" href="#bebi103-hmc-tail-xi-hat" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="bebi103.hmc.tail_xi_hat">
-<span class="sig-prename descclassname"><span class="pre">bebi103.hmc.</span></span><span class="sig-name descname"><span class="pre">tail_xi_hat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xi_hat_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omit_array_entry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.hmc.tail_xi_hat" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bebi103.hmc.</span></span><span class="sig-name descname"><span class="pre">tail_xi_hat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omit_array_entry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bebi103.hmc.tail_xi_hat" title="Link to this definition"></a></dt>
 <dd><p>Compute the empirical generalized Pareto shape (xi_hat) for the
 upper and lower tails of a sample of expectand values, ignoring any
-autocorrelation between the values.</p>
+autocorrelation between the values. The draws from all chains are
+pooled together.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>samples</strong> (<em>cmdstanpy.CmdStanMCMC instance</em><em> or </em><em>dict</em>) – MCMC samples from which to compute ESShat, either as a
+<li><p><strong>samples</strong> (<em>cmdstanpy.CmdStanMCMC instance</em><em> or </em><em>dict</em>) – MCMC samples from which to compute xi_hat, either as a
 cmdstanpy.CmdStanMCMC instance or as a dictionary of
 two-dimensional arrays for each expectand. For the dictionary,
 the first dimension of each element indexes the Markov chains and
 the second dimension indexes the sequential states within each
 Markov chain.</p></li>
-<li><p><strong>xi_hat_threshold</strong> (<em>float</em><em>, </em><em>default 0.25</em>) – Quantile fraction passed through to <cite>_compute_xi_hat()</cite> for each
-tail.</p></li>
 <li><p><strong>omit</strong> (<em>str</em><em>, </em><em>re.Pattern</em><em>, or </em><em>iterable thereof</em>) – Glob pattern(s) matched against the base (non-indexed) name of
 each variable. Any variable whose base name matches an entry is
 omitted, whether scalar or array valued. For example,
@@ -162,17 +164,22 @@ indices. A single string may be given instead of an iterable.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>output</strong> – Each value in the dictionary is the shape estimate for lower
-and upper tail for each expandand for each chain for each
-chain for each expectand. Each value is a Numpy array of shape
-(n_chains, 2), where the first index indexes the chain and the
-second index gives the shape index of the lower and upper tail.</p>
+<dd class="field-even"><p><strong>output</strong> – Each key is an expectand, and each value is a Numpy array of
+shape (2,) holding the shape estimates for the lower and upper
+tails, in that order, computed from the draws of all chains
+pooled together. An entry is NaN if there were too few draws to
+estimate the shape of that tail.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
+<p>Uses the method of Zhang and Stephens, “A New and Efficient
+Estimation Method for the Generalized Pareto Distribution”,
+Technometrics, 2009, <a class="reference external" href="https://doi.org/10.1198/tech.2009.08017">https://doi.org/10.1198/tech.2009.08017</a>.</p>
+<p>Within the generalized Pareto family all moments up to the mth
+order are finite if and only if xi_hat &lt; 1 / m.</p>
 </dd></dl>
 
 </section>
@@ -189,11 +196,11 @@ second index gives the shape index of the lower and upper tail.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 09, 2026.
+      <span class="lastupdated">Last updated on Sep 27, 2026.
       </span></p>
   </div>
 
-   <jinja2.runtime.BlockReference object at 0x304c5c130> 
+   <jinja2.runtime.BlockReference object at 0x306d9f460> 
 
 <p>© 2017–2025 Justin Bois.</p>
 

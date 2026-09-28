@@ -1,0 +1,6 @@
+﻿bebi103.utils.array\_to\_dict
+=============================
+
+.. currentmodule:: bebi103.utils
+
+.. autofunction:: array_to_dict
